@@ -1,58 +1,48 @@
 const Fusion = require('../models/fusion.model');
+const updateConformity = require('../utility_function/updateConformity');
 
 async function VolumesPourcentageLibreSuffisant() {
 
     try {
         const allFusionData = await Fusion.find();
 
-        let nomConformite = "Pourcentage d'espace total consomme depassant 70%";
+        let nomConformite = "Pourcentage d'espace total consomme depasse ou est egale a 70%";
         let dangerousityNumber = 0;
+        let nonConforme;
     
         for (const fusionData of allFusionData) {
             if(fusionData.VolumesPourcentageLibre){
-                const pourcentageEspaceConsomme = parseFloat(fusionData.VolumesPourcentageLibre);
+                const pourcentageEspaceLibre = parseFloat(fusionData.VolumesPourcentageLibre);
 
-                if (pourcentageEspaceConsomme < 70) {
-                    console.log(`le pourcentage d'espace consomme de la machine ${fusionData.CN} est bas (${pourcentageEspaceConsomme}%)`);
-                }else if( pourcentageEspaceConsomme >= 70 && pourcentageEspaceConsomme < 80) {
-                    console.log(`le pourcentage d'espace consomme de la machine ${fusionData.CN} est haut (${pourcentageEspaceConsomme}%)`);
+                if (pourcentageEspaceLibre > 30) {
+                    console.log(`le pourcentage d'espace consomme de la machine ${fusionData.CN} est suffisant (${pourcentageEspaceLibre}%)`);
+                }else if( pourcentageEspaceLibre <= 30 && pourcentageEspaceLibre > 20) {
+                    console.log(`le pourcentage d'espace consomme de la machine ${fusionData.CN} est haut (${pourcentageEspaceLibre}%)`);
                     dangerousityNumber = 1;
-                    if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                        fusionData.dangerousityNumber += 1; // Incrémenter le niveau de dangerosité
-                        fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                        await fusionData.save(); // Sauvegarder les modifications
-                    }
+                    nonConforme = nomConformite+`(${dangerousityNumber})`;
+                    updateConformity(fusionData, nonConforme, dangerousityNumber);
 
-                }else if( pourcentageEspaceConsomme >= 80 && pourcentageEspaceConsomme < 90) {
-                    console.log(`le pourcentage d'espace consomme de la machine ${fusionData.CN} est haut (${pourcentageEspaceConsomme}%)`);
-                    nomConformite = "Pourcentage d'espace total consomme depassant 80%"
+                }else if( pourcentageEspaceLibre <= 20 && pourcentageEspaceLibre > 10) {
+                    console.log(`le pourcentage d'espace consomme de la machine ${fusionData.CN} est haut (${pourcentageEspaceLibre}%)`);
+                    nomConformite = "Pourcentage d'espace total consomme depasse ou est egale a 80%"
                     dangerousityNumber = 2;
-                    if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                        fusionData.dangerousityNumber += 2;
-                        fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                        await fusionData.save();
-                    }
+                    nonConforme = nomConformite+`(${dangerousityNumber})`;
+                    updateConformity(fusionData, nonConforme, dangerousityNumber);
 
                 }else {
-                    console.log(`le pourcentage d'espace consomme de la machine ${fusionData.CN} est critique (${pourcentageEspaceConsomme}%)`);
-                    nomConformite = "Pourcentage d'espace total consomme depassant 90%"
+                    console.log(`le pourcentage d'espace consomme de la machine ${fusionData.CN} est critique (${pourcentageEspaceLibre}%)`);
+                    nomConformite = "Pourcentage d'espace total consomme depasse ou est egale a 90%"
                     dangerousityNumber = 3;
-                    if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                        fusionData.dangerousityNumber += 3;
-                        fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                        await fusionData.save();
-                    }
+                    nonConforme = nomConformite+`(${dangerousityNumber})`;
+                    updateConformity(fusionData, nonConforme, dangerousityNumber);
                 }
 
             }else{
                 console.log(`les donnees lie au pourcentage d'espace consomme par rapport au total de la machine ${fusionData.CN} ne sont pas disponible`);
                 nomConformite = "Pourcentage d'espace total consomme non disponible"
                 dangerousityNumber = 3;
-                if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                    fusionData.dangerousityNumber += 3;
-                    fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                    await fusionData.save();
-                }
+                nonConforme = nomConformite+`(${dangerousityNumber})`;
+                updateConformity(fusionData, nonConforme, dangerousityNumber);
             }
         }
         

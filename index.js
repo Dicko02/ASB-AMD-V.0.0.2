@@ -15,6 +15,9 @@ const conformitySettingRoute = require("./routes/conformitySetting.route");
 // Import de la fonction de vérification des conformités
 const checkConformites = require("./utility_function/checkConformites");
 
+// Import de la fonction de vérification des coherences
+const checkCoherences = require("./utility_function/coherence")
+
 const app = express();
 
 const port = process.env.PORT;
@@ -40,6 +43,13 @@ app.listen(port || 10000, () => {
 // Lancement de la vérification des conformités
 checkConformites().then(() => {
     console.log("Conformités vérifiées et mises à jour.");
+
+    checkCoherences().then(() => {
+        console.log("Coherences vérifiées et mises à jour.");
+    }).catch((error) => {
+        console.error("Erreur lors de la vérification des coherences:", error);
+    })
+
 }).catch((error) => {
     console.error("Erreur lors de la vérification des conformités:", error);
 });

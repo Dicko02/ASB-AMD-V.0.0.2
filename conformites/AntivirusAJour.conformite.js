@@ -1,4 +1,5 @@
 const Fusion = require('../models/fusion.model');
+const updateConformity = require('../utility_function/updateConformity');
 
 async function AntivirusAJour() {
 
@@ -7,6 +8,7 @@ async function AntivirusAJour() {
 
         let nomConformite = "Antivirus non à jour";
         let dangerousityNumber = 0;
+        let nonConforme;
     
         for (const fusionData of allFusionData) {
             
@@ -24,22 +26,16 @@ async function AntivirusAJour() {
                 }else {
                     console.log(`❌ L'antivirus de l'ordinateur ${fusionData.CN} n'est pas à jour. Dernière mise à jour il y a ${differenceEnJours} jours.`);
                     dangerousityNumber = 1;
-                    if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                        fusionData.dangerousityNumber += 1; // Incrémenter le niveau de dangerosité
-                        fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                        await fusionData.save(); // Sauvegarder les modifications
-                    }
+                    nonConforme = nomConformite+`(${dangerousityNumber})`;
+                    updateConformity(fusionData, nonConforme, dangerousityNumber);
                 }
 
             }else {
                 console.log(`❌ L'ordinateur ${fusionData.CN} n'a pas de date de dernière mise à jour des bases antivirus.`);
                 let nomConformite = "Date de derniere mise a jour de l'antivirus non disponible";
                 dangerousityNumber = 2;
-                if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                    fusionData.dangerousityNumber += 2;
-                    fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                    await fusionData.save();
-                }
+                nonConforme = nomConformite+`(${dangerousityNumber})`;
+                updateConformity(fusionData, nonConforme, dangerousityNumber);
             }
         }
 

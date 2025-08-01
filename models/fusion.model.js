@@ -24,6 +24,17 @@ const fusionSchema = new mongoose.Schema(
             type: [String],
             default: []
         },
+
+        incoherenceNumber: {
+            type: Number,
+            default: 0
+        },
+
+        //coherence verifier et incoherence
+        incoherences: {
+            type: [String],
+            default: []
+        }
     },
     
     {

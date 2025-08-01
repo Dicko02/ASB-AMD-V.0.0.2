@@ -1,4 +1,5 @@
 const Fusion = require('../models/fusion.model');
+const updateConformity = require('../utility_function/updateConformity');
 
 async function AntivirusActif() {
     try {
@@ -7,20 +8,21 @@ async function AntivirusActif() {
 
         let nomConformite = "Antivirus Inactif";
         let dangerousityNumber = 0;
+        let nonConforme;
     
         // Parcourir chaque ordinateur fusionné
         for (const fusionData of allFusionData) {
             // Vérifier si l'antivirus est actif
             if (fusionData.AntivirusNom){
-                // Séparer la chaîne même s’il n’y a pas de <br>, et nettoyer les espaces
+                // Séparer la chaîne même s’il y a pas de <br>, et nettoyer les espaces
                 const noms = fusionData.AntivirusNom.split("<br>").map(p => p.trim());
 
-                const nomKaspersky = noms.includes("Kaspersky Endpoint Security for Windows");
+                const nomKaspersky = noms.includes("Kaspersky Endpoint Security");
 
                 if(nomKaspersky && noms.length === 2) {
-                    if (noms[0] === "Kaspersky Endpoint Security for Windows") {
+                    if (noms[0] === "Kaspersky Endpoint Security") {
                         position = 0;
-                    } else if (noms[1] === "Kaspersky Endpoint Security for Windows") {
+                    } else if (noms[1] === "Kaspersky Endpoint Security") {
                         position = 1;
                     }
                     
@@ -31,11 +33,8 @@ async function AntivirusActif() {
                     }else {
                         console.log(`❌ L'antivirus Kaspersky n'est pas actif sur l'ordinateur ${fusionData.CN}.`);
                         dangerousityNumber = 1;
-                        if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                            fusionData.dangerousityNumber += 1; // Incrémenter le niveau de dangerosité
-                            fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                            await fusionData.save(); // Sauvegarder les modifications
-                        }
+                        nonConforme = nomConformite+`(${dangerousityNumber})`;
+                        updateConformity(fusionData, nonConforme, dangerousityNumber);
                     }
                 } else if(nomKaspersky && noms.length === 1){
                     console.log(`✅ L'antivirus Kaspersky est actif sur l'ordinateur ${fusionData.CN}.`);
@@ -43,11 +42,8 @@ async function AntivirusActif() {
                     console.log(`❌ L'antivirus Kaspersky n'est pas present sur l'ordinateur ${fusionData.CN}.`);
                     nomConformite = "Antivirus Inexistant";
                     dangerousityNumber = 2;
-                    if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                        fusionData.dangerousityNumber += 2;
-                        fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                        await fusionData.save(); // Sauvegarder les modifications
-                    }
+                    nonConforme = nomConformite+`(${dangerousityNumber})`;
+                    updateConformity(fusionData, nonConforme, dangerousityNumber);
                 }
             }
         }

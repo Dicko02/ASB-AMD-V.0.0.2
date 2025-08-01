@@ -1,4 +1,5 @@
 const Fusion = require('../models/fusion.model');
+const updateConformity = require('../utility_function/updateConformity');
 
 async function NomDeMachineConforme() {
 
@@ -7,6 +8,7 @@ async function NomDeMachineConforme() {
 
         let nomConformite = "Nom de machine non conforme";
         let dangerousityNumber = 0;
+        let nonConforme;
     
         for (const fusionData of allFusionData) {
             if(fusionData.CN){
@@ -19,11 +21,8 @@ async function NomDeMachineConforme() {
                 }else {
                     console.log(`La machine ${fusionData.CN} n'a pas un nom conforme`);
                     dangerousityNumber = 2;
-                    if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                        fusionData.dangerousityNumber += 2; // Incrémenter le niveau de dangerosité
-                        fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                        await fusionData.save(); // Sauvegarder les modifications
-                    }
+                    nonConforme = nomConformite+`(${dangerousityNumber})`;
+                    updateConformity(fusionData, nonConforme, dangerousityNumber);
                 }
     
             }else{

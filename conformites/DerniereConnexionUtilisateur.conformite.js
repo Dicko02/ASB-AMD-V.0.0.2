@@ -1,4 +1,5 @@
 const Fusion = require('../models/fusion.model');
+const updateConformity = require('../utility_function/updateConformity');
 
 async function DerniereConnexionUtilisateur() {
 
@@ -7,6 +8,7 @@ async function DerniereConnexionUtilisateur() {
 
         let nomConformite = "Dernière connexion utilisateur remontant a plus d'un mois";
         let dangerousityNumber = 0;
+        let nonConforme;
     
         for (const fusionData of allFusionData) {
 
@@ -19,22 +21,16 @@ async function DerniereConnexionUtilisateur() {
                     console.log(`date de la derniere connexion = ${dateDerniereConnexion}`);
 
                     dangerousityNumber = 2;
-                    if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                        fusionData.dangerousityNumber += 2; // Incrémenter le niveau de dangerosité
-                        fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                        await fusionData.save(); // Sauvegarder les modifications
-                    }
+                    nonConforme = nomConformite+`(${dangerousityNumber})`;
+                    updateConformity(fusionData, nonConforme, dangerousityNumber);
                 }
 
             }else{
                 console.log(`les donnees lie a la derniere connexion a la machine ${fusionData.CN} ne sont pas disponible`)
                 nomConformite = "Date de dernière connexion de l'utilisateur non disponible";
                 dangerousityNumber = 3;
-                if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                    fusionData.dangerousityNumber += 3; // Incrémenter le niveau de dangerosité
-                    fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                    await fusionData.save(); // Sauvegarder les modifications
-                }
+                nonConforme = nomConformite+`(${dangerousityNumber})`;
+                updateConformity(fusionData, nonConforme, dangerousityNumber);
             }
         }
     }catch (error) {

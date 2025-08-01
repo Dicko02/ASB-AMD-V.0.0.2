@@ -1,4 +1,5 @@
 const Fusion = require('../models/fusion.model');
+const updateConformity = require('../utility_function/updateConformity');
 
 async function PareFeuActive() {
 
@@ -7,6 +8,7 @@ async function PareFeuActive() {
 
         let nomConformite = "Pare-feu inactif";
         let dangerousityNumber = 0;
+        let nonConforme;
     
         for (const fusionData of allFusionData) {
             if(fusionData.etat && fusionData.groupeParent){
@@ -15,21 +17,15 @@ async function PareFeuActive() {
                 }else{
                     console.log(`le pare feu de la machine ${fusionData.CN} est desactiver`)
                     dangerousityNumber = 1;
-                    if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                        fusionData.dangerousityNumber += 1; // Incrémenter le niveau de dangerosité
-                        fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                        await fusionData.save(); // Sauvegarder les modifications
-                    }
+                    nonConforme = nomConformite+`(${dangerousityNumber})`;
+                    updateConformity(fusionData, nonConforme, dangerousityNumber);
                 }
             }else{
                 console.log(`les donnees lie au pare feu de la machine ${fusionData.CN} ne sont pas disponible`)
                 let nomConformite = "Donnees lie au pare feu non disponible";
                 dangerousityNumber = 2;
-                if (!fusionData.ConformitiesChecked.includes(nomConformite+`(${dangerousityNumber})`)) {
-                    fusionData.dangerousityNumber += 2;
-                    fusionData.ConformitiesChecked.push(nomConformite+`(${dangerousityNumber})`);
-                    await fusionData.save();
-                }
+                nonConforme = nomConformite+`(${dangerousityNumber})`;
+                updateConformity(fusionData, nonConforme, dangerousityNumber);
             }
         }
         
