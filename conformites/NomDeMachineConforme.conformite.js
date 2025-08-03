@@ -1,5 +1,5 @@
 const Fusion = require('../models/fusion.model');
-const updateConformity = require('../utility_function/updateConformity');
+const updateConformity = require('../utility_function/conformites/updateConformity');
 
 async function NomDeMachineConforme() {
 

@@ -34,6 +34,11 @@ const fusionSchema = new mongoose.Schema(
         incoherences: {
             type: [String],
             default: []
+        },
+
+        incoherenceTotalScore: {
+            type: Number,
+            default: 0
         }
     },
     

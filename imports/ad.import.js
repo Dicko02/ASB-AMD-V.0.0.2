@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Client } = require('ldapts');
 const adData = require('../models/ad.model');
-const parseDate = require('../utility_function/parseDateValue');
+const parseDate = require('../utility_function/dateFunctions/parseDateValue');
 
 async function importAdFromLdap() {
   const url = process.env.AD_URL;

@@ -1,4 +1,4 @@
-const Fusion = require('../models/fusion.model');
+const Fusion = require('../../models/fusion.model');
 
 async function criticalLevelUpDate() {
 

@@ -1,5 +1,5 @@
 const cron = require('node-cron');
-const checkConformites = require("./checkConformites");
+const checkConformites = require("./conformites/checkConformites");
 
 // Tous les jours à minuit
 cron.schedule('0 0 * * *', async () => {

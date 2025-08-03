@@ -1,18 +1,18 @@
 // fonction d'utilite(utility_function)
-const runImportAndFusion = require('./runImportAndFusion'); 
+const runImportAndFusion = require('../runImportAndFusion'); 
 const criticalLevelUpDate = require('./criticalLevelUpDate');
 
 //les conformites
-const AntivirusActif = require("../conformites/AntivirusActif.conformite");
-const AntivirusAJour = require("../conformites/AntivirusAJour.conformite");
-const DerniereConnexionUtilisateur = require("../conformites/DerniereConnexionUtilisateur.conformite");
-const DisqueChiffre = require("../conformites/DisqueChiffre.conformite");
-const NomDeMachineConforme = require("../conformites/NomDeMachineConforme.conformite");
-const PareFeuActive = require("../conformites/PareFeuActive.conformite");
-const VolumesPourcentageLibreSuffisant = require("../conformites/VolumesPourcentageLibreSuffisant.conformite");
-const BadLogonCount = require("../conformites/BadLogonCount.conformite");
+const AntivirusActif = require("../../conformites/AntivirusActif.conformite");
+const AntivirusAJour = require("../../conformites/AntivirusAJour.conformite");
+const DerniereConnexionUtilisateur = require("../../conformites/DerniereConnexionUtilisateur.conformite");
+const DisqueChiffre = require("../../conformites/DisqueChiffre.conformite");
+const NomDeMachineConforme = require("../../conformites/NomDeMachineConforme.conformite");
+const PareFeuActive = require("../../conformites/PareFeuActive.conformite");
+const VolumesPourcentageLibreSuffisant = require("../../conformites/VolumesPourcentageLibreSuffisant.conformite");
+const BadLogonCount = require("../../conformites/BadLogonCount.conformite");
 
-const conformitySettingModel = require('../models/conformitySetting.model');
+const conformitySettingModel = require('../../models/conformitySetting.model');
 
 // Fonction de verification des conformités
 async function checkConformites(){

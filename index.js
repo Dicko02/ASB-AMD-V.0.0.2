@@ -13,10 +13,11 @@ const noADRoute = require("./routes/noAD.route");
 const conformitySettingRoute = require("./routes/conformitySetting.route");
 
 // Import de la fonction de vérification des conformités
-const checkConformites = require("./utility_function/checkConformites");
+const checkConformites = require("./utility_function/conformites/checkConformites");
 
 // Import de la fonction de vérification des coherences
-const checkCoherences = require("./utility_function/coherence")
+const checkCoherences = require("./utility_function/coherence/coherence");
+const scoreTotalPossibleIncoherence = require("./utility_function/coherence/scoreTotalPossibleIncoherence")
 
 const app = express();
 
@@ -46,12 +47,20 @@ checkConformites().then(() => {
 
     checkCoherences().then(() => {
         console.log("Coherences vérifiées et mises à jour.");
+
+        scoreTotalPossibleIncoherence().then(() => {
+            console.log("score total des incoherences mises à jour avec succes.");
+
+        }).catch((error) => {
+            console.error("erreur lors de la mises à jour du score total des incoherences: ", error);
+        })
+        
     }).catch((error) => {
-        console.error("Erreur lors de la vérification des coherences:", error);
+        console.error("Erreur lors de la vérification des coherences: ", error);
     })
 
 }).catch((error) => {
-    console.error("Erreur lors de la vérification des conformités:", error);
+    console.error("Erreur lors de la vérification des conformités: ", error);
 });
 
 

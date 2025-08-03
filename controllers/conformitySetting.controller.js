@@ -1,5 +1,5 @@
 const conformitySettingModel = require('../models/conformitySetting.model');
-const checkConformites = require("../utility_function/checkConformites");
+const checkConformites = require("../utility_function/conformites/checkConformites");
 
 // GET paramètres des conformites
 module.exports.getConformitySetting = async (req, res) => {
