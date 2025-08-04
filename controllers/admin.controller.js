@@ -3,12 +3,17 @@ const conformitySettingModel = require('../models/conformitySetting.model');
 // Importe bcrypt et jsonwebtoken en haut du fichier
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const logHistory = require('../utility_function/loggers/logHistory');
+
+let user;
+let action;
 
 // Route POST : Connection en tant qu'administrateur
 module.exports.loginAdmin = async (req, res) => {
   const { pseudo, password } = req.body;
-
+  
   try {
+
     const admin = await adminModel.findOne({ pseudo });
 
     if (!admin){
@@ -35,17 +40,24 @@ module.exports.loginAdmin = async (req, res) => {
       }
     );
 
+    //enregistrement du log dans l'historique des audits utilisateurs
+    user = pseudo;
+    action = "Connection a la platforme";
+    logHistory(action, user);
+
     res.status(200).json({
       id: admin._id,
       pseudo: admin.pseudo,
       titre: admin.titre,
       token,
     });
+
   } catch (error) {
     console.error("Erreur lors de la connexion :", error);
     res.status(500).json({ message: "Erreur serveur", error });
   }
 };
+
 
 // Route POST : Ajouter un administrateur
 module.exports.signUp = async (req, res) => {
@@ -58,23 +70,40 @@ module.exports.signUp = async (req, res) => {
         // Une fois le user créé, on crée aussi son document paramètres
         await conformitySettingModel.create({ adminId: admin._id });
         await admin.save()
+
+        //enregistrement du log dans l'historique des audits utilisateurs
+        user = req.user.pseudo;
+        action = `Creation du compte de niveau <${titre}> portant le pseudo: ${pseudo}`;
+        logHistory(action, user);
+
         res.status(200).json({ message: 'Compte ajoute avec succes', adminID: admin._id });
+
     }catch (err) {
         console.error("Erreur lors de la creation du compte :", err);
         res.status(500).json({err})
     }
 };
 
+
 // Route GET : Récupérer tous les administrateurs
 module.exports.getAllAdmin = async (req, res) => {
     try {
         const admins = await adminModel.find().select('-password');
+
+        //enregistrement du log dans l'historique des audits utilisateurs
+        const { pseudo } = req.user;
+        user = `${pseudo}`;
+        action = "Consultation de tous les comptes utilisateurs";
+        logHistory(action, user);
+
         res.status(200).json(admins);
+
     } catch (err) {
         console.error("Erreur lors de la récupération des administrateurs :", err);
         res.status(500).json({error: "Erreur serveur, impossible de récupérer les administrateurs"});
     }
 };
+
 
 // Route GET : Récupérer les infos d'un administrateur
 module.exports.adminInfo = async (req, res) => {
@@ -83,12 +112,20 @@ module.exports.adminInfo = async (req, res) => {
       if (!admin) {
         return res.status(404).json({message: 'administrateur non enregistre'});
       }
+
+      //enregistrement du log dans l'historique des audits utilisateurs
+      user = req.user.pseudo;
+      action = `Consultation des informations du compte utilisateur dont l'ID est ${req.params.id}`;
+      logHistory(action, user);
+
       res.json(admin);
+
     } catch (error) {
       res.status(500).json({ message: "Erreur lors de la récupération des infos de l'administrateur", error });
     }
 }
   
+
 // Route UPDATE : Mettre a jour un administrateur
 module.exports.updateAdmin = async (req, res) => {
   try {
@@ -121,12 +158,19 @@ module.exports.updateAdmin = async (req, res) => {
       return res.status(404).json({ message: 'Compte Admin non trouvé' });
     }
 
+    //enregistrement du log dans l'historique des audits utilisateurs
+    user = req.user.pseudo;
+    action = `Mise a jour du compte de l'utilisateur ${pseudo}`;
+    logHistory(action, user);
+
     res.json({ message: 'Compte Admin mis à jour', admin: updatedAdmin });
+
   } catch (err) {
     console.error('Erreur lors de la mise à jour du compte Admin', err);
     res.status(500).json({ message: 'Erreur lors de la mise à jour du compte Admin', error: err.message });
   }
 };
+
 
 // Route DELETE : supprimer un administrateur
 module.exports.deleteAdmin = async (req, res) => {
@@ -135,7 +179,14 @@ module.exports.deleteAdmin = async (req, res) => {
       if (!deleteAdmin) {
         return res.status(404).json({ message: "l'administrateur n'existe deja pas" });
       }
+
+      //enregistrement du log dans l'historique des audits utilisateurs
+      user = req.user.pseudo;
+      action = `Suppression du compte de utilisateur dont l'ID est ${req.params.id}`;
+      logHistory(action, user);
+
       res.json({ message: 'administrateur supprimée', admin: deleteAdmin });
+
     } catch (error) {
       res.status(500).json({ message: "Erreur lors de la suppression de l'administrateur", error });
     }

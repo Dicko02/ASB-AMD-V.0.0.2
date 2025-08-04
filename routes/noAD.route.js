@@ -1,16 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const noADControllers = require('../controllers/noAD.controller');
+const authMiddleware = require('../middlewares/auth.middleware');
 
 
 // affichage des infos de tous les noAD
-router.get('/', noADControllers.getAllNoAD);
+router.get('/', authMiddleware, noADControllers.getAllNoAD);
 
 // affichage des infos d'un noAD
-router.get('/:CN', noADControllers.noADInfo);
+router.get('/:CN', authMiddleware, noADControllers.noADInfo);
 
 // suppression d'un noAD
-router.delete('/:CN', noADControllers.deleteNoAD)
+router.delete('/:CN', authMiddleware, noADControllers.deleteNoAD)
 
 
 module.exports = router;

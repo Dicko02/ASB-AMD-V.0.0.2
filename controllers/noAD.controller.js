@@ -1,11 +1,21 @@
 const noADModel = require('../models/noAD.model');
+const logHistory = require('../utility_function/loggers/logHistory');
 
+let user;
+let action;
 
 // Route GET : Récupérer tous les machines noAD
 module.exports.getAllNoAD = async (req, res) => {
     try {
         const noAD = await noADModel.find();
+
+        //enregistrement du log dans l'historique des audits utilisateurs
+        user = req.user.pseudo;
+        action = "Connection a la platforme";
+        logHistory(action, user);
+
         res.status(200).json(noAD);
+
     } catch (err) {
         console.error("Erreur lors de la récupération des infos des noAD :", err);
         res.status(500).json({error: "Erreur serveur, impossible de récupérer les infos des noAD"});
@@ -19,8 +29,15 @@ module.exports.noADInfo = async (req, res) => {
         const noAD = await noADModel.findById(id);
         if (!noAD) {
             return res.status(404).json({message: "noAD non enregistre"});
-        }
+        };
+
+        //enregistrement du log dans l'historique des audits utilisateurs
+        user = req.user.pseudo;
+        action = "Connection a la platforme";
+        logHistory(action, user);
+
         res.json(noAD);
+
     } catch (error) {
         res.status(500).json({ message: "Erreur lors de la récupération des infos de la machine noAD", error });
     }
@@ -34,8 +51,15 @@ module.exports.deleteNoAD = async (req, res) => {
         const deleteNoAD = await noADModel.findByIdAndDelete(id);
         if (!deleteNoAD) {
             return res.status(404).json({ message: "l'machine noAD n'existe deja pas" });
-        }
+        };
+
+        //enregistrement du log dans l'historique des audits utilisateurs
+        user = req.user.pseudo;
+        action = "Connection a la platforme";
+        logHistory(action, user);
+
         res.json({ message: 'machine noAD supprimée', noAD: deleteNoAD });
+        
     } catch (error) {
         res.status(500).json({ message: "Erreur lors de la suppression de la machine noAD", error });
     }

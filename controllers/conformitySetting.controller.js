@@ -1,9 +1,19 @@
 const conformitySettingModel = require('../models/conformitySetting.model');
 const checkConformites = require("../utility_function/conformites/checkConformites");
+const logHistory = require('../utility_function/loggers/logHistory');
+
+let user;
+let action;
 
 // GET paramètres des conformites
 module.exports.getConformitySetting = async (req, res) => {
   const conformitySetting = await conformitySettingModel.findOne({ adminId: req.admin.id });
+
+  //enregistrement du log dans l'historique des audits utilisateurs
+  user = req.user.pseudo;
+  action = "Consultation de la liste des conformites";
+  logHistory(action, user);
+
   res.json(conformitySetting);
 };
 
@@ -35,7 +45,13 @@ module.exports.updateConformitySetting = async (req, res) => {
       console.error("Erreur lors de la re-vérification des conformités:", error);
     });
 
+    //enregistrement du log dans l'historique des audits utilisateurs
+    user = req.user.pseudo;
+    action = "Mise a jour des conformites a applique aux endpoints";
+    logHistory(action, user);
+
     res.status(200).json(updated);
+
   } catch (err) {
     res.status(500).json({ message: "Erreur serveur", error: err.message });
   }

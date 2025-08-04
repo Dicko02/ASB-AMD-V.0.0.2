@@ -24,10 +24,13 @@
     "jsonwebtoken": "^9.0.2",
     "ldapts": "^8.0.6",
     "mongoose": "^8.16.0",
+    "morgan": "^1.10.1",
     "node-cron": "^4.2.1",
     "node-fetch": "^2.7.0",
     "nodemon": "^3.1.10",
+    "path": "^0.12.7",
     "tough-cookie": "^5.1.2",
-    "validator": "^13.15.15"
+    "validator": "^13.15.15",
+    "winston": "^3.17.0"
   }
 }

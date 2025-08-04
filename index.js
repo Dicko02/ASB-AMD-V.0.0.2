@@ -4,6 +4,9 @@ require("dotenv").config({path: './config/.env', quiet: true});
 require('./config/db_config');
 const helmet = require("helmet");
 const cors = require("cors");
+const morgan = require('morgan');
+const fs = require('fs');
+const path = require('path');
 
 require('./utility_function/cronJob'); // C’est suffisant pour démarrer la tâche planifiée
 
@@ -11,6 +14,7 @@ const fusionRoute = require("./routes/fusion.route");
 const adminRoute = require("./routes/admin.route");
 const noADRoute = require("./routes/noAD.route");
 const conformitySettingRoute = require("./routes/conformitySetting.route");
+const logsRoutes = require('./routes/logs.route');
 
 // Import de la fonction de vérification des conformités
 const checkConformites = require("./utility_function/conformites/checkConformites");
@@ -23,6 +27,10 @@ const app = express();
 
 const port = process.env.PORT;
 
+// Middleware log accès (access.log)
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs', 'access.log'), { flags: 'a' });
+app.use(morgan('combined', { stream: accessLogStream }));
+
 // Middlewares(doivent être avant les routes)
 app.use(express.json());
 app.use(bodyParser.json());
@@ -34,6 +42,7 @@ app.use('/api/fusion', fusionRoute);
 app.use('/api/admin', adminRoute);
 app.use('/api/noAD', noADRoute);
 app.use('/api/conformitySetting', conformitySettingRoute);
+app.use('/api/logs', logsRoutes);
 
 //démarrage du serveur
 app.listen(port || 10000, () => {
