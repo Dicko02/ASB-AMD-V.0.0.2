@@ -1,4 +1,5 @@
 const Fusion = require('../../models/fusion.model');
+const logApp = require('../loggers/logApp');
 
 async function criticalLevelUpDate() {
 
@@ -32,6 +33,9 @@ async function criticalLevelUpDate() {
                 await fusionData.save();
 
             }
+
+            logApp.info(`l'endpoint ${fusionData.CN} a un niveau de dangerosite <${fusionData.criticalLevel}>`);
+
         }
         
     }catch (error) {}

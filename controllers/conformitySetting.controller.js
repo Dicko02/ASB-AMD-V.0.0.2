@@ -11,7 +11,7 @@ module.exports.getConformitySetting = async (req, res) => {
 
   //enregistrement du log dans l'historique des audits utilisateurs
   user = req.user.pseudo;
-  action = "Consultation de la liste des conformites";
+  action = "✅ Consultation de la liste des conformites";
   logHistory(action, user);
 
   res.json(conformitySetting);
@@ -45,14 +45,16 @@ module.exports.updateConformitySetting = async (req, res) => {
       console.error("Erreur lors de la re-vérification des conformités:", error);
     });
 
-    //enregistrement du log dans l'historique des audits utilisateurs
     user = req.user.pseudo;
-    action = "Mise a jour des conformites a applique aux endpoints";
+    action = "✅ Mise a jour des conformites a applique aux endpoints";
     logHistory(action, user);
 
     res.status(200).json(updated);
 
   } catch (err) {
+    user = req.user.pseudo;
+    action = "❌ Echec de la mise a jour des conformites a applique aux endpoints";
+    logHistory(action, user);
     res.status(500).json({ message: "Erreur serveur", error: err.message });
   }
 };

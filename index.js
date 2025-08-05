@@ -58,10 +58,10 @@ checkConformites().then(() => {
         console.log("Coherences vérifiées et mises à jour.");
 
         scoreTotalPossibleIncoherence().then(() => {
-            console.log("score total des incoherences mises à jour avec succes.");
+            console.log("Score total des incoherences mises à jour avec succes.");
 
         }).catch((error) => {
-            console.error("erreur lors de la mises à jour du score total des incoherences: ", error);
+            console.error("Erreur lors de la mises à jour du score total des incoherences: ", error);
         })
         
     }).catch((error) => {
