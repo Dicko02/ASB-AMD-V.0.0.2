@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-const LOGS_DIR = path.join(__dirname, '..', 'logs');// Chemin du dossier contenant les fichiers de logs (../logs)
 const allowedLogTypes = ['app', 'history', 'access'];// Liste des types de logs que l'on autorise à consulter ou télécharger
 const logHistory = require('../utility_function/loggers/logHistory');
+const analyserLogsApp = require('../utility_function/appLogs/analyserLogsApp');
 
-let user;
-let action;
+const LOGS_DIR = path.join(__dirname, '..', 'logs');// Chemin du dossier contenant les fichiers de logs (../logs)
 
 // Pour lire le contenu un fichier log precis
 function getLogContent(req, res){
+  const user = req.user?.pseudo || 'Inconnu';
   try{
     const { logType } = req.params;// Récupère le type de log demandé depuis l’URL (ex: 'app', 'history')
 
@@ -27,17 +27,15 @@ function getLogContent(req, res){
     const content = fs.readFileSync(filePath, 'utf8');// Lit le contenu du fichier en texte brut (utf8)
 
     //enregistrement du log dans l'historique des audits utilisateurs
-    user = req.user.pseudo;
-    action = `✅ Consultation des logs de type <${logType}>`;
+    const action = `✅ Consultation des logs de type <${logType}>`;
     logHistory(action, user);
 
     // Envoie une réponse de type texte (text/plain)
     res.setHeader('Content-Type', 'text/plain');
-    res.send(content);
+    res.json(content.split("\n"));
 
   }catch{
-    user = req.user.pseudo;
-    action = `❌ Echec de la consultation des logs de type <${logType}>`;
+    const action = `❌ Echec de la consultation des logs de type <${logType}>`;
     logHistory(action, user);
   }
   
@@ -46,6 +44,7 @@ function getLogContent(req, res){
 
 // Pour telecharger un fichier log precis
 function downloadLogFile(req, res){
+  const user = req.user?.pseudo || 'Inconnu';
   try{
     const { logType } = req.params;// Récupère le type de log demandé depuis l’URL
 
@@ -61,18 +60,36 @@ function downloadLogFile(req, res){
       return res.status(404).json({ error: 'Fichier introuvable.' });
     };
 
-    user = req.user.pseudo;
-    action = `✅ Telechargement d'un rapport sur les logs de type <${logType}>`;
+    const action = `✅ Telechargement d'un rapport sur les logs de type <${logType}>`;
     logHistory(action, user);
 
     res.download(filePath);// lance le telechargement du fichier au client
 
   }catch{
-    user = req.user.pseudo;
-    action = `❌ Echec du telechargement d'un rapport sur les logs de type <${logType}>`;
+    const action = `❌ Echec du telechargement d'un rapport sur les logs de type <${logType}>`;
     logHistory(action, user);
   }
   
 };
 
-module.exports = {getLogContent, downloadLogFile}
+// Route GET : Récupérer tous les machines non conforme depuis un certain temp
+function getAllCritiquesDurables (req, res) {
+  const user = req.user?.pseudo || 'Inconnu';
+    try {
+        const filePath = path.join(LOGS_DIR, 'app.log');// Chemin complet vers le fichier app.log
+        const resultats = analyserLogsApp(filePath);
+
+        const action = "✅ Consultation de la liste des endpoints critiques durable";
+        logHistory(action, user);
+
+        res.status(200).json(resultats);
+
+    } catch (err) {
+        const action = "❌ Echec de la consultation de la liste des endpoints critiques durable";
+        logHistory(action, user);
+        console.error("Erreur lors de la récupération des des endpoints critiques durable :", err);
+        res.status(500).json({error: "Erreur serveur, impossible de récupérer les infos des endpoints critiques durable"});
+    }
+};
+
+module.exports = {getLogContent, downloadLogFile, getAllCritiquesDurables}

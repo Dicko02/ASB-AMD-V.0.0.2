@@ -2,6 +2,7 @@ require('dotenv').config();
 const { Client } = require('ldapts');
 const adData = require('../models/ad.model');
 const parseDate = require('../utility_function/dateFunctions/parseDateValue');
+const logHistory = require('../utility_function/loggers/logHistory');
 
 async function importAdFromLdap() {
   const url = process.env.AD_URL;
@@ -20,6 +21,8 @@ async function importAdFromLdap() {
     timeout: 10000, // 10 secondes
     connectTimeout: 5000,
   });
+
+  let user = "System";
 
   try {
     await client.bind(bindDN, password);
@@ -105,8 +108,15 @@ async function importAdFromLdap() {
       }
     }
 
+    action = `✅ ${updatesCount} ordinateurs AD insérés/mis à jour.`;
+    logHistory(action, user);
+
     console.log(`✅ ${updatesCount} ordinateurs AD insérés/mis à jour.`);
+
   } catch (err) {
+    action = "❌ Echec de l'importation des donnees depuis AD";
+    logHistory(action, user);
+
     console.error('❌ Erreur durant import LDAPTS :', err.message || err);
   } finally {
     await client.unbind().catch(() => {});

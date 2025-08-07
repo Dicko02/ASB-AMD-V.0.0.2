@@ -2,6 +2,7 @@ const fs = require('fs');
 const csv = require('csv-parser');
 const kasperskyData = require('../models/kaspersky.model');
 const path = require('path');
+const logHistory = require('../utility_function/loggers/logHistory');
 
 //Fonction d'importation
 function importKaspersky() {
@@ -11,6 +12,7 @@ function importKaspersky() {
     const kasperskyCSVRessourcePath = path.join('\\\\WIN-K0J5FFPIPLB', 'KSC-Share', 'allKasperskyData.csv');
 
     let stream;
+    let user = "System";
     try {
       stream = fs.createReadStream(kasperskyCSVRessourcePath);
     } catch (err) {
@@ -81,10 +83,16 @@ function importKaspersky() {
             }
           }
 
-          console.log(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès !`);
+          action = `✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kasperky.`;
+          logHistory(action, user);
+
+          console.log(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kasperky.`);
           resolve();
 
         } catch (err) {
+          action = "❌ Echec de l'importation des donnees depuis Kaspersky";
+          logHistory(action, user);
+
           console.error("❌Erreur lors de l'insertion des données de Kaspersky :", err);
           reject(err);
         }

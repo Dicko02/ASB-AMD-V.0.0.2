@@ -3,6 +3,8 @@ const router = express.Router();
 const logsController = require('../controllers/logs.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 
+// affichage des endpoints en danger pendant longtemp
+router.get('/critiquesDurables', authMiddleware, logsController.getAllCritiquesDurables);
 
 // GET: contenu brut en temps réel
 router.get('/:logType', authMiddleware, logsController.getLogContent);

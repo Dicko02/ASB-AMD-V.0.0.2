@@ -1,24 +1,20 @@
 const noADModel = require('../models/noAD.model');
 const logHistory = require('../utility_function/loggers/logHistory');
 
-let user;
-let action;
-
 // Route GET : Récupérer tous les machines noAD
 module.exports.getAllNoAD = async (req, res) => {
+    const user = req.user?.pseudo || 'Inconnu';
     try {
         const noAD = await noADModel.find();
 
         //enregistrement du log dans l'historique des audits utilisateurs
-        user = req.user.pseudo;
-        action = "✅ Consultation de la liste des endpoints noAD";
+        const action = "✅ Consultation de la liste des endpoints noAD";
         logHistory(action, user);
 
         res.status(200).json(noAD);
 
     } catch (err) {
-        user = req.user.pseudo;
-        action = "❌ Echec de la consultation de la liste des endpoints absent de AD mais present dans GLPI et/ou Kasperky";
+        const action = "❌ Echec de la consultation de la liste des endpoints absent de AD mais present dans GLPI et/ou Kasperky";
         logHistory(action, user);
         console.error("Erreur lors de la récupération des infos des noAD :", err);
         res.status(500).json({error: "Erreur serveur, impossible de récupérer les infos des noAD"});
@@ -27,6 +23,7 @@ module.exports.getAllNoAD = async (req, res) => {
 
 // Route GET : Récupérer les infos d'une machine noAD
 module.exports.noADInfo = async (req, res) => {
+    const user = req.user?.pseudo || 'Inconnu';
     try {
         const id = req.params._id
         const noAD = await noADModel.findById(id);
@@ -34,15 +31,13 @@ module.exports.noADInfo = async (req, res) => {
             return res.status(404).json({message: "noAD non enregistre"});
         };
 
-        user = req.user.pseudo;
-        action = "✅ Consultation des informations d'un enpoint noAD";
+        const action = "✅ Consultation des informations d'un enpoint noAD";
         logHistory(action, user);
 
         res.json(noAD);
 
     } catch (error) {
-        user = req.user.pseudo;
-        action = "❌ Echec de la consultation des informations d'un enpoint noAD";
+        const action = "❌ Echec de la consultation des informations d'un enpoint noAD";
         logHistory(action, user);
         res.status(500).json({ message: "Erreur lors de la récupération des infos de la machine noAD", error });
     }
@@ -51,6 +46,7 @@ module.exports.noADInfo = async (req, res) => {
 
 // Route DELETE : supprimer une machine noAD
 module.exports.deleteNoAD = async (req, res) => {
+    const user = req.user?.pseudo || 'Inconnu';
     try {
         const id = req.params._id
         const deleteNoAD = await noADModel.findByIdAndDelete(id);
@@ -58,15 +54,13 @@ module.exports.deleteNoAD = async (req, res) => {
             return res.status(404).json({ message: "l'machine noAD n'existe deja pas" });
         };
 
-        user = req.user.pseudo;
-        action = "✅ Suppression d'une machine noAD";
+        const action = "✅ Suppression d'une machine noAD";
         logHistory(action, user);
 
         res.json({ message: 'machine noAD supprimée', noAD: deleteNoAD });
         
     } catch (error) {
-        user = req.user.pseudo;
-        action = "❌ Echec de la suppression d'une machine noAD";
+        const action = "❌ Echec de la suppression d'une machine noAD";
         logHistory(action, user);
         res.status(500).json({ message: "Erreur lors de la suppression de la machine noAD", error });
     }

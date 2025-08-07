@@ -1,0 +1,1616 @@
+[2025-08-06T10:57:57.839Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-06T10:58:02.897Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-06T10:58:03.435Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-06T10:58:06.023Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-06T10:58:06.988Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T10:58:45.624Z] Action: ✅ Connection a la platforme, Par: Alastor
+[2025-08-06T10:58:46.196Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:58:52.142Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-06T10:59:00.054Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T10:59:03.713Z] Action: ✅ Consultation de la liste des endpoints noAD, Par: Alastor
+[2025-08-06T10:59:06.930Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:12.398Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:12.509Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:12.610Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:12.712Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:12.807Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:12.917Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:13.033Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:13.195Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:13.299Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:13.398Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:13.517Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:13.642Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:13.755Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T10:59:13.879Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T11:02:08.906Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-06T11:02:13.962Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-06T11:02:14.301Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-06T13:49:12.189Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-06T13:49:17.256Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-06T13:49:21.090Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T13:49:22.626Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-06T13:49:25.529Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-06T13:49:26.652Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T13:50:15.487Z] Action: ✅ Connection a la platforme, Par: Alastor
+[2025-08-06T13:50:18.020Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:18.251Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:18.472Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:18.669Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:18.942Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:19.671Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:20.094Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:20.632Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:20.820Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:20.926Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:21.034Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:21.364Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:21.488Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:21.615Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:50:42.506Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T13:50:47.554Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T13:51:43.864Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T13:51:48.544Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T13:55:23.526Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T13:58:28.451Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T13:58:30.910Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-06T13:58:35.957Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-06T13:58:36.523Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-06T13:58:43.017Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-06T13:58:45.153Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T13:58:54.161Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:01:00.544Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:02:21.533Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:02:36.601Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:05:00.542Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:05:12.865Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:05:20.551Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:05:35.917Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:05:44.433Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:05:44.538Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:05:53.296Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:05:56.873Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:06:01.295Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:06:03.357Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:06:10.071Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:06:10.930Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:06:15.665Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:06:21.186Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:06:22.008Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:06:24.612Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:07:20.212Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:07:58.565Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:09:26.277Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:09:49.634Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:09:50.048Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:10:12.570Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:10:23.586Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:10:37.772Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:10:49.466Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:11:02.193Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:11:17.993Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:11:21.938Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:11:45.823Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:11:55.223Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:12:53.556Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:12:57.626Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:13:38.595Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:13:49.735Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:13:59.548Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:14:00.540Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:14:04.530Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:14:39.538Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:14:47.546Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:15:36.532Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:15:39.564Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:15:52.586Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:15:54.591Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:16:01.548Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:16:28.536Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:16:37.576Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:17:34.731Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:18:50.557Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:18:56.608Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:18:59.582Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:19:13.563Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:19:14.559Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:19:18.594Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:19:38.807Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:20:26.758Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:22:36.611Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:22:40.706Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:22:44.605Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:24:09.953Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:24:12.811Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:24:12.817Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:24:12.823Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:25:32.909Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:35:15.972Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-06T14:35:19.865Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:35:19.871Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:35:19.868Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:40:25.467Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:40:25.471Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:40:25.476Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:52:10.471Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:52:10.474Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:52:10.477Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:52:39.461Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:52:39.474Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:52:39.485Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:52:43.457Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:52:43.465Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:52:43.473Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:53:08.456Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:53:08.469Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:53:08.480Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:53:10.464Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:53:10.475Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:53:10.483Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:53:17.462Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:53:17.473Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:53:17.485Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:53:19.452Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:53:19.463Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:53:19.473Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:53:27.469Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:53:27.485Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:53:27.497Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:53:28.453Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:53:28.463Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:53:28.471Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:53:53.464Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:53:53.477Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:53:53.489Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:54:07.470Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:54:07.481Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:54:07.491Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:54:34.463Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:54:34.475Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:54:34.485Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:55:11.456Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:55:11.468Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:55:11.479Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:55:18.462Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:55:18.474Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:55:18.485Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:55:21.452Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:55:21.464Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:55:21.471Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:55:26.470Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:55:26.484Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:55:26.494Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:55:39.466Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:55:39.478Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:55:39.488Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:56:31.457Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:56:31.469Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:56:31.480Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:56:50.470Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:56:50.485Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:56:50.501Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:57:04.460Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:57:04.474Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:57:04.485Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:57:10.457Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:57:10.469Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:57:10.481Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:57:19.456Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:57:19.468Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:57:19.477Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:57:27.460Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:57:27.471Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:57:27.482Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:57:41.466Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:57:41.477Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:57:41.487Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:57:43.461Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:57:43.470Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:57:43.479Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:59:34.459Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:59:34.472Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:59:34.484Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T14:59:36.453Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T14:59:36.462Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T14:59:36.471Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:00:00.456Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:00:00.469Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:00:00.480Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:00:19.458Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:00:19.469Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:00:19.480Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:00:30.470Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:00:30.483Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:00:30.494Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:00:39.300Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:00:39.313Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:00:39.322Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:00:49.464Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:00:49.475Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:00:49.487Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:03:20.478Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:03:20.494Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:03:20.508Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:04:07.883Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:04:07.894Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:04:07.904Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:07:14.467Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:07:14.482Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:07:14.493Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:07:16.459Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:07:16.468Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:07:16.477Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:07:18.462Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:07:18.473Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:07:18.484Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:07:23.872Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:07:23.883Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:07:23.900Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:08:43.464Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:08:43.477Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:08:43.487Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:09:31.470Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:09:31.482Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:09:31.493Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:10:42.464Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:10:42.477Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:10:42.488Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:10:49.463Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:10:49.477Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:10:49.488Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:10:52.464Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:10:52.475Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:10:52.482Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:10:54.449Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:10:54.459Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:10:54.469Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:13:36.471Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:13:36.485Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:13:36.496Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:14:33.847Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:14:33.859Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:14:33.870Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:14:36.759Z] Action: ✅ Telechargement d'un rapport sur les logs de type <access>, Par: Alastor
+[2025-08-06T15:19:58.374Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T15:19:58.753Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-06T15:20:03.825Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-06T15:20:06.617Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-06T15:20:13.208Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:20:13.222Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:20:13.234Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:20:44.553Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-06T15:20:46.234Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T15:24:48.413Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T15:24:50.982Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-06T15:24:56.017Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-06T15:24:56.645Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-06T15:25:02.146Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-06T15:25:03.569Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T15:26:08.212Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:26:08.227Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:26:08.239Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:28:13.483Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:28:13.496Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:28:13.507Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:28:16.467Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:28:16.476Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:28:16.484Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:28:23.471Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:28:23.484Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:28:23.494Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:28:25.468Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:28:25.478Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:28:25.486Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:28:32.489Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:28:32.505Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:28:32.515Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:33:26.773Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:33:26.991Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:33:27.002Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:33:30.763Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:33:30.774Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:33:30.782Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:35:16.843Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:35:16.856Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:35:16.869Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:35:20.728Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:35:20.739Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:35:20.748Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:35:27.749Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:35:27.761Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:35:27.774Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:35:30.778Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:35:30.791Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:35:30.801Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:35:34.721Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:35:34.735Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:35:34.748Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:35:35.828Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:35:35.838Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:35:35.846Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:35:38.787Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:35:38.797Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:35:38.806Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:35:42.740Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:35:42.753Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:35:42.765Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:36:05.276Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:36:05.288Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:36:05.301Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:47:48.601Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:47:48.696Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:47:48.709Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:47:59.106Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:47:59.118Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:47:59.129Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:52:10.553Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-06T15:52:10.916Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T15:52:15.613Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-06T15:52:15.976Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-06T15:52:21.354Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-06T15:52:22.874Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-06T15:52:26.229Z] Action: ✅ Connection a la platforme, Par: Alastor
+[2025-08-06T15:52:28.768Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:28.880Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:29.038Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:29.203Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:29.297Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:29.398Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:29.497Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:29.617Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:29.736Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:29.862Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:30.034Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:30.228Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:30.422Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:30.547Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:52:34.610Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:52:34.622Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:52:34.631Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:52:38.661Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:52:38.670Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:52:38.681Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:52:53.531Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:52:53.753Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:52:53.765Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:53:40.559Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:53:40.760Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:53:40.770Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T15:55:49.856Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:55:55.154Z] Action: ✅ Consultation des details de l'endpoint LP-KAMARA, Par: Alastor
+[2025-08-06T15:56:03.528Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:06.839Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:08.997Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:09.479Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:09.635Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:09.790Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:09.930Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:10.039Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:10.224Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:11.133Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:13.197Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:13.359Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:14.088Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:14.272Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-06T15:56:50.442Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T15:56:50.454Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T15:56:50.463Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:12:07.465Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:12:07.477Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T16:12:07.487Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:12:41.452Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:12:41.463Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T16:12:41.473Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:12:49.464Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:12:49.474Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T16:12:49.483Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:13:01.472Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:13:01.508Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T16:13:01.521Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:13:11.459Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:13:11.470Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T16:13:11.482Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:13:20.463Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:13:20.484Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T16:13:20.497Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:16:07.349Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:16:07.361Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T16:16:07.371Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:17:09.465Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:17:09.478Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T16:17:09.488Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:17:11.656Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:17:11.812Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-06T16:17:11.822Z] Action: ✅ Consultation des logs de type <access>, Par: Alastor
+[2025-08-06T16:34:25.464Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:36:16.836Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:41:50.476Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:41:53.457Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:43:10.141Z] Action: ✅ Telechargement d'un rapport sur les logs de type <history>, Par: Alastor
+[2025-08-06T16:46:13.501Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:48:18.463Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:48:21.456Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:48:47.467Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:51:21.472Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:51:24.460Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:52:48.475Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:52:56.470Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:53:02.455Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:53:05.454Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:53:08.476Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:53:14.460Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:53:17.455Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:55:43.929Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:57:23.830Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T16:58:16.936Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T17:04:45.496Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T17:05:23.499Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T17:05:27.498Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-06T17:05:28.495Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-07T08:54:50.433Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T08:54:53.665Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T08:54:58.734Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T08:54:59.289Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T08:55:08.915Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T08:55:12.380Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T08:56:19.115Z] Action: ✅ Connection a la platforme, Par: dic
+[2025-08-07T08:56:21.790Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:22.598Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:23.784Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:25.528Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:27.783Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:28.174Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:29.965Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:30.314Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:30.492Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:30.738Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:30.891Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:31.114Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:31.510Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:31.900Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:56:40.300Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:57:02.818Z] Action: ✅ Consultation des details de l'endpoint WIN-K0J5FFPIPLB, Par: dic
+[2025-08-07T08:57:15.751Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:57:24.748Z] Action: ✅ Consultation des details de l'endpoint WS-905, Par: dic
+[2025-08-07T08:58:26.038Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T08:58:31.757Z] Action: ✅ Consultation des details de l'endpoint LP-ZARA, Par: dic
+[2025-08-07T09:21:02.263Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T09:21:05.728Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T09:21:10.798Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T09:21:11.238Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T09:21:23.383Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T09:21:31.756Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T09:24:24.509Z] Action: ✅ Connection a la platforme, Par: dic
+[2025-08-07T09:24:26.948Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:27.083Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:27.385Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:27.585Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:27.684Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:27.778Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:27.897Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:28.408Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:28.503Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:28.595Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:28.689Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:28.795Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:28.998Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:24:29.844Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:14.419Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:14.542Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:14.679Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:14.785Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:14.903Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:15.010Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:15.162Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:15.255Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:15.381Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:16.203Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:16.313Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:16.424Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:16.578Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:29:16.758Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:35.217Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:35.390Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:35.531Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:35.671Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:35.871Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:35.994Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:36.101Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:36.195Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:36.302Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:36.477Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:36.586Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:36.744Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:36.855Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:37.087Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:56.218Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:56.350Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:56.485Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:56.639Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:56.934Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:57.219Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:57.526Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:57.635Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:57.776Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:57.924Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:58.180Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:58.361Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:58.508Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:32:58.629Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-07T09:51:47.097Z] Action: ✅ Connection a la platforme, Par: Alastor
+[2025-08-07T09:51:55.593Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:51:56.651Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:51:56.993Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:51:58.032Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:51:59.232Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:51:59.485Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:51:59.927Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:52:00.049Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:52:00.977Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:52:01.171Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:52:01.673Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:52:02.585Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:52:04.982Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:52:09.730Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T09:52:42.629Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Alastor
+[2025-08-07T09:55:30.331Z] Action: ❌ Echec de la creation d'un compte utilisateur, Par: Alastor
+[2025-08-07T10:05:59.578Z] Action: ❌ Echec de la creation d'un compte utilisateur, Par: Alastor
+[2025-08-07T10:06:41.246Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:06:44.379Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:06:49.410Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:06:50.051Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:06:57.089Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:07:01.418Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:08:16.081Z] Action: ❌ Echec de la creation d'un compte utilisateur, Par: Alastor
+[2025-08-07T10:10:36.987Z] Action: ❌ Echec de la creation d'un compte utilisateur, Par: Alastor
+[2025-08-07T10:14:25.227Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:14:34.462Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:14:37.227Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:14:43.816Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:14:44.796Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:15:05.413Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:15:06.525Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:16:01.686Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:16:05.259Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:16:10.292Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:16:10.639Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:16:16.321Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:16:17.550Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:17:13.380Z] Action: ✅ Creation du compte de niveau <Super Admin> portant le pseudo: Vox, Par: Alastor
+[2025-08-07T10:18:14.948Z] Action: ✅ Creation du compte de niveau <Admin> portant le pseudo: Velvette, Par: Alastor
+[2025-08-07T10:18:23.048Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:20:00.680Z] Action: ✅ Mise a jour du compte de l'utilisateur , Par: Alastor
+[2025-08-07T10:20:19.831Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:20:45.051Z] Action: ✅ Suppression du compte de utilisateur dont l'ID est 68947d6670a9b33d2ebff2b3, Par: Alastor
+[2025-08-07T10:20:53.451Z] Action: ✅ Suppression du compte de utilisateur dont l'ID est 68947b9cdba41c430f9d5adb, Par: Alastor
+[2025-08-07T10:20:57.566Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:21:56.047Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:21:58.059Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:22:22.918Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:22:25.174Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:22:34.982Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:22:41.046Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:22:46.427Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:22:57.878Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:23:02.808Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:23:16.653Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:23:22.090Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:23:32.102Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:23:35.085Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:23:39.090Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:23:47.109Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:24:04.121Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:24:06.083Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:24:11.107Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:24:16.106Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:24:42.948Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:25:00.722Z] Action: ✅ Suppression du compte de utilisateur dont l'ID est 68824c8374940b0e0cd77a55, Par: Alastor
+[2025-08-07T10:25:07.745Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:25:32.701Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:26:29.154Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: [object Object]
+[2025-08-07T10:27:15.242Z] Action: ✅ Connection a la platforme, Par: JoJo
+[2025-08-07T10:27:17.740Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:17.832Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:18.054Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:18.171Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:18.461Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:18.681Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:18.898Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:18.992Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:19.243Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:19.365Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:19.504Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:19.659Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:19.815Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:20.074Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:33.943Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:27:40.257Z] Action: ✅ Consultation des details de l'endpoint LP-LUNA, Par: JoJo
+[2025-08-07T10:27:51.185Z] Action: ✅ Consultation de la liste des endpoints noAD, Par: JoJo
+[2025-08-07T10:28:32.487Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T10:36:15.749Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:36:19.620Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:36:24.694Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:36:24.969Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:36:30.843Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:36:38.873Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:36:49.569Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:36:53.224Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:36:55.924Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:36:56.188Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:37:08.758Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:37:08.763Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:37:16.924Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:37:17.954Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:37:24.311Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:37:27.233Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:37:48.376Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:37:52.025Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:37:57.768Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:38:01.271Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:38:06.313Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:38:06.652Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:38:09.808Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:38:10.733Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:40:00.885Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:40:02.605Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:40:07.640Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:40:07.909Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:40:10.641Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:40:13.506Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:40:17.452Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:40:17.456Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:40:17.741Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:40:20.104Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:40:21.240Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:40:37.972Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:40:40.692Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:40:47.707Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:40:47.714Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:41:08.890Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:41:15.469Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:41:18.165Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:41:18.962Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:41:25.123Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:41:41.329Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:41:41.334Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:41:43.961Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:41:48.385Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:41:54.581Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:41:56.288Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:50:29.086Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:50:29.349Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:50:34.126Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:50:34.547Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:50:54.916Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:50:57.155Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:51:46.148Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T10:51:46.876Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T10:51:51.201Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T10:51:51.473Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T10:51:59.865Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T10:52:00.898Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:02:03.218Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:02:15.044Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:02:19.055Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:02:24.091Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:02:24.713Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:02:38.036Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:02:41.021Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:03:13.895Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:03:16.606Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:03:26.241Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:03:29.003Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:03:39.220Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:03:48.119Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:03:58.111Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:04:05.499Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:04:05.503Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:04:10.372Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:04:12.302Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:04:20.053Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:04:55.228Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:05:27.042Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:05:34.441Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:05:37.191Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:05:47.375Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:05:57.772Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:05:57.779Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:06:07.103Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:06:09.813Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:06:15.159Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:06:16.670Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:06:33.232Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:06:33.237Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:06:48.032Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:06:58.502Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:07:01.255Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:07:10.820Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:07:10.825Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:07:13.646Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:07:15.388Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:07:20.395Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:07:21.609Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:07:45.327Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:07:46.874Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:07:49.581Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:07:51.093Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:08:00.323Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:08:07.853Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:08:10.614Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:08:12.063Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:08:15.867Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:08:30.995Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:08:31.236Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:08:33.948Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:08:38.554Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:08:47.527Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:08:49.296Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:09:02.424Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:09:02.430Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:09:09.767Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:09:18.288Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:09:22.108Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:09:27.154Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:09:27.940Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:09:30.866Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:09:34.200Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:09:45.250Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:09:46.982Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:09:46.985Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:09:55.886Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:09:59.126Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:10:02.892Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:10:08.570Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:10:11.482Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:10:11.487Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:10:11.854Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:10:17.022Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:10:23.579Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:10:35.407Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:10:38.068Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:10:45.287Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:10:48.053Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:10:58.249Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:11:03.946Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:12:18.507Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:12:41.127Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:12:42.024Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:12:47.047Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:12:47.433Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:12:51.458Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:12:52.931Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:13:04.367Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:13:08.933Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:13:12.524Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:13:12.528Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:13:12.766Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:13:16.653Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:13:18.022Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:14:05.152Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:14:08.490Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:14:10.197Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:14:10.790Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:14:39.277Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:14:41.975Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:14:59.906Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:14:59.913Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:15:07.395Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:15:07.400Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:15:16.117Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:15:22.746Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:15:28.715Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:15:31.454Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:28:39.406Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:28:39.469Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:28:44.491Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:28:44.775Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:28:52.205Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:28:53.217Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:31:17.121Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:31:20.505Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:31:26.871Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:31:30.740Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:31:35.756Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:31:36.006Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:31:41.290Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:31:42.426Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:31:48.915Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:31:52.414Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:31:52.418Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:31:53.001Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:31:56.839Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:32:12.296Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:32:17.400Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:32:21.161Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:32:23.869Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:32:24.189Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:32:40.708Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:32:42.034Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:32:43.485Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:32:47.297Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:33:02.818Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:33:05.896Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:33:09.637Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:33:12.474Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:33:12.478Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:33:13.338Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:33:19.957Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:33:21.929Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:33:31.331Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:33:31.337Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:33:33.065Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:33:34.105Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:33:46.510Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:33:48.715Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:53:06.076Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:53:08.247Z] Action: ✅ Succes de l'importation des donnees depuis AD, Par: System
+[2025-08-07T11:53:13.293Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:53:13.790Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:53:17.592Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T11:53:19.328Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:55:39.663Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:55:45.219Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:55:45.490Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:55:56.610Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:55:58.514Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:55:58.799Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:56:06.398Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:56:10.042Z] Action: ✅ Succes de l'importation des donnees depuis Kaspersky, Par: System
+[2025-08-07T11:56:10.761Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T11:56:14.860Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:56:23.761Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:56:32.276Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:57:04.486Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:57:20.785Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:57:29.855Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:57:35.655Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:58:17.912Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:58:38.203Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:59:23.432Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T11:59:56.813Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:00:11.619Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:00:28.195Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:00:42.339Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:01:00.843Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:01:15.861Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:01:26.052Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T12:01:30.197Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:01:44.161Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:01:53.833Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:02:16.012Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:02:18.908Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:02:23.423Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T12:02:36.289Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:02:37.456Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:03:13.195Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:03:22.480Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:03:32.671Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T12:03:42.497Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:03:53.873Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:03:55.034Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:04:13.879Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:04:16.937Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:04:22.795Z] Action: ✅ Succes de l'importation des donnees depuis GLPI, Par: System
+[2025-08-07T12:04:32.011Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:04:43.648Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:04:53.843Z] Action: ✅ 0 ordinateurs importés ou mis à jour avec succès., Par: System
+[2025-08-07T12:05:03.872Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:05:08.685Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:05:32.139Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:05:40.299Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:05:53.552Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:06:00.629Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:06:11.817Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:06:13.085Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:06:16.125Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:06:20.473Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:06:21.541Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:07:07.993Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:07:11.188Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:07:16.599Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:07:22.547Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:07:24.527Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:08:03.881Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:08:05.635Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:08:08.700Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:08:25.782Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:08:51.038Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:09:00.300Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:09:13.730Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:09:23.517Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:10:05.160Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:10:09.732Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:10:30.524Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:10:34.261Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:10:35.964Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:10:38.411Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:10:39.647Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:10:43.921Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:10:44.073Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:10:49.036Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:10:52.614Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:10:55.560Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:10:59.715Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:11:02.946Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:11:03.255Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:11:06.213Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:11:11.481Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:11:16.483Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:11:20.209Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:11:23.243Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:11:25.547Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:11:27.037Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:11:34.632Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:11:36.037Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:11:40.962Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:11:44.192Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:11:44.629Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:11:50.516Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:11:53.666Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:11:54.124Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:12:00.914Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:12:07.332Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:12:11.384Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:12:14.468Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T12:12:17.450Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T12:12:20.196Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T12:12:21.773Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T12:12:31.428Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T12:12:31.649Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T14:18:55.175Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:18:56.842Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T14:19:02.669Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T14:19:07.906Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T14:19:09.528Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:19:15.212Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T14:19:15.422Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T14:21:07.766Z] Action: ✅ Connection a la platforme, Par: JoJo
+[2025-08-07T14:21:10.565Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:10.769Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:11.486Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:11.890Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:12.032Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:12.198Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:12.396Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:12.490Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:12.604Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:12.727Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:13.025Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:13.508Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:13.649Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:13.775Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:20.011Z] Action: ✅ Consultation de la liste des endpoints, Par: JoJo
+[2025-08-07T14:21:25.478Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: JoJo
+[2025-08-07T14:39:03.052Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:39:06.766Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T14:39:12.421Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T14:39:18.372Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T14:39:20.352Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:39:27.941Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T14:39:28.803Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T14:39:47.812Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: JoJo
+[2025-08-07T14:42:18.126Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:42:21.651Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T14:42:27.025Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T14:42:29.838Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T14:42:30.816Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:42:33.238Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T14:42:33.533Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T14:43:31.149Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: JoJo
+[2025-08-07T14:46:04.644Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T14:46:24.125Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T14:46:34.409Z] Action: ✅ 0 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T14:46:44.415Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T14:46:54.429Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:46:54.896Z] Action: ❌ Echec de la consultation des details d'un endpoint, Par: JoJo
+[2025-08-07T14:47:04.434Z] Action: ❌ Erreur lors de la vérification des conformités, Par: System
+[2025-08-07T14:47:05.482Z] Action: ❌ Echec de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:47:47.261Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T14:47:58.650Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T14:48:03.586Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:48:25.564Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T14:48:55.018Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T14:48:56.293Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:49:11.936Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T14:49:15.711Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T14:49:32.809Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:49:38.559Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:49:41.296Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T14:49:46.894Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T14:49:54.130Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T14:49:57.080Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T14:50:06.208Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T14:50:06.388Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T14:52:42.055Z] Action: ✅ Connection a la platforme, Par: Vox
+[2025-08-07T15:02:23.120Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:02:27.052Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:02:29.436Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:02:36.305Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:02:40.241Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:02:40.506Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:02:42.982Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:02:44.386Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:02:47.895Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:02:48.103Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:06:13.632Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:06:16.585Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:06:20.543Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:06:27.924Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:06:31.828Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:06:32.965Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:06:36.262Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:06:36.422Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:06:49.546Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Vox
+[2025-08-07T15:07:32.738Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:07:41.142Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:07:44.225Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:07:53.736Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:07:59.402Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:08:47.197Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:08:48.061Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:13:40.558Z] Action: ✅ Connection a la platforme, Par: Alastor
+[2025-08-07T15:13:43.420Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:13:43.917Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:13:44.845Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:13:47.142Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:13:47.529Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:13:47.740Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:13:48.170Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:14:05.011Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:14:06.765Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:14:07.136Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:14:08.167Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:14:08.910Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:14:09.066Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:14:09.485Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:14:23.006Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:14:40.726Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:14:40.743Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:15:44.012Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:15:44.313Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:15:44.322Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:15:48.992Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:15:50.289Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:15:50.304Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:15:50.992Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:15:51.252Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:15:51.262Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:15:58.007Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:15:58.175Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:15:58.186Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:15:59.991Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:00.089Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:16:00.099Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:03.005Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:03.126Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:16:03.139Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:05.991Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:06.098Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:16:06.107Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:16.744Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:16:16.757Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:47.015Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:47.214Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:16:47.224Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:54.009Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:54.606Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:16:54.616Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:57.987Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:16:58.105Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:16:58.114Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:01.005Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:01.096Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:17:01.104Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:43.996Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:44.078Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:17:44.088Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:47.005Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:47.869Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:17:47.881Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:51.005Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:51.637Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:17:51.648Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:52.000Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:53.299Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:17:53.309Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:56.999Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:17:59.091Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:17:59.102Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:18:01.991Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:18:03.999Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:18:06.997Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:18:07.761Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:18:07.769Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:18:08.998Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:18:10.905Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:18:10.921Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:18:12.643Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:18:12.653Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:18:14.887Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:18:18.915Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:18:18.927Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:19:07.886Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:19:11.367Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:19:18.234Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:19:22.015Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:19:25.066Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:19:25.129Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:19:25.157Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:19:30.983Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:19:31.799Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:19:34.602Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:19:34.712Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:19:59.430Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:20:03.494Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:20:06.457Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:20:09.487Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:20:10.416Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:20:13.022Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:20:13.171Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:21:33.707Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:21:35.920Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:21:41.377Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:21:47.084Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:21:47.897Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:21:50.536Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:21:50.670Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:21:53.147Z] Action: ✅ Consultation des logs de type <history>, Par: Alastor
+[2025-08-07T15:22:08.763Z] Action: ✅ Consultation des logs de type <app>, Par: Alastor
+[2025-08-07T15:23:09.638Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:23:23.406Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:23:30.213Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:23:30.439Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:23:35.634Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:23:37.668Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T15:23:42.187Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:23:44.187Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:23:44.699Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:23:44.722Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:23:48.916Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:23:49.471Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:24:21.060Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:24:21.080Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:25:00.329Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:25:00.385Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:25:05.751Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:25:07.167Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:25:07.191Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:25:26.188Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:25:29.418Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:25:30.252Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:25:33.790Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:25:33.820Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:25:53.599Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:26:03.729Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:26:11.939Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:26:11.963Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:26:46.433Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:26:48.351Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:26:59.900Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:27:12.836Z] Action: ✅ 0 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:27:16.736Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:27:17.485Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:27:17.508Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:27:30.141Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:27:36.012Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:27:47.005Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:27:50.360Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:27:53.972Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:27:53.991Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:28:05.957Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:28:18.947Z] Action: ✅ 0 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:28:28.965Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:28:35.568Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:28:39.166Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:28:39.195Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:28:39.933Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:28:42.602Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:28:42.721Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:32:12.532Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:32:27.822Z] Action: ✅ 0 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:32:36.333Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:33:34.091Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:34:32.310Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:34:33.514Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:34:36.723Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:34:52.487Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:34:52.504Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:35:10.327Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:35:44.809Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:35:47.823Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:35:51.449Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:35:51.477Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:35:53.684Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:36:00.846Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:36:03.042Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:36:07.791Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:36:08.214Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:36:21.157Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:36:26.194Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:36:32.225Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:36:34.658Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:36:44.074Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:36:53.126Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:36:53.556Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:36:53.581Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:36:57.455Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:37:09.554Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:37:14.635Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:37:30.778Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:37:31.259Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:40:00.998Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:40:03.670Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:40:08.145Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:40:08.172Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:40:08.967Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:40:16.583Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:40:45.296Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:40:48.448Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:40:49.066Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:40:49.090Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:40:51.467Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:40:58.864Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:41:00.930Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:41:07.721Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:41:09.991Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:52:18.216Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:52:20.602Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:52:26.082Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:52:43.380Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:52:45.269Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T15:52:45.624Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T15:52:51.774Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T15:52:53.756Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T15:52:58.999Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T15:52:59.679Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T15:54:55.935Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:54:55.960Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T15:55:19.880Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T15:55:19.904Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:00:47.666Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:00:51.534Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:00:59.818Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:01:03.169Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:01:03.190Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:01:07.416Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:01:08.237Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:01:10.215Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:01:10.333Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:03:50.290Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:03:54.168Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:03:55.791Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:04:00.955Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:04:03.106Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:04:19.739Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:04:21.153Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:07:30.177Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:07:30.197Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:08:16.770Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:08:24.550Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:08:27.796Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:08:33.278Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:08:46.266Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:08:54.575Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:08:58.295Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:08:58.480Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:12:51.671Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:12:55.182Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:13:01.073Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:13:06.704Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:13:08.272Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:13:12.304Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:13:12.482Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:14:36.009Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:14:36.029Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:19:16.655Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:19:19.087Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:19:24.443Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:19:35.054Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:19:38.062Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:19:46.246Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:19:46.944Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:20:39.028Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:20:39.046Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:22:43.093Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:22:44.196Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:22:50.779Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:23:07.044Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:23:11.473Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:23:14.338Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:23:14.357Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:23:23.432Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:23:23.826Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:24:41.371Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:24:42.158Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:24:47.685Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:24:47.692Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:24:47.710Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:24:54.167Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:24:55.380Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:25:00.737Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:25:03.438Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:25:14.402Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:25:21.521Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:25:23.261Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:25:26.506Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:25:26.702Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:28:17.983Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:28:22.703Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:28:29.536Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:29:11.802Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:29:20.886Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:29:41.130Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:29:41.544Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:30:22.204Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:30:30.010Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:30:40.903Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:30:47.346Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:30:47.366Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:31:29.440Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:31:32.466Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:31:36.510Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:31:39.431Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:31:52.271Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:31:53.134Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:31:54.322Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:32:03.231Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:32:04.981Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:32:10.979Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:32:11.004Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:32:13.329Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:32:13.540Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:32:57.560Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:32:57.724Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:33:03.937Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:33:06.729Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:33:09.843Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:33:12.305Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:33:12.323Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:33:15.217Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:33:17.156Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:33:23.130Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:33:23.242Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:33:39.592Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:33:39.615Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:35:05.316Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:35:05.652Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:35:07.202Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:35:07.221Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:35:10.961Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:35:15.105Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:35:16.388Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:35:19.006Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:35:19.266Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:35:36.189Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:35:40.139Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:35:43.222Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:35:46.367Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:35:47.541Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:35:48.899Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:35:48.914Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:35:49.691Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:35:49.840Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:36:08.792Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:36:08.804Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:37:24.969Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:37:28.934Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:37:35.340Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:37:45.154Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:37:50.405Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:37:57.481Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:38:06.163Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:38:15.552Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:38:16.918Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:38:22.248Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:38:25.280Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:38:26.348Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:38:28.907Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:38:29.394Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:38:39.472Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Alastor
+[2025-08-07T16:38:39.490Z] Action: ❌ Echec de la consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:38:56.570Z] Action: ✅ Connection a la platforme, Par: Alastor
+[2025-08-07T16:38:58.917Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.002Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.125Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.219Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.325Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.408Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.514Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.601Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.701Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.804Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:38:59.904Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:39:00.012Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:39:00.133Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:39:00.230Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:39:01.523Z] Action: ✅ Consultation de la liste des endpoints, Par: Alastor
+[2025-08-07T16:39:06.309Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:39:06.322Z] Action: ❌ Echec de la consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:39:41.157Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:39:44.769Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:39:47.935Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:39:53.307Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:39:56.465Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:39:57.482Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:39:59.994Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:40:00.147Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:40:10.689Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:40:10.706Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:40:35.912Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:40:39.658Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:40:42.624Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:40:45.870Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:40:46.774Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:40:48.834Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:40:48.940Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:41:15.899Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:41:15.936Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:42:03.552Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:42:07.075Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:42:10.296Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:42:13.886Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:42:16.943Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:42:22.154Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:42:23.612Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:42:26.508Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:42:27.092Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:43:17.135Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:43:17.160Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:47:45.081Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:47:48.877Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:47:50.432Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:47:55.496Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:47:57.228Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:48:00.824Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:48:00.957Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:48:10.763Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:48:10.804Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:49:06.790Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:49:09.685Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:49:13.482Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:49:18.909Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:49:22.741Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T16:49:28.118Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T16:49:31.307Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T16:49:32.328Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T16:49:34.819Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T16:49:35.006Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-07T16:49:40.020Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:49:40.170Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:49:40.181Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:49:42.002Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:49:42.093Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:49:42.103Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:49:55.996Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:49:56.105Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:49:56.115Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:50:31.006Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:50:31.095Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:50:31.105Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:50:35.998Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:50:36.171Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:50:36.206Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:50:36.997Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:50:37.091Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:50:37.104Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:50:40.996Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:50:41.099Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:50:41.111Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:50:49.312Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:50:49.326Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:47.019Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:47.144Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:51:47.155Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:51.994Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:52.085Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:51:52.107Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:53.998Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:54.122Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:51:54.132Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:54.995Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:55.095Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:51:55.107Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:57.996Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:51:58.102Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:51:58.114Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:52:06.849Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:52:06.862Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:52:22.009Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:52:22.097Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:52:22.107Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:52:31.458Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:52:31.473Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:54:07.998Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:54:08.272Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:54:08.282Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:54:14.006Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:54:14.102Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:54:14.114Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:02.995Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:03.094Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:55:03.104Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:04.994Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:05.096Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:55:05.107Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:27.005Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:27.108Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:55:27.120Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:30.993Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:31.265Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:55:31.274Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:38.007Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:38.119Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:55:38.128Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:42.000Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:42.213Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:55:42.223Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:59.006Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:55:59.137Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:55:59.147Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:00.999Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:01.146Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:56:01.159Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:01.993Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:02.132Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:56:02.141Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:03.001Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:03.090Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:56:03.099Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:06.001Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:06.199Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:56:06.209Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:10.994Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:11.116Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:56:11.129Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:13.992Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:14.238Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:56:14.247Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:15.998Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:16.108Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:56:16.117Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:26.998Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:27.193Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:56:27.202Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:56:33.276Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:56:33.291Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:57:40.998Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:57:41.110Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:57:41.121Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:58:27.002Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:58:27.101Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:58:27.111Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:58:31.006Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:58:31.160Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:58:31.170Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:58:32.001Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:58:32.192Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:58:32.206Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:58:34.991Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:58:35.103Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:58:35.112Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:58:50.105Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:59:14.092Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:59:28.126Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:59:32.177Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:59:37.105Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:59:37.117Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:59:43.009Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:59:43.014Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:59:54.681Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T16:59:54.698Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T16:59:54.705Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T17:02:52.087Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T17:03:08.195Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T17:03:08.221Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T17:03:12.001Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T17:03:12.133Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T17:03:12.149Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T17:03:25.152Z] Action: ✅ Consultation des details de l'endpoint LP-DIOP, Par: Alastor
+[2025-08-07T17:03:25.172Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Alastor
+[2025-08-07T17:04:12.064Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T17:04:15.514Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-07T17:04:20.846Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-07T17:04:25.762Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-07T17:04:26.672Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-07T17:04:29.975Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-07T17:04:30.283Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System

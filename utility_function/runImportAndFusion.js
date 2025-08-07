@@ -7,43 +7,18 @@ const logHistory = require('../utility_function/loggers/logHistory');
 
 // Fonction principale pour exécuter l'importation et la fusion
 async function runImportAndFusion() {
-  await importAd().then(() => {
-    user = "System";
-    action = "✅ Succes de l'importation des donnees depuis AD";
-    logHistory(action, user);
-  }).catch(() => {
-    user = "System";
-    action = "Echec de l'importation des donnees depuis AD";
-    logHistory(action, user);
-  });
-
-  await importKaspersky().then(() => {
-    user = "System";
-    action = "✅ Succes de l'importation des donnees depuis Kaspersky";
-    logHistory(action, user);
-  }).catch(() => {
-    user = "System";
-    action = "Echec de l'importation des donnees depuis Kaspersky";
-    logHistory(action, user);
-  });
-
-  await importGlpi().then(() => {
-    user = "System";
-    action = "✅ Succes de l'importation des donnees depuis GLPI";
-    logHistory(action, user);
-  }).catch(() => {
-    user = "System";
-    action = "Echec de l'importation des donnees depuis GLPI";
-    logHistory(action, user);
-  });
+  await importAd();
+  await importKaspersky();
+  await importGlpi();
 
   await fusion().then(() => {
     user = "System";
     action = "✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD";
     logHistory(action, user);
+
   }).catch(() => {
     user = "System";
-    action = "Echec de la fusion des tous donnees dont l'endpoint existe dans AD";
+    action = "❌ Echec de la fusion des tous donnees dont l'endpoint existe dans AD";
     logHistory(action, user);
   });
 
@@ -51,9 +26,10 @@ async function runImportAndFusion() {
     user = "System";
     action = "✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD";
     logHistory(action, user);
+
   }).catch(() => {
     user = "System";
-    action = "Echec de la fusion des tous donnees dont l'endpoint est absent d'AD";
+    action = "❌ Echec de la fusion des tous donnees dont l'endpoint est absent d'AD";
     logHistory(action, user);
   });
 

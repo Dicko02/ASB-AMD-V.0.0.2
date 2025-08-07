@@ -7,6 +7,7 @@ const cors = require("cors");
 const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
+const logHistory = require('./utility_function/loggers/logHistory');
 
 require('./utility_function/cronJob'); // C’est suffisant pour démarrer la tâche planifiée
 
@@ -14,7 +15,7 @@ const fusionRoute = require("./routes/fusion.route");
 const adminRoute = require("./routes/admin.route");
 const noADRoute = require("./routes/noAD.route");
 const conformitySettingRoute = require("./routes/conformitySetting.route");
-const logsRoutes = require('./routes/logs.route');
+const logsRoute = require('./routes/logs.route');
 
 // Import de la fonction de vérification des conformités
 const checkConformites = require("./utility_function/conformites/checkConformites");
@@ -42,33 +43,40 @@ app.use('/api/fusion', fusionRoute);
 app.use('/api/admin', adminRoute);
 app.use('/api/noAD', noADRoute);
 app.use('/api/conformitySetting', conformitySettingRoute);
-app.use('/api/logs', logsRoutes);
+app.use('/api/logs', logsRoute);
 
 //démarrage du serveur
 app.listen(port || 10000, () => {
     console.log(`Listening on port ${port}`);
 });
 
-
+let user = "System";
 // Lancement de la vérification des conformités
 checkConformites().then(() => {
+    action = "✅ Conformités vérifiées et mises à jour.";
+    logHistory(action, user);
     console.log("Conformités vérifiées et mises à jour.");
 
     checkCoherences().then(() => {
+        action = "✅ Coherences vérifiées et mises à jour.";
+        logHistory(action, user);
         console.log("Coherences vérifiées et mises à jour.");
 
         scoreTotalPossibleIncoherence().then(() => {
             console.log("Score total des incoherences mises à jour avec succes.");
-
         }).catch((error) => {
             console.error("Erreur lors de la mises à jour du score total des incoherences: ", error);
         })
         
     }).catch((error) => {
+        action = "❌ Erreur lors de la vérification des coherences";
+        logHistory(action, user);
         console.error("Erreur lors de la vérification des coherences: ", error);
     })
 
 }).catch((error) => {
+    action = "❌ Erreur lors de la vérification des conformités";
+    logHistory(action, user);
     console.error("Erreur lors de la vérification des conformités: ", error);
 });
 

@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 const glpiData = require('../models/glpi.model');
 require('dotenv').config();
+const logHistory = require('../utility_function/loggers/logHistory');
 
 // Configuration
 const GLPI_URL = process.env.GLPI_URL
@@ -53,6 +54,7 @@ async function closeGlpiSession(sessionToken) {
 }
 
 async function importGlpiFromApi() {
+  let user = "System";
   try {
     const sessionToken = await initGlpiSession();
     if (!sessionToken) {
@@ -116,8 +118,15 @@ async function importGlpiFromApi() {
     }
 
     await closeGlpiSession(sessionToken);
-    console.log(`✅ ${updatesCount} ordinateurs importés ou mis à jour avec succès.`);
+
+    action = `✅ ${updatesCount} ordinateurs importés ou mis à jour avec succès depuis GLPI.`;
+    logHistory(action, user);
+
+    console.log(`✅ ${updatesCount} ordinateurs importés ou mis à jour avec succèsdepuis GLPI.`);
   } catch (err) {
+    action = "❌ Echec de l'importation des donnees depuis GLPI";
+    logHistory(action, user);
+
     console.log('❌ Erreur pendant l’import des données GLPI :', err);
   }
 }
