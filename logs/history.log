@@ -2182,3 +2182,84 @@
 [2025-08-08T13:18:41.978Z] Action: ✅ Consultation de la liste des endpoints noAD, Par: Vox
 [2025-08-08T13:20:01.860Z] Action: ✅ Consultation de la liste des endpoints noAD, Par: Vox
 [2025-08-08T13:20:15.918Z] Action: ✅ Consultation de la liste des endpoints noAD, Par: Vox
+[2025-08-11T12:09:57.236Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-11T12:10:00.022Z] Action: ❌ Echec de l'importation des donnees depuis GLPI, Par: System
+[2025-08-11T12:10:03.812Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:11:06.125Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-11T12:11:07.777Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:12:27.908Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:13:09.341Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-11T12:13:12.074Z] Action: ❌ Echec de l'importation des donnees depuis GLPI, Par: System
+[2025-08-11T12:13:22.148Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-11T12:13:32.154Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:13:35.349Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:19:37.096Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-11T12:19:38.105Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:19:39.845Z] Action: ❌ Echec de l'importation des donnees depuis GLPI, Par: System
+[2025-08-11T12:19:49.595Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-11T12:19:52.618Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:20:37.044Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-11T12:20:55.414Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-11T12:20:55.452Z] Action: ❌ Echec de l'importation des donnees depuis GLPI, Par: System
+[2025-08-11T12:21:05.476Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-11T12:21:05.749Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:21:11.391Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:23:07.087Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-11T12:23:09.850Z] Action: ❌ Echec de l'importation des donnees depuis GLPI, Par: System
+[2025-08-11T12:23:11.021Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:58:15.736Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:58:18.062Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-11T12:58:20.828Z] Action: ❌ Echec de l'importation des donnees depuis GLPI, Par: System
+[2025-08-11T12:58:26.328Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-11T12:58:29.597Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:58:35.838Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-11T12:58:36.483Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-11T12:58:54.294Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:58:56.425Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-11T12:58:59.153Z] Action: ❌ Echec de l'importation des donnees depuis GLPI, Par: System
+[2025-08-11T12:59:05.282Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-11T12:59:07.729Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-11T12:59:14.126Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-11T12:59:15.041Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-11T13:02:04.202Z] Action: ✅ Connection a la platforme, Par: Vox
+[2025-08-11T13:02:07.239Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:07.466Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:07.718Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:08.381Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:08.814Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:09.268Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:09.549Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:09.787Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:10.246Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:10.906Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:11.460Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:11.698Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:11.935Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:12.117Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:18.003Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:27.903Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:28.181Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:28.362Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:28.774Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:29.317Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:29.622Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:29.900Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:30.317Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:30.566Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:30.845Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:31.063Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:31.316Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:31.510Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:31.788Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:40.749Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:02:46.191Z] Action: ✅ Consultation des details de l'endpoint WS-905, Par: Vox
+[2025-08-11T13:02:46.303Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Vox
+[2025-08-11T13:03:00.234Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:03:08.577Z] Action: ✅ Consultation des details de l'endpoint LP-NDIAYE, Par: Vox
+[2025-08-11T13:03:08.659Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Vox
+[2025-08-11T13:03:24.821Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:03:40.867Z] Action: ✅ Consultation des details de l'endpoint TAB-Alastor, Par: Vox
+[2025-08-11T13:03:40.912Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Vox
+[2025-08-11T13:03:52.036Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-11T13:03:58.993Z] Action: ✅ Consultation des details de l'endpoint WIN-K0J5FFPIPLB, Par: Vox
+[2025-08-11T13:03:59.036Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Vox

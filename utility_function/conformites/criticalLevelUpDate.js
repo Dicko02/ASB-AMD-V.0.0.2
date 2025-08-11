@@ -1,5 +1,6 @@
 const Fusion = require('../../models/fusion.model');
 const logApp = require('../loggers/logApp');
+const typeMachine = require('../typeMachine')
 
 async function criticalLevelUpDate() {
 
@@ -34,6 +35,10 @@ async function criticalLevelUpDate() {
 
             }
 
+            //Type de la machine(endpoint)
+            typeMachine(fusionData);
+
+            //historique de l'etat des endpoints
             logApp.info(`l'endpoint ${fusionData.CN} a un niveau de dangerosite <${fusionData.criticalLevel}>`);
 
         }
