@@ -2263,3 +2263,129 @@
 [2025-08-11T13:03:52.036Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
 [2025-08-11T13:03:58.993Z] Action: ✅ Consultation des details de l'endpoint WIN-K0J5FFPIPLB, Par: Vox
 [2025-08-11T13:03:59.036Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Vox
+[2025-08-12T15:21:39.512Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-12T15:21:42.842Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-12T15:21:46.134Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-12T15:21:49.868Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-12T15:21:51.637Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-12T15:21:57.558Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-12T15:21:57.869Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-12T15:22:52.964Z] Action: ✅ Connection a la platforme, Par: Vox
+[2025-08-12T15:22:55.770Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:55.925Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:56.035Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:56.144Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:56.308Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:56.719Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:56.869Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:57.032Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:57.207Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:57.332Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:57.503Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:57.622Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:57.772Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:22:57.922Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:23:35.653Z] Action: ✅ Consultation de la liste des endpoints noAD, Par: Vox
+[2025-08-12T15:24:45.334Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:45.462Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:45.711Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:45.918Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:46.113Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:46.233Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:46.633Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:46.781Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:47.105Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:47.230Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:47.653Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:47.822Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:48.008Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:48.196Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:24:57.243Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:25:02.878Z] Action: ✅ Consultation des details de l'endpoint LP-GAYE, Par: Vox
+[2025-08-12T15:25:02.944Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Vox
+[2025-08-12T15:29:26.618Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Vox
+[2025-08-12T15:29:34.940Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Vox
+[2025-08-12T15:29:41.626Z] Action: ✅ Consultation de tous les comptes utilisateurs, Par: Vox
+[2025-08-12T15:29:53.356Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:53.474Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:53.561Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:53.661Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:53.754Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:53.847Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:53.987Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:54.072Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:54.174Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:54.263Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:54.352Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:54.457Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:54.565Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:29:54.681Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:49.767Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:49.877Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:49.972Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:50.065Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:50.173Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:50.281Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:50.375Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:50.545Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:50.706Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:30:50.808Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:01.746Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:01.869Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:01.967Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:02.074Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:02.180Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:02.274Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:02.424Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:02.522Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:02.617Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:02.740Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:11.600Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:11.808Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:11.979Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:12.214Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:12.448Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:12.643Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:12.840Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:13.019Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:13.161Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:13.272Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:13.396Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:13.491Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:13.584Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:13.687Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:13.800Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:13.914Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:14.026Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:14.124Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:14.217Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:31:14.313Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:35:17.357Z] Action: ✅ Consultation des logs de type <history>, Par: Vox
+[2025-08-12T15:35:56.825Z] Action: ✅ Consultation des logs de type <history>, Par: Vox
+[2025-08-12T15:36:22.217Z] Action: ✅ Consultation des logs de type <access>, Par: Vox
+[2025-08-12T15:36:33.680Z] Action: ✅ Consultation des logs de type <app>, Par: Vox
+[2025-08-12T15:36:44.720Z] Action: ✅ Telechargement d'un rapport sur les logs de type <app>, Par: Vox
+[2025-08-12T15:37:10.159Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:47:25.836Z] Action: ✅ Consultation des details de l'endpoint LP-ZARA, Par: Vox
+[2025-08-12T15:47:25.866Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Vox
+[2025-08-12T15:47:38.877Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:47:47.035Z] Action: ✅ Consultation des details de l'endpoint LP-LUNA, Par: Vox
+[2025-08-12T15:47:47.064Z] Action: ✅ Consultation de la liste des endpoints critiques durable, Par: Vox
+[2025-08-12T15:48:03.716Z] Action: ✅ Consultation de la liste des endpoints, Par: Vox
+[2025-08-12T15:48:41.863Z] Action: ✅ Connection a la platforme, Par: dic
+[2025-08-12T15:48:44.444Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:44.588Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:44.727Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:44.880Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:45.058Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:45.539Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:45.879Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:45.972Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:46.190Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:46.460Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:46.951Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:47.119Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:47.608Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T15:48:47.758Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T16:02:48.847Z] Action: ✅ Consultation de la liste des endpoints, Par: dic
+[2025-08-12T16:02:59.290Z] Action: ✅ Consultation des logs de type <history>, Par: dic
