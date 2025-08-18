@@ -7,30 +7,24 @@ const logHistory = require('../utility_function/loggers/logHistory');
 
 // Fonction principale pour exécuter l'importation et la fusion
 async function runImportAndFusion() {
+  user = "System";
+
   await importAd();
   await importKaspersky();
   await importGlpi();
 
   await fusion().then(() => {
-    user = "System";
-    action = "✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD";
-    logHistory(action, user);
+    logHistory("✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD", user);
 
   }).catch(() => {
-    user = "System";
-    action = "❌ Echec de la fusion des tous donnees dont l'endpoint existe dans AD";
-    logHistory(action, user);
+    logHistory("❌ Echec de la fusion des tous donnees dont l'endpoint existe dans AD", user);
   });
 
   await noAD().then(() => {
-    user = "System";
-    action = "✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD";
-    logHistory(action, user);
+    logHistory("✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD", user);
 
   }).catch(() => {
-    user = "System";
-    action = "❌ Echec de la fusion des tous donnees dont l'endpoint est absent d'AD";
-    logHistory(action, user);
+    logHistory("❌ Echec de la fusion des tous donnees dont l'endpoint est absent d'AD", user);
   });
 
   console.log("✅ Processus complet terminé.");

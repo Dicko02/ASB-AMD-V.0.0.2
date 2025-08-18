@@ -5,13 +5,17 @@ const logHistory = require('../utility_function/loggers/logHistory');
 // GET paramètres des conformites
 module.exports.getConformitySetting = async (req, res) => {
   const user = req.user?.pseudo || 'Inconnu';
-  const conformitySetting = await conformitySettingModel.findOne({ adminId: req.admin.id });
+  try{
+    const conformitySetting = await conformitySettingModel.findOne({ adminId: req.admin.id });
 
-  //enregistrement du log dans l'historique des audits utilisateurs
-  const action = "✅ Consultation de la liste des conformites";
-  logHistory(action, user);
+    //enregistrement du log dans l'historique des audits utilisateurs
+    logHistory("✅ Consultation de la liste des conformites", user);
 
-  res.json(conformitySetting);
+    res.status(200).json(conformitySetting);
+  }catch(err){
+    logHistory("❌ Echec de la consultation de la liste des conformites", user);
+    res.status(500).json({ message: "Erreur serveur", error: err.message });
+  }
 };
 
 // PUT paramètres des conformites
@@ -43,14 +47,12 @@ module.exports.updateConformitySetting = async (req, res) => {
       console.error("Erreur lors de la re-vérification des conformités:", error);
     });
 
-    const action = "✅ Mise a jour des conformites a applique aux endpoints";
-    logHistory(action, user);
+    logHistory("✅ Mise a jour des conformites a applique aux endpoints", user);
 
     res.status(200).json(updated);
 
   } catch (err) {
-    const action = "❌ Echec de la mise a jour des conformites a applique aux endpoints";
-    logHistory(action, user);
+    logHistory("❌ Echec de la mise a jour des conformites a applique aux endpoints", user);
     res.status(500).json({ message: "Erreur serveur", error: err.message });
   }
 };

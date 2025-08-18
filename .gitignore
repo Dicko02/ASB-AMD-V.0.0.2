@@ -1,2 +1,5 @@
 /node_modules
 /config/.env
+/logs/access.log
+/logs/app.log
+/logs/history.log

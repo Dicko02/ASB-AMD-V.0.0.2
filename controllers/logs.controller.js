@@ -6,11 +6,12 @@ const analyserLogsApp = require('../utility_function/appLogs/analyserLogsApp');
 
 const LOGS_DIR = path.join(__dirname, '..', 'logs');// Chemin du dossier contenant les fichiers de logs (../logs)
 
-// Pour lire le contenu un fichier log precis
+// Pour lire le contenu d'un fichier log precis
 function getLogContent(req, res){
   const user = req.user?.pseudo || 'Inconnu';
+  const { logType } = req.params;// Récupère le type de log demandé depuis l’URL (ex: 'app', 'history')
+  
   try{
-    const { logType } = req.params;// Récupère le type de log demandé depuis l’URL (ex: 'app', 'history')
 
     // Si le type n'est pas dans la liste des types autorisés → erreur 400
     if (!allowedLogTypes.includes(logType)) {
@@ -27,16 +28,16 @@ function getLogContent(req, res){
     const content = fs.readFileSync(filePath, 'utf8');// Lit le contenu du fichier en texte brut (utf8)
 
     //enregistrement du log dans l'historique des audits utilisateurs
-    const action = `✅ Consultation des logs de type <${logType}>`;
-    logHistory(action, user);
+    logHistory(`✅ Consultation des logs de type <${logType}>`, user);
 
     // Envoie une réponse de type texte (text/plain)
     res.setHeader('Content-Type', 'text/plain');
-    res.json(content.split("\n"));
+    res.status(200).json(content.split("\n"));
 
-  }catch{
-    const action = `❌ Echec de la consultation des logs de type <${logType}>`;
-    logHistory(action, user);
+  }catch(err){
+    logHistory(`❌ Echec de la consultation des logs de type <${logType}>`, user);
+    console.error(`Erreur lors de la consultation des logs de type <${logType}> :`, err);
+    res.status(500).json({error: `Erreur serveur, impossible de consulter les logs de type <${logType}>`});
   }
   
 };
@@ -45,9 +46,9 @@ function getLogContent(req, res){
 // Pour telecharger un fichier log precis
 function downloadLogFile(req, res){
   const user = req.user?.pseudo || 'Inconnu';
-  try{
-    const { logType } = req.params;// Récupère le type de log demandé depuis l’URL
+  const { logType } = req.params;// Récupère le type de log demandé depuis l’URL
 
+  try{
     // Si le type n'est pas autorisé(erreur 400)
     if (!allowedLogTypes.includes(logType)) {
       return res.status(400).json({ error: 'Type de log non autorisé.' });
@@ -60,14 +61,14 @@ function downloadLogFile(req, res){
       return res.status(404).json({ error: 'Fichier introuvable.' });
     };
 
-    const action = `✅ Telechargement d'un rapport sur les logs de type <${logType}>`;
-    logHistory(action, user);
+    logHistory(`✅ Telechargement d'un rapport sur les logs de type <${logType}>`, user);
 
     res.download(filePath);// lance le telechargement du fichier au client
 
   }catch{
-    const action = `❌ Echec du telechargement d'un rapport sur les logs de type <${logType}>`;
-    logHistory(action, user);
+    logHistory(`❌ Echec du telechargement d'un rapport sur les logs de type <${logType}>`, user);
+    console.error(`Erreur lors du telechargement d'un rapport sur les logs de type <${logType}> :`, err);
+    res.status(500).json({error: `Erreur serveur, impossible de telecharger le rapport sur les logs de type <${logType}>`});
   }
   
 };
@@ -79,14 +80,12 @@ function getAllCritiquesDurables (req, res) {
         const filePath = path.join(LOGS_DIR, 'app.log');// Chemin complet vers le fichier app.log
         const resultats = analyserLogsApp(filePath);
 
-        const action = "✅ Consultation de la liste des endpoints critiques durable";
-        logHistory(action, user);
+        logHistory("✅ Consultation de la liste des endpoints critiques durable", user);
 
         res.status(200).json(resultats);
 
     } catch (err) {
-        const action = "❌ Echec de la consultation de la liste des endpoints critiques durable";
-        logHistory(action, user);
+        logHistory("❌ Echec de la consultation de la liste des endpoints critiques durable", user);
         console.error("Erreur lors de la récupération des des endpoints critiques durable :", err);
         res.status(500).json({error: "Erreur serveur, impossible de récupérer les infos des endpoints critiques durable"});
     }

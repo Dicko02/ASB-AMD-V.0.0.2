@@ -2441,3 +2441,616 @@
 [2025-08-14T15:03:58.317Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
 [2025-08-14T15:04:52.985Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
 [2025-08-14T15:04:53.467Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T09:49:59.745Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T09:50:03.646Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T09:50:06.747Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T09:50:11.100Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T09:50:11.951Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T09:50:15.050Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T09:50:15.167Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T09:51:12.109Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T09:51:15.060Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T09:51:18.011Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T09:51:20.506Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T09:51:21.373Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T09:51:24.480Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T09:51:26.467Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T09:51:28.557Z] Action: ✅ Mail de prise en charge de LP-GAYE envoye avec succes, Par: System
+[2025-08-18T09:51:30.581Z] Action: ✅ Mail de prise en charge de LP-NDIAYE envoye avec succes, Par: System
+[2025-08-18T09:51:32.558Z] Action: ✅ Mail de prise en charge de LP-KIMORA envoye avec succes, Par: System
+[2025-08-18T09:51:34.704Z] Action: ✅ Mail de prise en charge de LP-LUNA envoye avec succes, Par: System
+[2025-08-18T09:51:36.749Z] Action: ✅ Mail de prise en charge de LP-KARIM envoye avec succes, Par: System
+[2025-08-18T09:51:38.820Z] Action: ✅ Mail de prise en charge de WIN-K0J5FFPIPLB envoye avec succes, Par: System
+[2025-08-18T09:51:40.779Z] Action: ✅ Mail de prise en charge de LP-Overlord envoye avec succes, Par: System
+[2025-08-18T09:51:42.911Z] Action: ✅ Mail de prise en charge de WS-Limule envoye avec succes, Par: System
+[2025-08-18T09:51:46.285Z] Action: ✅ Mail de prise en charge de TAB-Alastor envoye avec succes, Par: System
+[2025-08-18T09:51:46.345Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T09:51:46.536Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T09:59:05.790Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T09:59:08.383Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T09:59:11.524Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T09:59:14.492Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T09:59:15.291Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T09:59:18.234Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T09:59:18.647Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:01:29.363Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:01:33.326Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:01:36.361Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:01:39.367Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:01:40.234Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:01:43.125Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:01:43.325Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:03:53.098Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:03:56.098Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:04:00.677Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:04:04.775Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:04:05.024Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:04:10.243Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:04:14.327Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:04:14.587Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:04:19.142Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:04:23.214Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:04:23.448Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:04:28.315Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:04:32.377Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:04:35.359Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:04:36.988Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:04:37.825Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:04:42.579Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:04:46.622Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:04:46.892Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:04:49.934Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:04:50.857Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:04:54.242Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:04:54.354Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:06:03.390Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:06:04.635Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:06:07.898Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:06:11.636Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:06:12.455Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:06:15.430Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:06:15.612Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:10:03.766Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:10:07.566Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:10:10.582Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:10:13.638Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:10:14.458Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:10:17.648Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:10:17.784Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:11:13.512Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:11:17.337Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:11:34.098Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:11:42.321Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:11:47.717Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:11:49.062Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:11:49.497Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:11:53.442Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:11:54.493Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:11:58.534Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:11:58.711Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:11:58.878Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:11:58.962Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:14:52.878Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:14:56.837Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:14:59.993Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:15:03.067Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:15:04.035Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:15:07.593Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:15:09.684Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:15:11.512Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:15:11.703Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:15:11.799Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:15:12.168Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:18:20.158Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:18:22.732Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:18:36.538Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:18:40.525Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:18:43.595Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:18:46.487Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:18:47.448Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:18:50.366Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:18:52.443Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:18:54.488Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:18:54.689Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:18:54.736Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:18:54.824Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:18:59.528Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:19:10.558Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:19:27.159Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:19:31.231Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:19:34.181Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:19:36.762Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:19:37.603Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:19:40.506Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:19:43.908Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:19:49.014Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:19:52.940Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:19:53.187Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:19:55.692Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:20:02.215Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:20:12.171Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:20:26.712Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:20:40.536Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:20:44.309Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:20:47.268Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:20:48.666Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:20:49.537Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:20:52.480Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:20:52.681Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:20:52.706Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:20:52.787Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:26:25.730Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:26:29.645Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:26:32.613Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:26:35.142Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:26:35.976Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:26:39.182Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:26:43.410Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:26:46.649Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:26:46.822Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:26:46.992Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:26:47.150Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:28:54.942Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:28:57.654Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:29:00.723Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:29:04.997Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:29:05.803Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:29:09.596Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:29:12.683Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:29:14.545Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:29:14.740Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:29:14.868Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:29:15.031Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:29:31.925Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:29:34.943Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:29:38.947Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:29:41.917Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:29:44.915Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:29:45.711Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:29:48.762Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:29:50.873Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:29:53.024Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:29:53.236Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:29:53.276Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:29:53.359Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:31:17.079Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:31:21.118Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:31:24.056Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:31:26.633Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:31:27.576Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:31:30.507Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:31:32.460Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:31:34.322Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:31:34.511Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:31:34.567Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:31:34.652Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:32:02.742Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:32:05.698Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:32:11.676Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:32:15.595Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:32:18.337Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:32:27.276Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:32:30.889Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:32:31.165Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:32:33.990Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:32:34.894Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:32:39.264Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:32:41.449Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:32:43.534Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:32:43.738Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:32:43.781Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:32:43.870Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:32:50.840Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:32:54.795Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:33:00.729Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:33:04.519Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:33:04.805Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:33:07.920Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:33:11.568Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:33:21.548Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:33:24.447Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:33:28.741Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:33:34.179Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:33:35.952Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:33:39.730Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:33:43.067Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:33:46.767Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:33:49.817Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:34:00.873Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:34:04.274Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:34:04.767Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:34:10.248Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:34:21.720Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:34:23.044Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:34:26.076Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:34:28.125Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:34:29.079Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:34:33.169Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:34:35.743Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:34:41.941Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:34:42.238Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:34:42.508Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:34:42.506Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:35:09.566Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:35:21.155Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:35:33.745Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:35:34.337Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:35:38.905Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:35:46.225Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:35:48.561Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:36:00.802Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:36:04.820Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:36:05.116Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:36:07.860Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:36:08.796Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:36:12.899Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:36:14.738Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:36:14.955Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:36:14.999Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:36:15.083Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:37:57.366Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:38:01.277Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:38:04.390Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:38:07.433Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:38:09.222Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:38:15.046Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:38:17.995Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:38:22.159Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:38:22.337Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:38:22.395Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:38:22.476Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:39:24.743Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:39:28.145Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:39:40.414Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:39:59.712Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:40:03.759Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:40:06.699Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:40:09.227Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:40:10.048Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:40:12.958Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:40:14.835Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:40:16.708Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:40:16.905Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:40:16.936Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:40:17.030Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:40:27.506Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:40:31.435Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:40:31.665Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:40:34.262Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:40:35.064Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:40:38.101Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:40:40.309Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:40:42.061Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:40:42.287Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:40:42.307Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:40:42.414Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:41:00.231Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:41:07.103Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:41:11.082Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:41:14.054Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:41:20.302Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:41:24.248Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:41:24.514Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:41:32.640Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:41:35.948Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:41:36.282Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:41:39.943Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:41:41.075Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:41:45.335Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:41:49.692Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:41:53.714Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:41:56.657Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:42:03.488Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:42:06.842Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:42:07.070Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:42:11.628Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:42:15.701Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:42:15.954Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:42:17.389Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:42:18.239Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:42:21.065Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:42:21.197Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:42:21.296Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:42:21.380Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:42:53.400Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:43:04.266Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:43:08.335Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:43:11.337Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:43:15.780Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:43:16.654Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:43:20.022Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:43:22.124Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:43:24.087Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:43:24.293Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:43:24.344Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:43:24.421Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:44:14.320Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:44:25.239Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:44:29.064Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:44:32.006Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:44:49.429Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:44:53.393Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:44:53.743Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:45:05.006Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:45:16.386Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:45:19.742Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:45:22.908Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:45:25.406Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:45:26.272Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:45:32.144Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:45:34.881Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:45:39.164Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:45:39.374Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:45:39.411Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:45:39.490Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:46:07.300Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:46:16.237Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:46:20.164Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:46:23.106Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:46:28.026Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:46:33.874Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:46:37.846Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:46:42.465Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:46:49.811Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:46:55.570Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:46:59.493Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:47:05.083Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:47:09.126Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:47:12.175Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:47:15.021Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:47:15.941Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:47:18.973Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:47:21.034Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:47:22.770Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:47:22.974Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:47:23.007Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:47:23.086Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:48:46.982Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:48:48.549Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:49:02.569Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:49:05.533Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:49:14.686Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:49:17.064Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:49:17.893Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:49:30.369Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:49:41.252Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:49:42.714Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:49:47.895Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:49:55.914Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:49:58.225Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:50:02.988Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:50:06.122Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:50:18.260Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:50:21.615Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:50:24.983Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:50:28.029Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:50:39.477Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:50:42.162Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:50:42.415Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:50:45.631Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:50:46.647Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:50:51.697Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:50:52.447Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:50:52.450Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:50:52.733Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:51:08.322Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:51:10.021Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:51:13.098Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:51:20.515Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:51:27.914Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:51:33.223Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:51:40.947Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:51:42.238Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:51:42.936Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:51:45.095Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:51:46.252Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:51:49.568Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:51:51.912Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:52:03.932Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:52:07.313Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:52:10.714Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:52:15.876Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:52:17.812Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:52:22.711Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:52:22.940Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:52:22.958Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:52:23.082Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:52:36.131Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:52:40.001Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:52:40.286Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:52:44.437Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:52:48.542Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:52:52.026Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:52:54.421Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:52:56.671Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:52:56.884Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:52:56.913Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:52:57.041Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:53:08.660Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:53:11.984Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:53:14.952Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:53:17.796Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:53:18.673Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:53:24.673Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:53:27.123Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:53:29.999Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:53:30.369Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:53:30.397Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:53:30.495Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:53:48.029Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:53:51.714Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:53:55.138Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:54:05.786Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:54:08.964Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:54:09.339Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:54:13.099Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:54:14.077Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:54:17.098Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:54:20.874Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:54:21.140Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:54:23.573Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:54:24.824Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:54:33.369Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:54:39.483Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:54:40.788Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:54:43.758Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:54:47.944Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:54:49.399Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:54:53.966Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:54:54.175Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:54:54.218Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:54:54.397Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:55:01.060Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:55:07.082Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:55:10.470Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:55:11.005Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:55:14.762Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:55:16.299Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:55:20.809Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:55:25.570Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:55:28.345Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:55:28.566Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:55:28.581Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:55:28.784Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:55:57.168Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:55:59.515Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:56:09.182Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:56:12.298Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:56:13.262Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:56:22.649Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:56:26.261Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:56:26.516Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:56:36.215Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:56:39.769Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:56:49.131Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:56:57.354Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:57:01.262Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:57:01.529Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:57:03.508Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:57:04.653Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:57:08.094Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:57:12.659Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:57:14.963Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:57:15.260Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:57:15.277Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:57:15.415Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:57:58.652Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:58:07.139Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:58:11.156Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:58:14.105Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:58:16.616Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:58:17.472Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:58:20.215Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T10:58:22.569Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T10:58:25.221Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T10:58:25.403Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T10:58:25.451Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T10:58:25.530Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T10:58:34.544Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:58:43.471Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:58:47.397Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:58:50.354Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:58:58.395Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:59:01.269Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:59:01.635Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:59:11.793Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:59:15.204Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:59:15.533Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:59:24.245Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:59:27.298Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:59:30.261Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:59:32.289Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:59:39.262Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:59:43.173Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T10:59:43.495Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T10:59:45.461Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T10:59:46.261Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T10:59:49.422Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T11:00:03.337Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:00:07.349Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:00:10.285Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:00:12.965Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T11:00:13.924Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:00:21.376Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:00:25.396Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:00:33.505Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:00:36.364Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:00:36.606Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:00:38.519Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T11:00:39.343Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:00:42.080Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T11:00:42.367Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T11:00:42.370Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T11:00:42.523Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T11:01:03.408Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:01:08.518Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:01:11.885Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:01:15.897Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:01:18.845Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:01:21.268Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T11:01:22.235Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:01:25.267Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T11:01:27.227Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T11:01:28.994Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T11:01:29.242Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T11:01:29.294Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T11:01:29.470Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T11:01:33.435Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:01:37.434Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:01:37.734Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:01:41.824Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T11:01:42.616Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:01:51.974Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:02:02.667Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:02:06.250Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:02:09.370Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:02:19.599Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:02:22.864Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:02:23.118Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:02:25.721Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T11:02:26.530Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:02:36.336Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:02:40.192Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:02:43.163Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:02:46.256Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T11:02:47.394Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:02:50.537Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T11:02:50.642Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T11:02:50.768Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T11:02:50.848Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T11:03:05.181Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:03:18.690Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:03:22.688Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:03:25.648Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:03:28.253Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T11:03:29.112Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:03:32.167Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T11:03:34.364Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T11:03:36.183Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T11:03:36.367Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T11:03:36.416Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T11:03:36.507Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T11:04:00.107Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:04:01.862Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:04:07.169Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:04:08.747Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:04:09.118Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:04:14.124Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T11:04:14.948Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:04:18.237Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T11:04:20.401Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T11:04:22.170Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T11:04:22.367Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T11:04:22.402Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T11:04:22.512Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System
+[2025-08-18T11:07:32.509Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:07:36.469Z] Action: ❌ Echec de l'importation des donnees depuis AD, Par: System
+[2025-08-18T11:07:39.444Z] Action: ✅ 3 ordinateurs importés ou mis à jour avec succès depuis GLPI., Par: System
+[2025-08-18T11:07:42.077Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint existe dans AD, Par: System
+[2025-08-18T11:07:42.872Z] Action: ✅ Succes de la fusion des tous donnees dont l'endpoint est absent d'AD, Par: System
+[2025-08-18T11:07:45.898Z] Action: ✅ Mail de prise en charge de LP-KAMARA envoye avec succes, Par: System
+[2025-08-18T11:07:49.204Z] Action: ✅ Mail de prise en charge de LP-DIOP envoye avec succes, Par: System
+[2025-08-18T11:07:51.624Z] Action: ✅ Conformités vérifiées et mises à jour., Par: System
+[2025-08-18T11:07:51.802Z] Action: ✅ Coherences vérifiées et mises à jour., Par: System
+[2025-08-18T11:07:51.910Z] Action: ✅ Suppression du mail pour endpoint LP-DIOP, Par: System
+[2025-08-18T11:07:52.056Z] Action: ✅ Suppression du mail pour endpoint LP-KAMARA, Par: System

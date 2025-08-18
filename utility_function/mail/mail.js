@@ -17,7 +17,7 @@ async function mail(endpoint, message) {
   const mailOptions = {
     from: process.env.SENDER_MAIL,
     to: process.env.GETER_MAIL,
-    subject: `l'endpoint ${endpoint} est critique et doit etre pris en charge`,
+    subject: endpoint,
     text: message,
     html: `<p>${message}</p>`
   };

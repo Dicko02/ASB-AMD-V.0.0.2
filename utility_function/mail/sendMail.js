@@ -1,8 +1,11 @@
 const mail = require('./mail');
-const mailModel = require('../../models/mail.model')
+const mailModel = require('../../models/mail.model');
+const logHistory = require('../loggers/logHistory');
 
 //fonction d'envoi de mail
 async function sendMail(endpoint, inconformites, addressIP, lieu, utilisateur, incoherenceNumber, incoherenceTotalScore, typeMachine) {
+    const user = "System";
+
     try {
         // Sécuriser la division par zéro
         if (!incoherenceTotalScore || incoherenceTotalScore === 0) {
@@ -29,10 +32,12 @@ async function sendMail(endpoint, inconformites, addressIP, lieu, utilisateur, i
             // Envoi
             await mail(endpoint, message);
             console.log(`Email envoyé avec succès à propos de ${endpoint ?? 'Inconnu'}.`);
+            logHistory(`✅ Mail de prise en charge de ${endpoint} envoye avec succes`, user);
         }
 
     } catch (error) {
         console.error(`Erreur lors de l'envoi de l'email : ${error.message}`);
+        logHistory(`❌ Echec de l'envoie du mail de prise en charge de ${endpoint}`, user);
     }
 }
 

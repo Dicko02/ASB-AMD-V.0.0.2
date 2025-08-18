@@ -13,6 +13,7 @@ function importKaspersky() {
 
     let stream;
     let user = "System";
+
     try {
       stream = fs.createReadStream(kasperskyCSVRessourcePath);
     } catch (err) {
@@ -65,6 +66,7 @@ function importKaspersky() {
           }
 
           let updatesCount = 0;
+
           for (const doc of allKasperskyData) {
             try {
 
@@ -83,15 +85,13 @@ function importKaspersky() {
             }
           }
 
-          action = `✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kasperky.`;
-          logHistory(action, user);
+          logHistory(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kasperky.`, user);
 
           console.log(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kasperky.`);
           resolve();
 
         } catch (err) {
-          action = "❌ Echec de l'importation des donnees depuis Kaspersky";
-          logHistory(action, user);
+          logHistory("❌ Echec de l'importation des donnees depuis Kaspersky", user);
 
           console.error("❌Erreur lors de l'insertion des données de Kaspersky :", err);
           reject(err);

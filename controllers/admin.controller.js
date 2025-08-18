@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const logHistory = require('../utility_function/loggers/logHistory');
 
-// Route POST : Connection en tant qu'administrateur
+// Route POST : Connection en tant qu'utilisateur
 module.exports.loginAdmin = async (req, res) => {
   const { pseudo, password } = req.body;
   
@@ -38,8 +38,7 @@ module.exports.loginAdmin = async (req, res) => {
 
     //enregistrement du log dans l'historique des audits utilisateurs
     userConnection = pseudo;
-    const action = "✅ Connection a la platforme";
-    logHistory(action, userConnection);
+    logHistory(`✅ Connection a la platforme en tant que ${pseudo}`, userConnection);
 
     res.status(200).json({
       id: admin._id,
@@ -50,15 +49,14 @@ module.exports.loginAdmin = async (req, res) => {
 
   } catch (error) {
     userConnection = pseudo;
-    const action = "❌ Echec de connection a la platforme";
-    logHistory(action, userConnection);
+    logHistory(`❌ Echec de connection a la platforme en tant que ${pseudo}`, userConnection);
     console.error("Erreur lors de la connexion :", error);
     res.status(500).json({ message: "Erreur serveur", error });
   }
 };
 
 
-// Route POST : Ajouter un administrateur
+// Route POST : Ajouter un utilisateur
 module.exports.signUp = async (req, res) => {
   const user = req.user?.pseudo || 'Inconnu';
   try{
@@ -71,68 +69,62 @@ module.exports.signUp = async (req, res) => {
       await conformitySettingModel.create({ adminId: admin._id });
       await admin.save()
 
-      const action = `✅ Creation du compte de niveau <${req.body.titre}> portant le pseudo: ${req.body.pseudo}`;
-      logHistory(action, user);
+      logHistory(`✅ Creation du compte de niveau <${req.body.titre}> portant le pseudo: ${req.body.pseudo}`, user);
 
       res.status(200).json({ message: 'Compte ajoute avec succes', adminID: admin._id });
 
   }catch (err) {
-    const action = `❌ Echec de la creation d'un compte utilisateur`;
-    logHistory(action, user);
+    logHistory(`❌ Echec de la creation d'un compte utilisateur`, user);
     console.error("Erreur lors de la creation du compte :", err);
     res.status(500).json({err})
   }
 };
 
 
-// Route GET : Récupérer tous les administrateurs
+// Route GET : Récupérer tous les utilisateurs
 module.exports.getAllAdmin = async (req, res) => {
   const user = req.user?.pseudo || 'Inconnu';
   try {
       const admins = await adminModel.find().select('-password');
 
-      const pseudo = req.user;
-      const action = "✅ Consultation de tous les comptes utilisateurs";
-      logHistory(action, user);
+      logHistory("✅ Consultation de tous les comptes utilisateurs", user);
 
       res.status(200).json(admins);
 
   } catch (err) {
-    const action = `❌ Echec de la Consultation des comptes utilisateurs`;
-    logHistory(action, user);
-    console.error("Erreur lors de la récupération des administrateurs :", err);
-    res.status(500).json({error: "Erreur serveur, impossible de récupérer les administrateurs"});
+    logHistory(`❌ Echec de la Consultation des comptes utilisateurs`, user);
+    console.error("Erreur lors de la récupération des utilisateurs :", err);
+    res.status(500).json({error: "Erreur serveur, impossible de récupérer les utilisateurs"});
   }
 };
 
 
-// Route GET : Récupérer les infos d'un administrateur
+// Route GET : Récupérer les infos d'un utilisateur
 module.exports.adminInfo = async (req, res) => {
   const user = req.user?.pseudo || 'Inconnu';
   try {
     const admin = await adminModel.findById(req.params.id).select('-password');
     if (!admin) {
-      return res.status(404).json({message: 'administrateur non enregistre'});
+      return res.status(404).json({message: 'utilisateur non enregistre'});
     }
 
-    const action = `✅ Consultation des informations du compte utilisateur dont l'ID est ${req.params.id}`;
-    logHistory(action, user);
+    logHistory(`✅ Consultation des informations de l'utilisateur qui a ID=${req.params.id}`, user);
 
     res.json(admin);
 
   } catch (error) {
-    const action = `❌ Echec de la consultation des informations d'un compte utilisateur`;
-    logHistory(action, user);
-    res.status(500).json({ message: "Erreur lors de la récupération des infos de l'administrateur", error });
+    logHistory(`❌ Echec de la consultation des informations de l'utilisateur qui a ID=${req.params.id}`, user);
+    res.status(500).json({ message: "Erreur lors de la récupération des infos de l'utilisateur", error });
   }
 }
   
 
-// Route UPDATE : Mettre a jour un administrateur
+// Route UPDATE : Mettre a jour un utilisateur
 module.exports.updateAdmin = async (req, res) => {
   const user = req.user?.pseudo || 'Inconnu';
+  const { pseudo, titre, password } = req.body;
+
   try {
-    const { pseudo, titre, password } = req.body;
 
     let hashedPassword = null;
     if (password) {
@@ -161,37 +153,33 @@ module.exports.updateAdmin = async (req, res) => {
       return res.status(404).json({ message: 'Compte Admin non trouvé' });
     }
 
-    const action = `✅ Mise a jour du compte de l'utilisateur ${pseudo}`;
-    logHistory(action, user);
+    logHistory(`✅ Mise a jour du compte de l'utilisateur ${pseudo} de niveau ${titre}`, user);
 
     res.json({ message: 'Compte Admin mis à jour', admin: updatedAdmin });
 
   } catch (err) {
-    const action = `❌ Echec de la Mise a jour d'un compte utilisateur`;
-    logHistory(action, user);
+    logHistory(`❌ Echec de la Mise a jour de l'utilisateur ${pseudo} de niveau ${titre}`, user);
     console.error('Erreur lors de la mise à jour du compte Admin', err);
     res.status(500).json({ message: 'Erreur lors de la mise à jour du compte Admin', error: err.message });
   }
 };
 
 
-// Route DELETE : supprimer un administrateur
+// Route DELETE : supprimer un utilisateur
 module.exports.deleteAdmin = async (req, res) => {
   const user = req.user?.pseudo || 'Inconnu';
   try {
     const deleteAdmin = await adminModel.findByIdAndDelete(req.params.id);
     if (!deleteAdmin) {
-      return res.status(404).json({ message: "l'administrateur n'existe deja pas" });
+      return res.status(404).json({ message: "l'utilisateur n'existe deja pas" });
     }
 
-    const action = `✅ Suppression du compte de utilisateur dont l'ID est ${req.params.id}`;
-    logHistory(action, user);
+    logHistory(`✅ Suppression de l'utilisateur qui a ID=${req.params.id}`, user);
 
-    res.json({ message: 'administrateur supprimée', admin: deleteAdmin });
+    res.json({ message: 'utilisateur supprimée', admin: deleteAdmin });
 
   } catch (error) {
-    const action = `❌ Echec de la Suppression d'un compte utilisateur`;
-    logHistory(action, user);
-    res.status(500).json({ message: "Erreur lors de la suppression de l'administrateur", error });
+    logHistory(`❌ Echec de la Suppression de l'utilisateur qui a ID=${req.params.id}`, user);
+    res.status(500).json({ message: "Erreur lors de la suppression de l'utilisateur", error });
   }
 };

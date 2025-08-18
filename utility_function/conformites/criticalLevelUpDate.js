@@ -2,6 +2,7 @@ const Fusion = require('../../models/fusion.model');
 const logApp = require('../loggers/logApp');
 const typeMachine = require('../typeMachine')
 const sendMail = require('../mail/sendMail')
+const updateMail = require('../mail/updateMail');
 
 async function criticalLevelUpDate() {
 
@@ -48,6 +49,9 @@ async function criticalLevelUpDate() {
             }
 
         }
+
+        //Supprime de la base les demandes deja traite
+        await updateMail();
         
     }catch (error) {
         console.log("erreur lors l'affectation du niveau de criticite, du typage de l'endpoint, de la mise a jour l'historique ou encore de l'envoie de mail d'alerte: ", error);

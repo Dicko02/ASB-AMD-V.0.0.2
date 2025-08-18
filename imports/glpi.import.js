@@ -55,6 +55,7 @@ async function closeGlpiSession(sessionToken) {
 
 async function importGlpiFromApi() {
   let user = "System";
+  
   try {
     const sessionToken = await initGlpiSession();
     if (!sessionToken) {
@@ -119,13 +120,11 @@ async function importGlpiFromApi() {
 
     await closeGlpiSession(sessionToken);
 
-    action = `✅ ${updatesCount} ordinateurs importés ou mis à jour avec succès depuis GLPI.`;
-    logHistory(action, user);
+    logHistory(`✅ ${updatesCount} ordinateurs importés ou mis à jour avec succès depuis GLPI.`, user);
 
     console.log(`✅ ${updatesCount} ordinateurs importés ou mis à jour avec succèsdepuis GLPI.`);
   } catch (err) {
-    action = "❌ Echec de l'importation des donnees depuis GLPI";
-    logHistory(action, user);
+    logHistory("❌ Echec de l'importation des donnees depuis GLPI", user);
 
     console.log('❌ Erreur pendant l’import des données GLPI :', err);
   }

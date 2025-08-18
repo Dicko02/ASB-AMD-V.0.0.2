@@ -8,14 +8,12 @@ module.exports.getAllNoAD = async (req, res) => {
         const noAD = await noADModel.find();
 
         //enregistrement du log dans l'historique des audits utilisateurs
-        const action = "✅ Consultation de la liste des endpoints noAD";
-        logHistory(action, user);
+        logHistory("✅ Consultation de la liste des endpoints noAD", user);
 
         res.status(200).json(noAD);
 
     } catch (err) {
-        const action = "❌ Echec de la consultation de la liste des endpoints absent de AD mais present dans GLPI et/ou Kasperky";
-        logHistory(action, user);
+        logHistory("❌ Echec de la consultation de la liste des endpoints absent de AD mais present dans GLPI et/ou Kasperky", user);
         console.error("Erreur lors de la récupération des infos des noAD :", err);
         res.status(500).json({error: "Erreur serveur, impossible de récupérer les infos des noAD"});
     }
@@ -31,14 +29,12 @@ module.exports.noADInfo = async (req, res) => {
             return res.status(404).json({message: "noAD non enregistre"});
         };
 
-        const action = "✅ Consultation des informations d'un enpoint noAD";
-        logHistory(action, user);
+        logHistory(`✅ Consultation des informations d'un enpoint noAD d'id ${id}`, user);
 
         res.json(noAD);
 
     } catch (error) {
-        const action = "❌ Echec de la consultation des informations d'un enpoint noAD";
-        logHistory(action, user);
+        logHistory(`❌ Echec de la consultation des informations d'un enpoint noAD d'id ${id}`, user);
         res.status(500).json({ message: "Erreur lors de la récupération des infos de la machine noAD", error });
     }
 }
@@ -47,21 +43,19 @@ module.exports.noADInfo = async (req, res) => {
 // Route DELETE : supprimer une machine noAD
 module.exports.deleteNoAD = async (req, res) => {
     const user = req.user?.pseudo || 'Inconnu';
+    const id = req.params._id
     try {
-        const id = req.params._id
         const deleteNoAD = await noADModel.findByIdAndDelete(id);
         if (!deleteNoAD) {
             return res.status(404).json({ message: "l'machine noAD n'existe deja pas" });
         };
 
-        const action = "✅ Suppression d'une machine noAD";
-        logHistory(action, user);
+        logHistory(`✅ Suppression de la machine noAD d'id ${id}`, user);
 
         res.json({ message: 'machine noAD supprimée', noAD: deleteNoAD });
         
     } catch (error) {
-        const action = "❌ Echec de la suppression d'une machine noAD";
-        logHistory(action, user);
+        logHistory(`❌ Echec de la suppression de la machine noAD d'id ${id}`, user);
         res.status(500).json({ message: "Erreur lors de la suppression de la machine noAD", error });
     }
 };
