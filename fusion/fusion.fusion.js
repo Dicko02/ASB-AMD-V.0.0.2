@@ -5,7 +5,6 @@ const Fusion = require('../models/fusion.model');
 
 // fonction permettant de fusionner les données existantes qui ont été importées depuis AD, Kaspersky et GLPI
 async function fusion() {
-
   try {
     // Récupérer toutes les données AD, GLPI et Kaspersky
     const allAdData = await AD.find();
@@ -20,7 +19,6 @@ async function fusion() {
 
     // Parcourir chaque ordinateur AD
     for (const adData of allAdData) {
-
       // Recherche des informations supplémentaires en se servant d'un attribut unique partout
       const glpiData = allGlpiData.find(glpi => glpi.Nom === adData.CN);
       const kasperskyData = allKasperskyData.find(kaspersky => kaspersky.Nom === adData.CN);
@@ -28,31 +26,30 @@ async function fusion() {
       // Fusion souple : on copie ce qu'on a seulement
       const fusionData = {
         ...adData.toObject(),
-        ...(glpiData ? glpiData.toObject() : {}), // ajoute GLPI seulement s'il existe
-        ...(kasperskyData ? kasperskyData.toObject() : {}), // ajoute Kaspersky seulement s'il existe
+        ...(glpiData ? glpiData.toObject() : {}),
+        ...(kasperskyData ? kasperskyData.toObject() : {}),
       };
 
-      // Initialisation sûre du champ dangerousityNumber
+      // Initialisation sûre
       fusionData.dangerousityNumber = 0;
-
-      // Préparer le tableau Composites selon la source
       const composites = ["AD"];
 
-      //tableau de securite pour eviter les erreurs undefined avec "ConformitiesChecked"
+      // Sécurisation du tableau ConformitiesChecked
       if (!fusionData.ConformitiesChecked) {
         fusionData.ConformitiesChecked = [];
       }
 
-      // Ajustement de dangerousityNumber si absence de données GLPI ou Kaspersky
+      // Ajustement si absence de données GLPI
       if (!glpiData && !fusionData.ConformitiesChecked.includes(nomConformiteGlpi+`(${dangerousityNumberGlpi})`)) {
-        fusionData.dangerousityNumber += 10; // Incrémenter le niveau de dangerosité
+        fusionData.dangerousityNumber += dangerousityNumberGlpi;
         fusionData.ConformitiesChecked.push(nomConformiteGlpi+`(${dangerousityNumberGlpi})`);
       } else {
         composites.push("GLPI");
       }
 
+      // Ajustement si absence de données Kaspersky
       if (!kasperskyData && !fusionData.ConformitiesChecked.includes(nomConformiteKaspersky+`(${dangerousityNumberKaspersky})`)) {
-        fusionData.dangerousityNumber += 10;
+        fusionData.dangerousityNumber += dangerousityNumberKaspersky;
         fusionData.ConformitiesChecked.push(nomConformiteKaspersky+`(${dangerousityNumberKaspersky})`);
       } else {
         composites.push("Kaspersky");
@@ -60,25 +57,33 @@ async function fusion() {
 
       fusionData.Composites = composites;
 
-      // Pour éviter les mises à jour inutiles
+      // Vérifie si un document avec le même CN existe
       const existing = await Fusion.findOne({ CN: adData.CN });
 
-      if (!existing || JSON.stringify(existing.toObject()) !== JSON.stringify({ ...existing.toObject(), ...fusionData })) {
-        await Fusion.findOneAndUpdate(
-          { CN: adData.CN }, // filtre
-          fusionData, // données fusionnées
-          { upsert: true, new: true } // options : crée si pas existant, retourne le doc modifié
+      if (!existing) {
+        // Si pas trouvé (insertion directe)
+        await Fusion.create(fusionData);
+      } else {
+        // Vérifie si les données ont changé (comparaison stricte champ par champ)
+        const hasChanged = Object.keys(fusionData).some(key =>
+          JSON.stringify(existing[key]) !== JSON.stringify(fusionData[key])
         );
 
-        console.log("✅ Fusion mise à jour/ajoutée pour l'ordinateur " + adData.CN);
-      } else {
-        console.log("ℹ️ Aucune modification nécessaire pour " + adData.CN);
+        if (hasChanged) {
+          await Fusion.findOneAndUpdate(
+            { CN: adData.CN },
+            fusionData,
+            { new: true }
+          );
+          console.log(`🔄 Mise à jour effectuée pour ${adData.CN}`);
+        } else {
+          console.log(`✅ Pas de changement détecté pour ${adData.CN}`);
+        }
       }
     }
 
-    // Message final en console
-    console.log("✅ Fusion terminée avec succès pour tous les ordinateurs.");
-
+    // Message final une seule fois
+    console.log("🎉 Fusion terminée avec succès pour tous les ordinateurs.");
   } catch (error) {
     console.error("❌ Erreur dans l'ajout ou la fusion :", error);
   }
