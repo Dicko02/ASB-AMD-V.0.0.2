@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 require("dotenv").config({path: './config/.env', quiet: true});
-require('./config/db_config');
+//require('./config/db_config');
 const helmet = require("helmet");
 const cors = require("cors");
 const morgan = require('morgan');

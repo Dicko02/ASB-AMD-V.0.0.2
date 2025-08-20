@@ -8,6 +8,21 @@ const GLPI_URL = process.env.GLPI_URL;
 const USER_TOKEN = process.env.GLPI_USER_TOKEN;
 const APP_TOKEN = process.env.GLPI_APP_TOKEN;
 
+// Fonction utilitaire safeFetch pour éviter les plantages
+async function safeFetch(url, options = {}) {
+  try {
+    const res = await fetch(url, options);
+    if (!res.ok) {
+      console.log(`⚠️ Requête échouée (${res.status}) sur ${url}`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    console.log(`⚠️ Erreur réseau sur ${url} : ${err.message}`);
+    return null;
+  }
+}
+
 async function initGlpiSession() {
   try {
     const data = await safeFetch(`${GLPI_URL}/initSession`, {
@@ -30,6 +45,7 @@ async function initGlpiSession() {
     return null;
   }
 }
+
 
 // Pour récupérer les ordinateurs dans GLPI
 async function fetchGlpiComputers(sessionToken, rangeStart = 0, rangeStop = 999) {
