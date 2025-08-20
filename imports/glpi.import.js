@@ -4,53 +4,79 @@ require('dotenv').config();
 const logHistory = require('../utility_function/loggers/logHistory');
 
 // Configuration
-const GLPI_URL = process.env.GLPI_URL
-const USER_TOKEN = process.env.GLPI_USER_TOKEN
-const APP_TOKEN = process.env.GLPI_APP_TOKEN
+const GLPI_URL = process.env.GLPI_URL;
+const USER_TOKEN = process.env.GLPI_USER_TOKEN;
+const APP_TOKEN = process.env.GLPI_APP_TOKEN;
 
 async function initGlpiSession() {
-  const res = await fetch(`${GLPI_URL}/initSession`, {
-    headers: {
-      'App-Token': APP_TOKEN,
-      'Authorization': `user_token ${USER_TOKEN}`,
-      'Content-Type': 'application/json'
+  try {
+    const data = await safeFetch(`${GLPI_URL}/initSession`, {
+      headers: {
+        'App-Token': APP_TOKEN,
+        'Authorization': `user_token ${USER_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!data?.session_token) {
+      console.log(`❌ Impossible d'ouvrir une session GLPI sur ${GLPI_URL}`);
+      return null;
     }
-  });
-  const data = await res.json();
-  return data.session_token || null;
+
+    return data.session_token;
+
+  } catch (err) {
+    console.error(`❌ Erreur critique lors de l'init GLPI : ${err.message}`);
+    return null;
+  }
 }
 
+// Pour récupérer les ordinateurs dans GLPI
 async function fetchGlpiComputers(sessionToken, rangeStart = 0, rangeStop = 999) {
-  const res = await fetch(`${GLPI_URL}/Computer`, {
+  const res = await safeFetch(`${GLPI_URL}/Computer`, {
     headers: {
       'Session-Token': sessionToken,
       'App-Token': APP_TOKEN,
       'Range': `${rangeStart}-${rangeStop}`
     }
   });
-  const data = await res.json();
-  const more = res.headers.get('Content-Range')?.includes('*'); // GLPI renvoie * si + de résultats
-  return { data, more };
+
+  if (!Array.isArray(res)) {
+    // safeFetch a échoué ou n’a pas renvoyé un tableau
+    return { data: [], more: false };
+  }
+
+  // GLPI met la pagination dans les headers, mais comme safeFetch fait déjà `res.json()`
+  // tu ne peux plus les lire ici. => Soit tu adaptes safeFetch pour renvoyer {json, headers}
+  // soit tu décides que "more" = true tant que tu reçois un batch complet.
+  const more = res.length >= (rangeStop - rangeStart + 1);
+
+  return { data: res, more };
 }
 
-// enrichissement
+
 async function fetchComputerDetails(id, sessionToken) {
-  const res = await fetch(`${GLPI_URL}/Computer/${id}?expand_dropdowns=true`, {
+  return await safeFetch(`${GLPI_URL}/Computer/${id}?expand_dropdowns=true`, {
     headers: {
       'Session-Token': sessionToken,
       'App-Token': APP_TOKEN
     }
-  });
-  return res.json();
+  }) || {};
 }
 
+// Pour fermer une session GLPI
 async function closeGlpiSession(sessionToken) {
-  await fetch(`${GLPI_URL}/killSession`, {
-    headers: {
-      'Session-Token': sessionToken,
-      'App-Token': APP_TOKEN
-    }
-  });
+  try {
+    await safeFetch(`${GLPI_URL}/killSession`, {
+      headers: {
+        'Session-Token': sessionToken,
+        'App-Token': APP_TOKEN
+      }
+    });
+    console.log("✅ Session GLPI fermée");
+  } catch (err) {
+    console.error("❌ Erreur dans closeGlpiSession:", err.message);
+  }
 }
 
 async function importGlpiFromApi() {
@@ -121,12 +147,10 @@ async function importGlpiFromApi() {
     await closeGlpiSession(sessionToken);
 
     logHistory(`✅ ${updatesCount} ordinateurs importés ou mis à jour avec succès depuis GLPI.`, user);
-
-    console.log(`✅ ${updatesCount} ordinateurs importés ou mis à jour avec succèsdepuis GLPI.`);
+    console.log(`✅ ${updatesCount} ordinateurs importés ou mis à jour avec succès depuis GLPI.`);
   } catch (err) {
-    logHistory("❌ Echec de l'importation des donnees depuis GLPI", user);
-
-    console.log('❌ Erreur pendant l’import des données GLPI :', err);
+    logHistory("❌ Echec de l'importation des données depuis GLPI", user);
+    console.log('❌ Erreur pendant l’import des données GLPI :', err.message);
   }
 }
 
