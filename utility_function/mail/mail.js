@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-require("dotenv");
 
 //fonction d'envoi de mail
 async function mail(endpoint, message) {

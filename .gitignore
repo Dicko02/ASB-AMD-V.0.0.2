@@ -1,5 +1,5 @@
 /node_modules
-/config/.env
+/.env
 /logs/access.log
 /logs/app.log
 /logs/history.log

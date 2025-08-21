@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require('body-parser');
-require("dotenv").config({path: './config/.env', quiet: true});
+require("dotenv").config({quiet: true});
 //require('./config/db_config');
 const helmet = require("helmet");
 const cors = require("cors");
@@ -46,8 +46,8 @@ app.use('/api/conformitySetting', conformitySettingRoute);
 app.use('/api/logs', logsRoute);
 
 //démarrage du serveur
-app.listen(port || 10000, () => {
-    console.log(`Listening on port ${port}`);
+app.listen(port || 10000, `${process.env.IP}`, () => {
+    console.log(`Listening on port ${port ?? 10000}`);
 });
 
 let user = "System";

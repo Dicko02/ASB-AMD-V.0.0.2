@@ -1,6 +1,5 @@
 const fetch = require('node-fetch');
 const glpiData = require('../models/glpi.model');
-require('dotenv').config();
 const logHistory = require('../utility_function/loggers/logHistory');
 
 // Configuration

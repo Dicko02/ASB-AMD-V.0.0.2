@@ -1,6 +1,5 @@
 // Importation du module mongoose
 const mongoose = require('mongoose');
-require('dotenv').config({quiet: true}); // Charger les variables d'environnement
 const logHistory = require('../utility_function/loggers/logHistory')
 
 const user = "System";

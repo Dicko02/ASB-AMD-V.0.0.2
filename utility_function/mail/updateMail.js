@@ -1,4 +1,3 @@
-require('dotenv').config();
 const fetch = require('node-fetch');
 const mailModel = require('../../models/mail.model');
 const logHistory = require('../loggers/logHistory');

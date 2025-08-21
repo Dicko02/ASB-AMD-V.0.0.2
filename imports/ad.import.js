@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { Client } = require('ldapts');
 const adData = require('../models/ad.model');
 const parseDate = require('../utility_function/dateFunctions/parseDateValue');
