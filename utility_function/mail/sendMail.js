@@ -17,7 +17,7 @@ async function sendMail(endpoint, inconformites, addressIP, lieu, utilisateur, i
         const pourcentageCoherence = (100 - pourcentageIncoherence).toFixed(2);
 
         // Message final
-        const message = `${typeMachine ?? 'endpoint'} ${endpoint ?? 'Inconnu'} d'adresse IP ${addressIP ?? 'Inconnu'} se trouvant à ${lieu ?? 'Inconnu'} et appartenant à ${utilisateur ?? 'Inconnu'} est cohérent à ${pourcentageCoherence ?? '???'}%, il se trouve dans un état critique, voici la liste de ses non-conformités: ${inconformites ?? 'Aucune donnée fournie'}`;
+        const message = `${typeMachine ?? 'endpoint'} ${endpoint ?? 'Inconnu'} d'adresse IP ${addressIP ?? 'Inconnu'} se trouvant à ${lieu ?? 'Inconnu'} ayant pour proprietaire ${utilisateur ?? 'Inconnu'} et cohérent à ${pourcentageCoherence ?? '???'}% est dans un état critique, voici la liste des problemes a resoudre: ${inconformites ?? 'Aucune donnée fournie'}`;
 
         // Vérifier si le mail existe déjà
         const mailExistant = await mailModel.findOne({ endpoint });
