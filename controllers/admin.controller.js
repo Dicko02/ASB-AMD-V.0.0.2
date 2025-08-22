@@ -174,6 +174,8 @@ module.exports.deleteAdmin = async (req, res) => {
       return res.status(404).json({ message: "l'utilisateur n'existe deja pas" });
     }
 
+    await conformitySettingModel.findOneAndDelete({ adminId: req.params.id });
+
     logHistory(`✅ Suppression de l'utilisateur qui a ID=${req.params.id}`, user);
 
     res.json({ message: 'utilisateur supprimée', admin: deleteAdmin });
