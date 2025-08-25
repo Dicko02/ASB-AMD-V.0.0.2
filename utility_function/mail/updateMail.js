@@ -61,19 +61,23 @@ async function checkTickets() {
     const user = "System";
 
     try {
+        // Ouverture de session GLPI
         const sessionToken = await getSessionToken();
         if (!sessionToken) return; // arrêt si pas de token
 
+        // Récupération des tickets
         const tickets = await getTicketsForRequester(sessionToken);
 
         //On filtre uniquement les tickets dont le statut est 5 (Traité) ou 6 (Clos)
         const traites = tickets.filter(t => [5, 6].includes(Number(t.statut)));
 
+        // Vérification des tickets traités
         if (traites.length === 0) {
             console.log("⏳ Aucun ticket traité pour l’instant.");
             return;
         }
 
+        // Suppression des mails liés aux tickets traités
         for (const t of traites) {
             try {
                 console.log(`✅ Ticket ${t.id} pour endpoint "${t.titre}" est traité.`);
@@ -100,7 +104,7 @@ async function checkTickets() {
 
 //Lancement de la surveillance toutes les 60 minutes
 function watchTickets() {
-    checkTickets(); //exécution une fois au démarrage
+    checkTickets(); //exécution une fois au démarrage ou au redémarrage
     setInterval(checkTickets, 3600000); //re-exécution toutes les 60 min
 }
 

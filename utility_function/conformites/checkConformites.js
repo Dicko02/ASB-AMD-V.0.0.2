@@ -18,7 +18,7 @@ const conformitySettingModel = require('../../models/conformitySetting.model');
 async function checkConformites(){
     
     // Exécution de l'importation et de la fusion des données
-    await runImportAndFusion();//a decommente plus tard
+    await runImportAndFusion();
 
     const setting = await conformitySettingModel.findOne();
 

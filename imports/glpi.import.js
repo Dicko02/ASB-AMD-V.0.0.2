@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 const glpiData = require('../models/glpi.model');
 const logHistory = require('../utility_function/loggers/logHistory');
+const _ = require("lodash");
 
 // Configuration
 const GLPI_URL = process.env.GLPI_URL;
@@ -22,6 +23,7 @@ async function safeFetch(url, options = {}) {
   }
 }
 
+// Fonction pour initialiser la session GLPI
 async function initGlpiSession() {
   try {
     const data = await safeFetch(`${GLPI_URL}/initSession`, {
@@ -64,6 +66,7 @@ async function fetchGlpiComputers(sessionToken, rangeStart = 0, rangeStop = 999)
   return { data: res, more };
 }
 
+// Pour récupérer les détails d'un ordinateur par son id
 async function fetchComputerDetails(id, sessionToken) {
   return await safeFetch(`${GLPI_URL}/Computer/${id}?expand_dropdowns=true`, {
     headers: {
@@ -88,6 +91,7 @@ async function closeGlpiSession(sessionToken) {
   }
 }
 
+// Pour importer les données GLPI depuis l'API(l'ensemble de toutes les fonctions précédentes)
 async function importGlpiFromApi() {
   let user = "System";
   
@@ -103,6 +107,7 @@ async function importGlpiFromApi() {
     let updatesCount = 0;
     const concurrencyLimit = 10;
 
+    // Boucle principale de la récupération des infos des machines
     while (true) {
       const { data: computers, more } = await fetchGlpiComputers(
         sessionToken,
@@ -140,19 +145,20 @@ async function importGlpiFromApi() {
           const existing = await glpiData.findOne({ Nom: doc.Nom });
 
           if (!existing) {
-            // Nouveau document → insertion
+
+            // Si pas trouvé on fait une insertion
             await glpiData.updateOne({ Nom: doc.Nom }, { $set: doc }, { upsert: true });
             updatesCount++;
           } else {
-            // Comparaison champ par champ
-            let hasChanged = false;
-            for (let key of Object.keys(doc)) {
-              if (doc[key] !== existing[key]) {
-                hasChanged = true;
-                break;
-              }
-            }
 
+            const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];// Champs à ignorer
+            // Nettoyage des champs à ignorer
+            const cleanExisting = _.omit(existing.toObject(), ignoreFields);
+            const cleanNew = _.omit(doc, ignoreFields);
+          
+            const hasChanged = !_.isEqual(cleanExisting, cleanNew);// Vérification du changement ou non des données
+
+            // Si des changements ont été détectés on fait une mise à jour
             if (hasChanged) {
               await glpiData.updateOne({ Nom: doc.Nom }, { $set: doc });
               updatesCount++;
@@ -164,7 +170,7 @@ async function importGlpiFromApi() {
         }
       };
 
-      // Traitement en parallèle par lots de 10
+      // Traitement en parallèle par lots de 10 (Limitage du nombre de requêtes simultanées)
       for (let i = 0; i < computers.length; i += concurrencyLimit) {
         const chunk = computers.slice(i, i + concurrencyLimit);
         await Promise.all(chunk.map(processEntry));
@@ -176,8 +182,8 @@ async function importGlpiFromApi() {
 
     await closeGlpiSession(sessionToken);
 
-    logHistory(`✅ ${updatesCount} ordinateurs insérés ou réellement mis à jour depuis GLPI.`, user);
-    console.log(`✅ ${updatesCount} ordinateurs insérés ou réellement mis à jour depuis GLPI.`);
+    logHistory(`✅ ${updatesCount} ordinateurs importés ou mis à jour depuis GLPI.`, user);
+    console.log(`✅ ${updatesCount} ordinateurs importés ou mis à jour depuis GLPI.`);
   } catch (err) {
     logHistory("❌ Echec de l'importation des données depuis GLPI", user);
     console.log('❌ Erreur pendant l’import des données GLPI :', err.message);

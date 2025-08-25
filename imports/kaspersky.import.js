@@ -3,6 +3,7 @@ const csv = require('csv-parser');
 const kasperskyData = require('../models/kaspersky.model');
 const path = require('path');
 const logHistory = require('../utility_function/loggers/logHistory');
+const _ = require("lodash");
 
 //Fonction d'importation
 function importKaspersky() {
@@ -30,7 +31,7 @@ function importKaspersky() {
       .on('data', (ligne) => {
         const newKasperskyData = new kasperskyData({
           Nom: ligne?.Nom,
-          agentAdministrationInstalle: ligne["L'Agent d'administration est installé"]?.toLowerCase(),
+          agentAdministrationInstale: ligne["L'Agent d'administration est installé"]?.toLowerCase(),
           agentAdministrationExecution: ligne["L'Agent d'administration est en cours d'exécution"]?.toLowerCase(),
           protectionTempsReel: ligne["Protection en temps réel"]?.toLowerCase(),
           DerniereMiseAJourBasesAntivirus: ligne["Dernière mise à jour des bases antivirus"] || null,
@@ -47,7 +48,6 @@ function importKaspersky() {
           console.log("L'ordinateur " + newKasperskyData.Nom + " existe déjà dans le fichier CSV (doublon ignoré).");
           return;
         } else {
-
           // Ajout de l'objet à la liste et au Set pour éviter les doublons
           nomSet.add(newKasperskyData.Nom);
           allKasperskyData.push(newKasperskyData);
@@ -56,43 +56,44 @@ function importKaspersky() {
       })
       .on('end', async () => {
         try {
-          const existingDocs = await kasperskyData.find({ Nom: { $in: allKasperskyData.map(d => d.Nom) } }).select('Nom');
-          const existingNoms = new Set(existingDocs.map(d => d.Nom));
-          const filteredData = allKasperskyData.filter(d => !existingNoms.has(d.Nom));
-
-          if (filteredData.length === 0) {
-            console.log("⚠️ Aucun nouvel ordinateur à insérer depuis Kaspersky, tous les Nom existent déjà.");
-            return resolve();
-          }
-
           let updatesCount = 0;
 
           for (const doc of allKasperskyData) {
             try {
-
               const updateDoc = doc.toObject();
-              delete updateDoc._id; // Suppression de _id
-              delete updateDoc.__v; // Suppression de __v
+              delete updateDoc._id;
+              delete updateDoc.__v;
 
-              await kasperskyData.updateOne(
-                { Nom: doc.Nom }, //Critère : identifiant unique du poste
-                { $set: updateDoc }, //On remplace les données existantes
-                { upsert: true } //Sinon, on insère
-              );
-              updatesCount++;
+              const existing = await kasperskyData.findOne({ Nom: updateDoc.Nom });
+
+              if (!existing) {
+                await kasperskyData.updateOne({ Nom: updateDoc.Nom }, { $set: updateDoc }, { upsert: true });
+                updatesCount++;
+              } else {
+                // Comparaison champ par champ
+                const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];// Champs à ignorer
+                // Nettoyage des champs à ignorer
+                const cleanExisting = _.omit(existing.toObject(), ignoreFields);
+                const cleanNew = _.omit(doc, ignoreFields);
+                
+                const hasChanged = !_.isEqual(cleanExisting, cleanNew);// Vérification du changement ou non des données
+
+                if (hasChanged) {
+                  await kasperskyData.updateOne({ Nom: updateDoc.Nom }, { $set: updateDoc });
+                  updatesCount++;
+                }
+              }
             } catch (err) {
               console.error(`❌ Erreur lors de l'upsert du poste Kaspersky ${doc.Nom} :`, err.message);
             }
           }
 
           logHistory(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kasperky.`, user);
-
           console.log(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kasperky.`);
           resolve();
 
         } catch (err) {
           logHistory("❌ Echec de l'importation des donnees depuis Kaspersky", user);
-
           console.error("❌Erreur lors de l'insertion des données de Kaspersky :", err);
           reject(err);
         }

@@ -2,6 +2,7 @@ const { Client } = require('ldapts');
 const adData = require('../models/ad.model');
 const parseDate = require('../utility_function/dateFunctions/parseDateValue');
 const logHistory = require('../utility_function/loggers/logHistory');
+const _ = require("lodash");
 
 async function importAdFromLdap() {
   const url = process.env.AD_URL;
@@ -23,6 +24,7 @@ async function importAdFromLdap() {
 
   let user = "System";
 
+  // Ouverture de session LDAP
   try {
     await client.bind(bindDN, password);
     console.log('✅ Bind LDAP réussi.');
@@ -45,11 +47,13 @@ async function importAdFromLdap() {
     const cnSet = new Set();
     let updatesCount = 0;
 
+    // Fonction utilitaire pour nettoyer les champs
     const cleanField = (field) => {
       if (Array.isArray(field) && field.length === 0) return "";
       return field;
     };
 
+    // Traitement des entrées
     for (const e of searchEntries) {
       try {
         if (!e.cn || cnSet.has(e.cn)) {
@@ -100,20 +104,37 @@ async function importAdFromLdap() {
           Description: Array.isArray(e.description) && e.description.length === 0 ? "" : e.description,
         };
 
-        await adData.updateOne({ CN: doc.CN }, { $set: doc }, { upsert: true });
-        updatesCount++;
+        // Vérifier si déjà présent
+        const existing = await adData.findOne({ CN: doc.CN });
+
+        // Si non présent, on insère
+        if (!existing) {
+          await adData.updateOne({ CN: doc.CN }, { $set: doc }, { upsert: true });
+          updatesCount++;
+        } else {
+          const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];// Champs à ignorer
+          // Nettoyage des champs à ignorer
+          const cleanExisting = _.omit(existing.toObject(), ignoreFields);
+          const cleanNew = _.omit(doc, ignoreFields);
+
+          const hasChanged = !_.isEqual(cleanExisting, cleanNew);// Vérification du changement ou non des données
+
+
+          if (hasChanged) {
+            await adData.updateOne({ CN: doc.CN }, { $set: doc });
+            updatesCount++;
+          }
+        }
       } catch (err) {
         console.error(`❌ Erreur sur l’entrée ${e.cn || '[sans CN]'} :`, err.message);
       }
     }
 
     logHistory(`✅ ${updatesCount} ordinateurs AD insérés/mis à jour.`, user);
-
     console.log(`✅ ${updatesCount} ordinateurs AD insérés/mis à jour.`);
 
   } catch (err) {
     logHistory("❌ Echec de l'importation des donnees depuis AD", user);
-
     console.error('❌ Erreur durant import LDAPTS :', err.message || err);
   } finally {
     await client.unbind().catch(() => {});

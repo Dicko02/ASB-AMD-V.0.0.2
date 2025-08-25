@@ -2,6 +2,7 @@ const GLPI = require('../models/glpi.model');
 const Kaspersky = require('../models/kaspersky.model');
 const NoAD = require('../models/noAD.model');
 const AD = require('../models/ad.model');  // Import du modèle AD
+const _ = require("lodash");
 
 // fonction permettant la fusion des endpoints apparaissant dans Kaspersky ou GLPI mais n'apparaissant pas dans AD
 async function noAD() {
@@ -16,6 +17,7 @@ async function noAD() {
     // ---- Cas Kaspersky ----
     if (allKasperskyData && allKasperskyData.length > 0) {
       for (const kasperskyData of allKasperskyData) {
+        
         // Ignore si Nom dans Kaspersky est présent dans AD
         if (adCNs.has(kasperskyData.Nom)) continue;
 
@@ -38,10 +40,13 @@ async function noAD() {
           await NoAD.create(noADData);
           console.log(`🆕 Ajout noAD pour ${kasperskyData.Nom}`);
         } else {
-          // Comparaison champ par champ
-          const hasChanged = Object.keys(noADData).some(
-            key => JSON.stringify(existing[key]) !== JSON.stringify(noADData[key])
-          );
+
+          const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];// Champs à ignorer
+          // Nettoyage des champs à ignorer
+          const cleanExisting = _.omit(existing.toObject(), ignoreFields);
+          const cleanNew = _.omit(noADData, ignoreFields);
+
+          const hasChanged = !_.isEqual(cleanExisting, cleanNew);// Vérification du changement ou non des données
 
           if (hasChanged) {
             await NoAD.findOneAndUpdate(
@@ -57,7 +62,7 @@ async function noAD() {
       }
     }
 
-    // ---- Cas GLPI seul ----
+    // ---- Cas GLPI ----
     for (const glpiData of allGlpiData) {
       // Ignore si Nom dans GLPI est présent dans AD
       if (adCNs.has(glpiData.Nom)) continue;
@@ -73,9 +78,11 @@ async function noAD() {
         await NoAD.create(noADData);
         console.log(`🆕 Ajout noAD pour ${glpiData.Nom}`);
       } else {
-        const hasChanged = Object.keys(noADData).some(
-          key => JSON.stringify(existing[key]) !== JSON.stringify(noADData[key])
-        );
+        const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];
+        const cleanExisting = _.omit(existing.toObject(), ignoreFields);
+        const cleanNew = _.omit(noADData, ignoreFields);
+        const hasChanged = !_.isEqual(cleanExisting, cleanNew);
+
 
         if (hasChanged) {
           await NoAD.findOneAndUpdate(
@@ -91,7 +98,7 @@ async function noAD() {
     }
 
     // ✅ Message final une seule fois
-    console.log("🎉 Fusion noAD terminée avec succès pour tous les ordinateurs.");
+    console.log("✅ Fusion noAD terminée avec succès pour tous les ordinateurs.");
 
   } catch (error) {
     console.error("❌ Erreur dans l'ajout ou la fusion noAD :", error);

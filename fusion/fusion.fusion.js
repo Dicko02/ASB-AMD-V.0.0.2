@@ -62,11 +62,11 @@ async function fusion() {
       const existing = await Fusion.findOne({ CN: adData.CN });
 
       if (!existing) {
-        // Si pas trouvé (insertion directe)
-        await Fusion.create(fusionData);
+        await Fusion.create(fusionData); // Si pas trouvé on fait insertion directe
+
       } else {
         // Vérifie si les données ont changé (comparaison stricte champ par champ)
-        // 🔄 MODIFIÉ : comparaison profonde avec lodash en ignorant les champs techniques MongoDB
+        // comparaison profonde avec lodash en ignorant les champs techniques MongoDB
         const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];
         const cleanExisting = _.omit(existing.toObject(), ignoreFields);
         const cleanFusion = _.omit(fusionData, ignoreFields);
@@ -87,7 +87,7 @@ async function fusion() {
     }
 
     // Message final une seule fois
-    console.log("🎉 Fusion terminée avec succès pour tous les ordinateurs.");
+    console.log("✅ Fusion terminée avec succès pour tous les ordinateurs.");
   } catch (error) {
     console.error("❌ Erreur dans l'ajout ou la fusion :", error);
   }
