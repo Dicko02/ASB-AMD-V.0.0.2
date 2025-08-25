@@ -2,6 +2,7 @@ const AD = require('../models/ad.model');
 const GLPI = require('../models/glpi.model');
 const Kaspersky = require('../models/kaspersky.model');
 const Fusion = require('../models/fusion.model');
+const _ = require("lodash"); // ajout pour comparaison profonde
 
 // fonction permettant de fusionner les données existantes qui ont été importées depuis AD, Kaspersky et GLPI
 async function fusion() {
@@ -65,9 +66,12 @@ async function fusion() {
         await Fusion.create(fusionData);
       } else {
         // Vérifie si les données ont changé (comparaison stricte champ par champ)
-        const hasChanged = Object.keys(fusionData).some(key =>
-          JSON.stringify(existing[key]) !== JSON.stringify(fusionData[key])
-        );
+        // 🔄 MODIFIÉ : comparaison profonde avec lodash en ignorant les champs techniques MongoDB
+        const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];
+        const cleanExisting = _.omit(existing.toObject(), ignoreFields);
+        const cleanFusion = _.omit(fusionData, ignoreFields);
+
+        const hasChanged = !_.isEqual(cleanExisting, cleanFusion);
 
         if (hasChanged) {
           await Fusion.findOneAndUpdate(

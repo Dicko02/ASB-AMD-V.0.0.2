@@ -45,7 +45,6 @@ async function initGlpiSession() {
   }
 }
 
-
 // Pour récupérer les ordinateurs dans GLPI
 async function fetchGlpiComputers(sessionToken, rangeStart = 0, rangeStop = 999) {
   const res = await safeFetch(`${GLPI_URL}/Computer`, {
@@ -57,18 +56,13 @@ async function fetchGlpiComputers(sessionToken, rangeStart = 0, rangeStop = 999)
   });
 
   if (!Array.isArray(res)) {
-    // safeFetch a échoué ou n’a pas renvoyé un tableau
     return { data: [], more: false };
   }
 
-  // GLPI met la pagination dans les headers, mais comme safeFetch fait déjà `res.json()`
-  // tu ne peux plus les lire ici. => Soit tu adaptes safeFetch pour renvoyer {json, headers}
-  // soit tu décides que "more" = true tant que tu reçois un batch complet.
   const more = res.length >= (rangeStop - rangeStart + 1);
 
   return { data: res, more };
 }
-
 
 async function fetchComputerDetails(id, sessionToken) {
   return await safeFetch(`${GLPI_URL}/Computer/${id}?expand_dropdowns=true`, {
@@ -142,8 +136,29 @@ async function importGlpiFromApi() {
             Utilisateur: entry.users_id_tech || null
           };
 
-          await glpiData.updateOne({ Nom: doc.Nom }, { $set: doc }, { upsert: true });
-          updatesCount++;
+          // Vérifier si l'ordinateur existe déjà
+          const existing = await glpiData.findOne({ Nom: doc.Nom });
+
+          if (!existing) {
+            // Nouveau document → insertion
+            await glpiData.updateOne({ Nom: doc.Nom }, { $set: doc }, { upsert: true });
+            updatesCount++;
+          } else {
+            // Comparaison champ par champ
+            let hasChanged = false;
+            for (let key of Object.keys(doc)) {
+              if (doc[key] !== existing[key]) {
+                hasChanged = true;
+                break;
+              }
+            }
+
+            if (hasChanged) {
+              await glpiData.updateOne({ Nom: doc.Nom }, { $set: doc });
+              updatesCount++;
+            }
+          }
+
         } catch (e) {
           console.log(`⚠️  Erreur sur l’entrée GLPI ${entry.name} :`, e.message);
         }
@@ -161,8 +176,8 @@ async function importGlpiFromApi() {
 
     await closeGlpiSession(sessionToken);
 
-    logHistory(`✅ ${updatesCount} ordinateurs importés ou mis à jour avec succès depuis GLPI.`, user);
-    console.log(`✅ ${updatesCount} ordinateurs importés ou mis à jour avec succès depuis GLPI.`);
+    logHistory(`✅ ${updatesCount} ordinateurs insérés ou réellement mis à jour depuis GLPI.`, user);
+    console.log(`✅ ${updatesCount} ordinateurs insérés ou réellement mis à jour depuis GLPI.`);
   } catch (err) {
     logHistory("❌ Echec de l'importation des données depuis GLPI", user);
     console.log('❌ Erreur pendant l’import des données GLPI :', err.message);
