@@ -10,6 +10,11 @@ const LOGS_DIR = path.join(__dirname, '..', 'logs');// Chemin du dossier contena
 function getLogContent(req, res){
   const user = req.user?.pseudo || 'Inconnu';
   const { logType } = req.params;// Récupère le type de log demandé depuis l’URL (ex: 'app', 'history')
+
+  // Vérifie si le dossier des logs existe, sinon le crée
+  if (!fs.existsSync(LOGS_DIR)) {
+    fs.mkdirSync(LOGS_DIR, { recursive: true });
+  }
   
   try{
 
