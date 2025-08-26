@@ -12,7 +12,7 @@ if (!fs.existsSync(LOGS_DIR)) {
 }
 
 // Pour lire le contenu d'un fichier log precis
-function getLogContent(req, res){
+async function getLogContent(req, res){
   const user = req.user?.pseudo || 'Inconnu';
   const { logType } = req.params;// Récupère le type de log demandé depuis l’URL (ex: 'app', 'history')
   
@@ -30,13 +30,12 @@ function getLogContent(req, res){
       return res.status(404).json({ error: 'Fichier introuvable.' });
     };
 
-    const content = fs.readFileSync(filePath, 'utf8');// Lit le contenu du fichier en texte brut (utf8)
+    const content = await fs.promises.readFile(filePath, 'utf8');// Lit le contenu du fichier en texte brut (utf8)
 
     //enregistrement du log dans l'historique des audits utilisateurs
     logHistory(`✅ Consultation des logs de type <${logType}>`, user);
 
-    // Envoie une réponse de type texte (text/plain)
-    res.setHeader('Content-Type', 'text/plain');
+    // Envoie une réponse JSON contenant les lignes du log sous forme de tableau
     res.status(200).json(content.split("\n"));
 
   }catch(err){
@@ -70,7 +69,7 @@ function downloadLogFile(req, res){
 
     res.download(filePath);// lance le telechargement du fichier au client
 
-  }catch{
+  }catch (err) {
     logHistory(`❌ Echec du telechargement d'un rapport sur les logs de type <${logType}>`, user);
     console.error(`Erreur lors du telechargement d'un rapport sur les logs de type <${logType}> :`, err);
     res.status(500).json({error: `Erreur serveur, impossible de telecharger le rapport sur les logs de type <${logType}>`});
