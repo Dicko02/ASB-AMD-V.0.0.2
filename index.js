@@ -46,7 +46,7 @@ app.use('/api/conformitySetting', conformitySettingRoute);
 app.use('/api/logs', logsRoute);
 
 // Middleware pour les routes non trouvées
-app.use('*', (req, res) => {
+app.use((req, res) => {
   res.status(404).json({
     status: 'error',
     message: `Route ${req.originalUrl} non trouvée`
