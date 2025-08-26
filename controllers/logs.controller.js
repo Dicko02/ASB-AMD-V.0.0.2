@@ -6,15 +6,15 @@ const analyserLogsApp = require('../utility_function/appLogs/analyserLogsApp');
 
 const LOGS_DIR = path.join(__dirname, '..', 'logs');// Chemin du dossier contenant les fichiers de logs (../logs)
 
+// Vérifie si le dossier des logs existe, sinon le crée
+if (!fs.existsSync(LOGS_DIR)) {
+  fs.mkdirSync(LOGS_DIR, { recursive: true });
+}
+
 // Pour lire le contenu d'un fichier log precis
 function getLogContent(req, res){
   const user = req.user?.pseudo || 'Inconnu';
   const { logType } = req.params;// Récupère le type de log demandé depuis l’URL (ex: 'app', 'history')
-
-  // Vérifie si le dossier des logs existe, sinon le crée
-  if (!fs.existsSync(LOGS_DIR)) {
-    fs.mkdirSync(LOGS_DIR, { recursive: true });
-  }
   
   try{
 
