@@ -45,6 +45,14 @@ app.use('/api/noAD', noADRoute);
 app.use('/api/conformitySetting', conformitySettingRoute);
 app.use('/api/logs', logsRoute);
 
+// Middleware pour les routes non trouvées
+app.use('*', (req, res) => {
+  res.status(404).json({
+    status: 'error',
+    message: `Route ${req.originalUrl} non trouvée`
+  });
+});
+
 //démarrage du serveur
 app.listen(port || 10000, `${process.env.IP}`, () => {
     console.log(`Listening on port ${port ?? 10000}`);
