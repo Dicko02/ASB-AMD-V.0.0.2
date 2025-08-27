@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const logHistory = require('../utility_function/loggers/logHistory');
 
+
 // Route POST : Connection en tant qu'utilisateur
 module.exports.loginAdmin = async (req, res) => {
   const { pseudo, password } = req.body;
@@ -20,6 +21,10 @@ module.exports.loginAdmin = async (req, res) => {
 
     if (!isPasswordValid){
       return res.status(401).json({ message: "Mot de passe incorrect" });
+    }
+
+    if(admin.status === 'inactive'){
+      return res.status(403).json({ message: "Compte inactif" });
     }
 
     // Crée un token signé (JWT)
@@ -63,6 +68,7 @@ module.exports.signUp = async (req, res) => {
       const admin = new adminModel({
         pseudo: req.body.pseudo,
         titre: req.body.titre,
+        status: 'active',
         password: req.body.password
       });
       // Une fois le user créé, on crée aussi son document paramètres
@@ -122,7 +128,7 @@ module.exports.adminInfo = async (req, res) => {
 // Route UPDATE : Mettre a jour un utilisateur
 module.exports.updateAdmin = async (req, res) => {
   const user = req.user?.pseudo || 'Inconnu';
-  const { pseudo, titre, password } = req.body;
+  const { pseudo, status, titre, password } = req.body;
 
   try {
 
@@ -138,6 +144,7 @@ module.exports.updateAdmin = async (req, res) => {
         $set: {
           ...(pseudo && { pseudo }), // n'inclut que si pseudo est fourni
           ...(titre && { titre }), // n'inclut que si titre est fourni
+          ...(status && { status }), // idem pour le statut
           ...(hashedPassword && { password: hashedPassword }) // idem pour le mot de passe
         }
       },

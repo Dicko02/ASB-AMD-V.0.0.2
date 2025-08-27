@@ -1,111 +1,171 @@
 const fetch = require('node-fetch');
-const mailModel = require('../../models/mail.model');
+const mailModel = require('../../models/mail.model'); // modèle des mails / tickets
 const logHistory = require('../loggers/logHistory');
+const endpointsModel = require('../../models/fusion.model');
 
 const API_URL = process.env.GLPI_URL;
 const APP_TOKEN = process.env.GLPI_APP_TOKEN;
 const USER_TOKEN = process.env.GLPI_USER_TOKEN;
-const DEMANDEUR_NOM = process.env.DEMANDEUR_NOM; //nom exact du demandeur
+const DEMANDEUR_NOM = process.env.DEMANDEUR_NOM;
 
-// Fonction utilitaire safe pour fetch
-async function safeFetch(url, headers = {}) {
+// Fonction safe fetch
+async function safeFetch(url, options = {}) {
     try {
-        const res = await fetch(url, { headers });
+        const res = await fetch(url, options);
         if (!res.ok) {
             console.log(`⚠️ Requête échouée (${res.status}) sur ${url}`);
             return null;
         }
         return await res.json();
     } catch (err) {
-        console.log(`⚠️ Erreur réseau sur ${url} : ${err.message}`);
+        console.log(`⚠️ Erreur réseau sur ${url}: ${err.message}`);
         return null;
     }
 }
 
-//Ouverture d'une session API GLPI non bloquante
+// Session GLPI
 async function getSessionToken() {
     const data = await safeFetch(`${API_URL}/initSession`, {
-        'App-Token': APP_TOKEN,
-        'Authorization': `user_token ${USER_TOKEN}`
+        headers: {
+            'App-Token': APP_TOKEN,
+            'Authorization': `user_token ${USER_TOKEN}`
+        }
     });
-
-    if (!data?.session_token) {
-        console.log("❌ Impossible d'obtenir le token de session GLPI.");
-        return null;
-    }
-
-    return data.session_token;
+    return data?.session_token || null;
 }
 
-//Récuperation des tickets liés au demandeur non bloquante
+// Récupération tickets
 async function getTicketsForRequester(sessionToken) {
     if (!sessionToken) return [];
-    
     const url = `${API_URL}/search/Ticket?criteria[0][field]=4&criteria[0][searchtype]=contains&criteria[0][value]=${encodeURIComponent(DEMANDEUR_NOM)}`;
     const data = await safeFetch(url, {
-        'Session-Token': sessionToken,
-        'App-Token': APP_TOKEN
+        headers: {
+            'Session-Token': sessionToken,
+            'App-Token': APP_TOKEN
+        }
     });
 
     if (!data?.data) return [];
-
     return data.data.map(row => ({
-        id: row[2], //ID du ticket
-        titre: row[1], //Titre = endpoint
-        statut: row[12] //Statut (4=Résolu, 5=Traité, 6=Clos)
+        id: row[2],
+        titre: row[1],
+        statut: Number(row[12])
     }));
 }
 
-//Vérification et suppression des mails liés aux tickets traités
-async function checkTickets() {
-    const user = "System";
+// Vérifie si l'endpoint est critique
+async function isEndpointCritical(endpoint) {
+    const doc = await endpointsModel.findOne({ endpoint });
 
+    if(doc?.criticalLevel === 'critical'){
+        return true;
+    }
+
+    return false;
+}
+
+// Réouvrir ticket
+async function reopenTicket(ticketId) {
     try {
-        // Ouverture de session GLPI
-        const sessionToken = await getSessionToken();
-        if (!sessionToken) return; // arrêt si pas de token
-
-        // Récupération des tickets
-        const tickets = await getTicketsForRequester(sessionToken);
-
-        //On filtre uniquement les tickets dont le statut est 5 (Traité) ou 6 (Clos)
-        const traites = tickets.filter(t => [5, 6].includes(Number(t.statut)));
-
-        // Vérification des tickets traités
-        if (traites.length === 0) {
-            console.log("⏳ Aucun ticket traité pour l’instant.");
-            return;
-        }
-
-        // Suppression des mails liés aux tickets traités
-        for (const t of traites) {
-            try {
-                console.log(`✅ Ticket ${t.id} pour endpoint "${t.titre}" est traité.`);
-
-                const deleteMail = await mailModel.findOneAndDelete({ endpoint: t.titre });
-
-                if (deleteMail) {
-                    console.log(`✅ Mail supprimé pour endpoint ${t.titre}`);
-                    logHistory(`✅ Suppression du mail pour endpoint ${t.titre}`, user);
-                } else {
-                    console.log(`ℹ️ Aucun mail trouvé pour endpoint ${t.titre}`);
-                    logHistory(`ℹ️ Aucun mail trouvé pour endpoint ${t.titre}`, user);
-                }
-            } catch (err) {
-                console.log(`⚠️ Erreur lors de la suppression du mail pour ${t.titre} : ${err.message}`);
-                logHistory(`⚠️ Erreur suppression mail pour ${t.titre} : ${err.message}`, user);
-            }
-        }
-    } catch (error) {
-        console.error("❌ Erreur dans checkTickets:", error);
-        logHistory(`❌ Erreur checkTickets: ${error.message}`, user);
+        const res = await fetch(`${API_URL}/Ticket/${ticketId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "App-Token": APP_TOKEN,
+                "Authorization": `user_token ${USER_TOKEN}`
+            },
+            body: JSON.stringify({ status: 1 }) // 1 = Nouveau
+        });
+        if (!res.ok) throw new Error(`Erreur API: ${res.status}`);
+        console.log(`✅ Ticket ${ticketId} réouvert`);
+        return true;
+    } catch (err) {
+        console.error(`❌ Impossible de réouvrir le ticket ${ticketId}: ${err.message}`);
+        return false;
     }
 }
 
-//Lancement de la surveillance toutes les 60 minutes
+// Traitement des tickets
+async function checkTickets() {
+    
+    const user = "System";
+    const sessionToken = await getSessionToken();
+
+    if (!sessionToken) return;
+
+    const tickets = await getTicketsForRequester(sessionToken);
+    const traites = tickets.filter(t => [5, 6].includes(t.statut)); // 5=Traité, 6=Clos
+
+    for (const t of traites) {
+        const critical = await isEndpointCritical(t.titre);
+
+        // vérifier si le ticket critique a déjà un champ reopenAt
+        const mailEntry = await mailModel.findOne({ ticketId: t.id });
+
+        if (critical) {
+            const now = new Date();
+
+            if (!mailEntry?.reopenAt) {
+
+                // création du champ reopenAt +24h si inexistant
+                const reopenDate = new Date(now.getTime() + 24*60*60*1000);
+
+                await mailModel.findOneAndUpdate(
+                    {
+                        ticketId: t.id // ID unique du ticket GLPI
+                    },
+                    
+                    { 
+                        endpoint: t.titre,
+                        reopenAt: reopenDate
+                    },
+
+                    {
+                        upsert: true
+                    }
+                );
+
+                console.log(`⏳ Ticket ${t.id} pour endpoint "${t.titre}" critique → réouverture planifiée à ${reopenDate}`);
+
+            } else if (mailEntry.reopenAt <= now) {
+
+                // réouverture du ticket si la date est passée et toujours critique
+                if ([5,6].includes(t.statut)) {
+
+                    const reopened = await reopenTicket(t.id);
+
+                    if (reopened) {
+
+                        // Suppression du champ reopenAt
+                        await mailModel.updateOne({ ticketId: t.id }, { $unset: { reopenAt: "" } });
+                        logHistory(`🔄 Ticket ${t.id} réouvert pour endpoint critique ${t.titre}`, user);
+
+                    }
+                }
+            }
+        } else if (t.statut === 5) {
+            // Le ticket est résolu et l'endpoint n'est plus critique alors on supprime le mail
+            const deleteMail = await mailModel.findOneAndDelete({ ticketId: t.id });
+
+            if (deleteMail) {
+
+                console.log(`✅ Mail supprimé pour endpoint ${t.titre}`);
+                logHistory(`✅ Suppression mail pour endpoint ${t.titre}`, user);
+
+            } else {
+
+                console.log(`ℹ️ Aucun mail trouvé pour endpoint ${t.titre}`);
+                logHistory(`ℹ️ Aucun mail trouvé pour endpoint ${t.titre}`, user);
+
+            }
+        }
+    }
+}
+
+// Lancement
 function watchTickets() {
-    checkTickets(); //exécution une fois au démarrage ou au redémarrage
-    setInterval(checkTickets, 3600000); //re-exécution toutes les 60 min
+    checkTickets();
+    setInterval(checkTickets, 2*60*60*1000); // toutes les 2 heures
 }
 
 module.exports = watchTickets;

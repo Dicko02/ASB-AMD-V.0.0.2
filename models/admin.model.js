@@ -11,6 +11,12 @@ const adminSchema = new mongoose.Schema(
           trim: true
         },
 
+        status: {
+          type: String,
+          enum: ['active', 'inactive'],
+          default: 'active'
+        },
+
         titre:{
           type: String,
           required: true,
