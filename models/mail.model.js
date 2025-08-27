@@ -5,8 +5,6 @@ const mailSchema = new mongoose.Schema(
     {
         ticketId: {
             type: Number,
-            required: true,
-            unique: true
         },
 
         endpoint: {
