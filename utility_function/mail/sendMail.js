@@ -1,6 +1,8 @@
 const mail = require('./mail');
 const mailModel = require('../../models/mail.model');
 const logHistory = require('../loggers/logHistory');
+const object = require('./object');
+const demandeurNom = process.env.DEMANDEUR_NOM;
 
 //fonction d'envoi de mail
 async function sendMail(endpoint, inconformites, addressIP, lieu, utilisateur, incoherenceNumber, incoherenceTotalScore, typeMachine) {
@@ -30,7 +32,8 @@ async function sendMail(endpoint, inconformites, addressIP, lieu, utilisateur, i
             await nouveauMail.save();
 
             // Envoi
-            await mail(endpoint, message);
+            const subject = object(demandeurNom, endpoint, inconformites);
+            await mail(subject, message);
             console.log(`Email envoyé avec succès à propos de ${endpoint ?? 'Inconnu'}.`);
             logHistory(`✅ Mail de prise en charge de ${endpoint} envoye avec succes`, user);
         }

@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 
 //fonction d'envoi de mail
-async function mail(endpoint, message) {
+async function mail(object, message) {
     
   // Creation d'un transporteur SMTP (exemple avec Gmail)
   const transporter = nodemailer.createTransport({
@@ -16,7 +16,7 @@ async function mail(endpoint, message) {
   const mailOptions = {
     from: process.env.SENDER_MAIL,
     to: process.env.GETER_MAIL,
-    subject: endpoint,
+    subject: object,
     text: message,
     html: `<p>${message}</p>`
   };

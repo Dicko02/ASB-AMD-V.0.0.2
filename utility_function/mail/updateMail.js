@@ -97,7 +97,9 @@ async function checkTickets() {
     const traites = tickets.filter(t => [5, 6].includes(t.statut)); // 5=Traité, 6=Clos
 
     for (const t of traites) {
-        const critical = await isEndpointCritical(t.titre);
+        // Extraction de l'endpoint du titre et vérification de son état critique
+        const endpoint = t.titre.split("|")[0].split(":")[1].trim();
+        const critical = await isEndpointCritical(endpoint);
 
         // vérifier si le ticket critique a déjà un champ reopenAt
         const mailEntry = await mailModel.findOne({ ticketId: t.id });
@@ -116,7 +118,7 @@ async function checkTickets() {
                     },
                     
                     { 
-                        endpoint: t.titre,
+                        endpoint: endpoint,
                         reopenAt: reopenDate
                     },
 
