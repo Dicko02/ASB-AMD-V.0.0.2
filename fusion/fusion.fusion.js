@@ -4,6 +4,25 @@ const Kaspersky = require('../models/kaspersky.model');
 const Fusion = require('../models/fusion.model');
 const _ = require("lodash"); // ajout pour comparaison profonde
 
+const relevantFields = [
+  "CN",
+  "Nom",
+  "DNSHostName",
+  "LastLogonDate",
+  "OperatingSystem",
+  "OperatingSystemVersion",
+  "whenCreated",
+  "AntivirusActif",
+  "AntivirusNom",
+  "AntivirusVersion",
+  "Lieu",
+  "Utilisateur",
+  "VolumesPourcentageLibre",
+  "dangerousityNumber",
+  "ConformitiesChecked",
+  "Composites"
+];
+
 // fonction permettant de fusionner les données existantes qui ont été importées depuis AD, Kaspersky et GLPI
 async function fusion() {
   try {
@@ -61,19 +80,33 @@ async function fusion() {
       // Vérifie si un document avec le même CN existe
       const existing = await Fusion.findOne({ CN: adData.CN });
 
+      // Fusionner les tableaux ConformitiesChecked pour ne pas perdre les anciennes erreurs
+      fusionData.ConformitiesChecked = _.union(
+        existing?.ConformitiesChecked || [],
+        fusionData.ConformitiesChecked
+      );
+
+      // Recalcul du dangerousityNumber en additionnant les scores entre parenthèses
+      fusionData.dangerousityNumber = fusionData.ConformitiesChecked.reduce((acc, item) => {
+        const match = item.match(/\((\d+)\)$/);
+        return acc + (match ? parseInt(match[1], 10) : 0);
+      }, 0);
+
       if (!existing) {
         await Fusion.create(fusionData); // Si pas trouvé on fait insertion directe
 
       } else {
         // Vérifie si les données ont changé (comparaison stricte champ par champ)
         // comparaison profonde avec lodash en ignorant les champs techniques MongoDB
-        const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];
-        const cleanExisting = _.omit(existing.toObject(), ignoreFields);
-        const cleanFusion = _.omit(fusionData, ignoreFields);
+        const cleanExisting = _.pick(existing.toObject(), relevantFields);
+        const cleanFusion = _.pick(fusionData, relevantFields);
 
         const hasChanged = !_.isEqual(cleanExisting, cleanFusion);
 
         if (hasChanged) {
+          console.log("Différence détectée pour", adData.CN);
+          console.log("Existing:", cleanExisting);
+          console.log("Fusion :", cleanFusion);
           await Fusion.findOneAndUpdate(
             { CN: adData.CN },
             fusionData,

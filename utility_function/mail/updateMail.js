@@ -114,10 +114,7 @@ async function checkTickets() {
 
                 await mailModel.findOneAndUpdate(
                     {
-                        ticketId: t.id // ID unique du ticket GLPI
-                    },
-                    
-                    { 
+                        ticketId: t.id,
                         endpoint: endpoint,
                         reopenAt: reopenDate
                     },
@@ -145,19 +142,23 @@ async function checkTickets() {
                     }
                 }
             }
-        } else if (t.statut === 5) {
+        } else if (t.statut === 5 || t.statut === 6) {
             // Le ticket est résolu et l'endpoint n'est plus critique alors on supprime le mail
-            const deleteMail = await mailModel.findOneAndDelete({ ticketId: t.id });
+            const deleteMail1 = await mailModel.findOneAndDelete({ ticketId: t.id });
+            
 
-            if (deleteMail) {
-
-                console.log(`✅ Mail supprimé pour endpoint ${t.titre}`);
-                logHistory(`✅ Suppression mail pour endpoint ${t.titre}`, user);
-
+            if (deleteMail1) {
+                console.log(`✅ Mail supprimé par id du ticket pour endpoint ${endpoint}`);
+                logHistory(`✅ Suppression mail pour endpoint ${endpoint}`, user);
             } else {
-
-                console.log(`ℹ️ Aucun mail trouvé pour endpoint ${t.titre}`);
-                logHistory(`ℹ️ Aucun mail trouvé pour endpoint ${t.titre}`, user);
+                const deleteMail2 = await mailModel.findOneAndDelete({ endpoint: endpoint });
+                if (deleteMail2) {
+                    console.log(`✅ Mail supprimé par nom de l'endpoint pour endpoint ${endpoint}`);
+                    logHistory(`✅ Suppression mail pour endpoint ${endpoint}`, user);
+                }else{
+                    console.log(`ℹ️ Aucun mail trouvé pour endpoint ${endpoint}`);
+                    logHistory(`ℹ️ Aucun mail trouvé pour endpoint ${endpoint}`, user);
+                }
 
             }
         }
