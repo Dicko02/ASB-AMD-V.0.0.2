@@ -4,13 +4,15 @@ const kasperskyData = require('../models/kaspersky.model');
 const path = require('path');
 const logHistory = require('../utility_function/loggers/logHistory');
 const _ = require("lodash");
+const chemin = process.env.CHEMIN_ACCES_FICHIER_CSV;
 
 //Fonction d'importation
 function importKaspersky() {
   return new Promise((resolve, reject) => {
     const allKasperskyData = [];
     const nomSet = new Set(); //Set local pour éviter doublons pendant l'import
-    const kasperskyCSVRessourcePath = path.join('\\\\WIN-K0J5FFPIPLB', 'KSC-Share', 'allKasperskyData.csv');
+
+    const kasperskyCSVRessourcePath = chemin;
 
     let stream;
     let user = "System";

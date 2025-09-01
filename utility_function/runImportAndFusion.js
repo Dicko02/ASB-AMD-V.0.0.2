@@ -4,11 +4,14 @@ const importGlpi = require("../imports/glpi.import")
 const fusion = require("../fusion/fusion.fusion");
 const noAD = require("../fusion/noAD.fusion")
 const logHistory = require('../utility_function/loggers/logHistory');
-require('../config/db_config');
+const connectDB = require('../config/db_config');
 
 // Fonction principale pour exécuter l'importation et la fusion
 async function runImportAndFusion() {
   user = "System";
+
+  // Connexion à la base de données
+  await connectDB();
 
   await importAd();
   await importKaspersky();
