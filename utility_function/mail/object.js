@@ -1,3 +1,5 @@
+
+// Fonction de creation de l'objet du mail
 function object(demandeurNom, endpoint, inconformites){
 
     firstInconformite = inconformites[0] || 'Aucune inconformité';

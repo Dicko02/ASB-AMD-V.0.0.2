@@ -19,7 +19,8 @@ const mailSchema = new mongoose.Schema(
         },
 
         message: {
-            type: String
+            htmlContent: String,
+            textContent: String
         }
     },
     

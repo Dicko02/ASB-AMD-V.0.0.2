@@ -45,7 +45,7 @@ async function criticalLevelUpDate() {
 
             //envoie d'un mail d'alerte sur le compte que le collecteur glpi utilise
             if(fusionData.criticalLevel === "critical"){
-                await sendMail(fusionData.CN, fusionData.ConformitiesChecked, fusionData.IPv4Address, fusionData.Lieu, fusionData.Utilisateur, fusionData.incoherenceNumber, fusionData.incoherenceTotalScore, fusionData.typeMachine);
+                await sendMail(fusionData);
             }
 
         }
