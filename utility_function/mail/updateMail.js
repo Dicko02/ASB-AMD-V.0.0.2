@@ -55,13 +55,15 @@ async function getTicketsForRequester(sessionToken) {
 
 // Vérifie si l'endpoint est critique
 async function isEndpointCritical(endpoint) {
-    const doc = await endpointsModel.findOne({ endpoint });
+    const CN = endpoint;
+    const doc = await endpointsModel.findOne({ CN });
 
     if(doc?.criticalLevel === 'critical'){
         return 'critical';
+    }else{
+        return 'non-critique';
     }
 
-    return 'non-critique';
 }
 
 // Réouvrir ticket
@@ -103,24 +105,24 @@ async function checkTickets() {
 
         // vérifier si le ticket critique a déjà un champ reopenAt
         const mailEntry = await mailModel.findOne({ ticketId: t.id });
-
         if (critical === 'critical') {
             const now = new Date();
+            const reopenAt = mailEntry?.reopenAt ? new Date(mailEntry.reopenAt) : null;
 
-            if (!mailEntry?.reopenAt) {
+            if (!reopenAt) {
 
                 // création du champ reopenAt +24h si inexistant
                 const reopenDate = new Date(now.getTime() + 24*60*60*1000);
 
                 await mailModel.findOneAndUpdate(
-                    { ticketId: t.id, endpoint: endpoint },
-                    { $set: { reopenAt: reopenDate } },
+                    { endpoint: endpoint },
+                    { $set: { ticketId: t.id, reopenAt: reopenDate } },
                     { upsert: true }
                 );
 
                 console.log(`⏳ Ticket ${t.id} pour endpoint "${t.titre}" critique → réouverture planifiée à ${reopenDate}`);
 
-            } else if (new Date(mailEntry.reopenAt) <= now) {
+            } else if (reopenAt <= now) {
 
                 // réouverture du ticket si la date est passée et toujours critique
                 if ([5,6].includes(t.statut)) {
@@ -136,7 +138,7 @@ async function checkTickets() {
                     }
                 }
             }
-        } else if ((t.statut === 5 || t.statut === 6) && critical != 'critical') {
+        } else if ((t.statut === 5 || t.statut === 6) && critical != 'critical' && mailEntry?.ticketId) {
 
             // Suppression uniquement par ticketId
             const deleteMail = await mailModel.findOneAndDelete({ ticketId: t.id });
@@ -149,6 +151,9 @@ async function checkTickets() {
                 logHistory(`ℹ️ Aucun mail trouvé pour ticketId ${t.id} (endpoint ${endpoint})`, user);
             }
 
+        } else {
+            console.log(`ℹ️ le mail dedie au ticket qui a pour ticketId ${t.id} (endpoint ${endpoint}) n'a pas ete trouve ou le ticket n'est pas dans un etat a traiter`);
+            logHistory(`ℹ️ Aucun mail trouvé pour ticketId ${t.id} (endpoint ${endpoint})`, user);
         }
     }
 }
