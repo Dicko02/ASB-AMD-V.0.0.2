@@ -104,14 +104,15 @@ async function fusion() {
         const hasChanged = !_.isEqual(cleanExisting, cleanFusion);
 
         if (hasChanged) {
-          console.log("Différence détectée pour", adData.CN);
-          console.log("Existing:", cleanExisting);
-          console.log("Fusion :", cleanFusion);
+
+          const updateData = _.omit(fusionData, ['_id', '__v']);
+
           await Fusion.findOneAndUpdate(
             { CN: adData.CN },
-            fusionData,
+            { $set: updateData },
             { new: true }
           );
+
           console.log(`🔄 Mise à jour effectuée pour ${adData.CN}`);
         } else {
           console.log(`✅ Pas de changement détecté pour ${adData.CN}`);

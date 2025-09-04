@@ -67,18 +67,29 @@ async function isEndpointCritical(endpoint) {
 }
 
 // Réouvrir ticket
-async function reopenTicket(ticketId) {
+async function reopenTicket(ticketId, sessionToken) {
     try {
         const res = await fetch(`${API_URL}/Ticket/${ticketId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
                 "App-Token": APP_TOKEN,
-                "Authorization": `user_token ${USER_TOKEN}`
+                "Authorization": `user_token ${USER_TOKEN}`,
+                "Session-Token": sessionToken
             },
-            body: JSON.stringify({ status: 1 }) // 1 = Nouveau
+            body: JSON.stringify({
+                input: [
+                    {
+                        id: ticketId,
+                        status: 1  // 1 = Nouveau
+                    }
+                ]
+            })
         });
-        if (!res.ok) throw new Error(`Erreur API: ${res.status}`);
+
+        const text = await res.text(); // lire la réponse brute
+        if (!res.ok) throw new Error(`Erreur API: ${res.status} - ${text}`);
+
         console.log(`✅ Ticket ${ticketId} réouvert`);
         return true;
     } catch (err) {
@@ -86,6 +97,7 @@ async function reopenTicket(ticketId) {
         return false;
     }
 }
+
 
 // Traitement des tickets
 async function checkTickets() {
@@ -127,7 +139,7 @@ async function checkTickets() {
                 // réouverture du ticket si la date est passée et toujours critique
                 if ([5,6].includes(t.statut)) {
 
-                    const reopened = await reopenTicket(t.id);
+                    const reopened = await reopenTicket(t.id, sessionToken);
 
                     if (reopened) {
 

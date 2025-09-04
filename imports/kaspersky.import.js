@@ -6,55 +6,89 @@ const logHistory = require('../utility_function/loggers/logHistory');
 const _ = require("lodash");
 const chemin = process.env.CHEMIN_ACCES_FICHIER_CSV;
 
-//Fonction d'importation
+// Fonction pour détecter automatiquement le séparateur CSV
+function detectSeparator(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠ Fichier CSV introuvable : ${filePath}`);
+      return ','; // Retourne un séparateur par défaut
+    }
+
+    const firstLine = fs.readFileSync(filePath, 'utf8').split('\n')[0];
+    const separators = [',', ';', '\t', '|'];
+    let maxCount = 0;
+    let detected = ',';
+
+    separators.forEach(sep => {
+      const count = firstLine.split(sep).length;
+      if (count > maxCount) {
+        maxCount = count;
+        detected = sep;
+      }
+    });
+
+    return detected;
+  } catch (err) {
+    console.log(`⚠ Impossible de détecter le séparateur : ${err.message}`);
+    return ','; // Valeur par défaut pour continuer
+  }
+}
+
+
+// Fonction d'importation
 function importKaspersky() {
   return new Promise((resolve, reject) => {
     const allKasperskyData = [];
-    const nomSet = new Set(); //Set local pour éviter doublons pendant l'import
-
+    const nomSet = new Set(); // Set local pour éviter doublons pendant l'import
     const kasperskyCSVRessourcePath = chemin;
-
-    let stream;
     let user = "System";
 
+    let stream;
     try {
       stream = fs.createReadStream(kasperskyCSVRessourcePath);
     } catch (err) {
-      console.log(`⚠️ Fichier Kaspersky inaccessible : ${err.message}`);
-      return resolve(); //On termine proprement sans planter
+      console.log(`⚠ Fichier Kaspersky inaccessible : ${err.message}`);
+      return resolve(); // Terminer proprement sans planter
     }
+
+    const separator = detectSeparator(kasperskyCSVRessourcePath);
+    console.log("Séparateur détecté :", separator);
 
     stream
       .on('error', (err) => {
-        console.log(`⚠️ Impossible de lire le fichier Kaspersky : ${err.message}`);
-        return resolve(); //Terminer silencieusement
+        console.log(`⚠ Impossible de lire le fichier Kaspersky : ${err.message}`);
+        return resolve(); 
       })
-      .pipe(csv())
+      .pipe(csv({ separator }))
       .on('data', (ligne) => {
+        // Nettoyage des clés et valeurs pour éviter les espaces
+        const cleanLigne = {};
+        for (let key in ligne) {
+          cleanLigne[key.trim()] = ligne[key]?.trim();
+        }
+
         const newKasperskyData = new kasperskyData({
-          Nom: ligne?.Nom,
-          agentAdministrationInstale: ligne["L'Agent d'administration est installé"]?.toLowerCase(),
-          agentAdministrationExecution: ligne["L'Agent d'administration est en cours d'exécution"]?.toLowerCase(),
-          protectionTempsReel: ligne["Protection en temps réel"]?.toLowerCase(),
-          DerniereMiseAJourBasesAntivirus: ligne["Dernière mise à jour des bases antivirus"] || null,
-          etat: ligne["État"] || null,
-          description: ligne["Description de l'état"] || null,
-          groupeParent: ligne["Groupe parent"] || null,
-          etatChiffrement: ligne["État de chiffrement"] || null,
-          DerniereAnalyseComplete: ligne["Dernière analyse complète"]
-            ? new Date(ligne["Dernière analyse complète"])
+          Nom: cleanLigne.Nom,
+          agentAdministrationInstale: cleanLigne["L'Agent d'administration est installé"]?.toLowerCase(),
+          agentAdministrationExecution: cleanLigne["L'Agent d'administration est en cours d'exécution"]?.toLowerCase(),
+          protectionTempsReel: cleanLigne["Protection en temps réel"]?.toLowerCase(),
+          DerniereMiseAJourBasesAntivirus: cleanLigne["Dernière mise à jour des bases antivirus"] || null,
+          etat: cleanLigne["État"] || null,
+          description: cleanLigne["Description de l'état"] || null,
+          groupeParent: cleanLigne["Groupe parent"] || null,
+          etatChiffrement: cleanLigne["État de chiffrement"] || null,
+          DerniereAnalyseComplete: cleanLigne["Dernière analyse complète"]
+            ? new Date(cleanLigne["Dernière analyse complète"])
             : null,
         });
 
         if (nomSet.has(newKasperskyData.Nom)) {
-          console.log("L'ordinateur " + newKasperskyData.Nom + " existe déjà dans le fichier CSV (doublon ignoré).");
+          console.log(`L'ordinateur ${newKasperskyData.Nom} existe déjà dans le fichier CSV (doublon ignoré).`);
           return;
-        } else {
-          // Ajout de l'objet à la liste et au Set pour éviter les doublons
-          nomSet.add(newKasperskyData.Nom);
-          allKasperskyData.push(newKasperskyData);
         }
 
+        nomSet.add(newKasperskyData.Nom);
+        allKasperskyData.push(newKasperskyData);
       })
       .on('end', async () => {
         try {
@@ -72,15 +106,11 @@ function importKaspersky() {
                 await kasperskyData.updateOne({ Nom: updateDoc.Nom }, { $set: updateDoc }, { upsert: true });
                 updatesCount++;
               } else {
-                // Comparaison champ par champ
-                const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];// Champs à ignorer
-                // Nettoyage des champs à ignorer
+                const ignoreFields = ["__v", "createdAt", "updatedAt", "_id"];
                 const cleanExisting = _.omit(existing.toObject(), ignoreFields);
-                const cleanNew = _.omit(doc, ignoreFields);
-                
-                const hasChanged = !_.isEqual(cleanExisting, cleanNew);// Vérification du changement ou non des données
+                const cleanNew = _.omit(updateDoc, ignoreFields);
 
-                if (hasChanged) {
+                if (!_.isEqual(cleanExisting, cleanNew)) {
                   await kasperskyData.updateOne({ Nom: updateDoc.Nom }, { $set: updateDoc });
                   updatesCount++;
                 }
@@ -90,16 +120,14 @@ function importKaspersky() {
             }
           }
 
-          logHistory(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kasperky.`, user);
-          console.log(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kasperky.`);
+          logHistory(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kaspersky.`, user);
+          console.log(`✅ ${updatesCount} postes Kaspersky insérés ou mis à jour avec succès depuis Kaspersky.`);
           resolve();
-
         } catch (err) {
           logHistory("❌ Echec de l'importation des donnees depuis Kaspersky", user);
           console.error("❌Erreur lors de l'insertion des données de Kaspersky :", err);
           reject(err);
         }
-
       })
       .on('error', reject);
   });
