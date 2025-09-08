@@ -18,7 +18,13 @@ async function NomDeMachineConforme() {
                 const prefixesConforme = ["WS-", "LP-", "TAB-", "TB-", "SRV-", /^\d{3}/];
 
                 // Vérification si le nom commence par l'un des préfixes ou un motif numérique
-                const verificationPrefixesConforme = prefixesConforme.some(prefix => nomMachine.startsWith(prefix));
+                const verificationPrefixesConforme = prefixesConforme.some(prefix => {
+                    if (prefix instanceof RegExp) {
+                        return prefix.test(nomMachine);
+                    } else {
+                        return nomMachine.startsWith(prefix);
+                    }
+                });
 
                 if (verificationPrefixesConforme) {
                     console.log(`La machine ${fusionData.CN} a un nom conforme`);
