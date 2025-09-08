@@ -13,7 +13,11 @@ async function NomDeMachineConforme() {
         for (const fusionData of allFusionData) {
             if(fusionData.CN){
                 const nomMachine = fusionData.CN;
-                const prefixesConforme = ["WS-", "LP-", "TAB-"];
+
+                // la liste des préfixes conformes
+                const prefixesConforme = ["WS-", "LP-", "TAB-", "TB-", "SRV-", /^\d{3}/];
+
+                // Vérification si le nom commence par l'un des préfixes ou un motif numérique
                 const verificationPrefixesConforme = prefixesConforme.some(prefix => nomMachine.startsWith(prefix));
 
                 if (verificationPrefixesConforme) {

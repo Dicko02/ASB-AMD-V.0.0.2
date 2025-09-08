@@ -13,13 +13,17 @@ async function typeMachine(endpoint){
 
         endpoint.typeMachine = "Laptop"; //Les Laptops
 
-    }else if(nomMachine.startsWith("TAB-")){
+    }else if(nomMachine.startsWith("TAB-") || nomMachine.startsWith("TB-")){
 
         endpoint.typeMachine = "Tablette"; //Les Tablettes
 
-    }else if((systemMachine.includes("Windows server") || systemMachine.includes("Linux"))){
+    }else if(nomMachine.startsWith("SRV-") && (systemMachine.includes("Windows server") || systemMachine.includes("Linux"))){
 
         endpoint.typeMachine = "Server"; //Les Servers
+
+    }else if(/^\d{3}/.test(nomMachine)){
+
+        endpoint.typeMachine = "Guichet"; //Les Guichets
 
     }else if(adressIP){
 

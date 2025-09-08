@@ -43,6 +43,9 @@ async function noAD() {
           ...(glpiData ? glpiData.toObject() : {}),
         };
 
+        // Supprime _id pour éviter le doublon
+        delete noADData._id;
+
         // Préparer le tableau Composites selon la source
         const composites = ["Kaspersky"];
         if (glpiData) composites.push("GLPI");
@@ -96,6 +99,8 @@ async function noAD() {
         ...glpiData.toObject(),
         Composites: ["GLPI"]
       };
+
+      delete noADData._id; // <- important
 
       const existing = await NoAD.findOne({ Nom: glpiData.Nom });
 
