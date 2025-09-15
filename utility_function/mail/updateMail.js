@@ -78,17 +78,17 @@ async function reopenTicket(ticketId, sessionToken) {
                 "Session-Token": sessionToken
             },
             body: JSON.stringify({
-                input: [
-                    {
-                        id: ticketId,
-                        status: 1  // 1 = Nouveau
-                    }
-                ]
+                input:{
+                    id: ticketId,
+                    status: 2  // 2 = En cours (attribué)
+                }
             })
         });
 
-        const text = await res.text(); // lire la réponse brute
-        if (!res.ok) throw new Error(`Erreur API: ${res.status} - ${text}`);
+        const data = await res.json();
+        console.log("Réponse API:", data);
+
+        if (!res.ok) throw new Error(`Erreur API: ${res.status} - ${data}`);
 
         console.log(`✅ Ticket ${ticketId} réouvert`);
         return true;
@@ -124,7 +124,7 @@ async function checkTickets() {
             if (!reopenAt) {
 
                 // création du champ reopenAt +24h si inexistant
-                const reopenDate = new Date(now.getTime() + 24*60*60*1000);
+                const reopenDate = new Date(now.getTime() + 24*60*60*1000); // heure actuelle + 24h
 
                 await mailModel.findOneAndUpdate(
                     { endpoint: endpoint },
