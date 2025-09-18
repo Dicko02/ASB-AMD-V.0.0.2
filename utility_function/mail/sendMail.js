@@ -15,20 +15,20 @@ async function sendMail(endpoint) {
         const message = mailContente(endpoint);
 
         // Vérifier si le mail existe déjà
-        const mailExistant = await mailModel.findOne({ 'endpoint': endpoint.CN });
+        const mailExistant = await mailModel.findOne({ 'endpoint': endpoint.CN ?? endpoint.Nom});
 
         if (mailExistant) {
-            console.log(`❌ Le mail a propos de "${endpoint.CN}" existe déjà, pas d'ajout.`);
+            console.log(`❌ Le mail a propos de "${endpoint.CN ?? endpoint.Nom}" existe déjà, pas d'ajout.`);
         }else{
             // Création et sauvegarde si pas trouvé
-            const nouveauMail = new mailModel({ 'endpoint': endpoint.CN, message });
+            const nouveauMail = new mailModel({ 'endpoint': endpoint.CN ?? endpoint.Nom, message });
             await nouveauMail.save();
 
             // Envoi
-            const subject = object(demandeurNom, endpoint.CN, endpoint.ConformitiesChecked);
+            const subject = object(demandeurNom, endpoint.CN ?? endpoint.Nom, endpoint.ConformitiesChecked);
             await mail(subject, message.htmlContent, message.textContent);
-            console.log(`Email envoyé avec succès à propos de ${endpoint.CN ?? 'Inconnu'}.`);
-            logHistory(`✅ Mail de prise en charge de ${endpoint.CN} envoye avec succes`, user);
+            console.log(`Email envoyé avec succès à propos de ${endpoint.CN ?? endpoint.Nom}.`);
+            logHistory(`✅ Mail de prise en charge de ${endpoint.CN ?? endpoint.Nom} envoye avec succes`, user);
         }
 
     } catch (error) {

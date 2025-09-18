@@ -1,7 +1,7 @@
 const updateCoherence = require('../utility_function/coherence/updateCoherence');
 const scoreCoherenceAccumulateur = require('../utility_function/coherence/scoreCoherenceAccumulateur')
 
-async function ContradictionAntivirus(fusionData, result = null) {
+async function ContradictionAntivirus(endpoint, result = null) {
 
     try{      
         const nomIncoherence = "Antivirus actif mais signalé inexistant"; // le message lie a l'incoherence
@@ -11,16 +11,16 @@ async function ContradictionAntivirus(fusionData, result = null) {
             // 💡 Met à jour le score total seulement si result est fourni
             scoreCoherenceAccumulateur(result, score);
         }else{
-            const noms = fusionData.AntivirusNom?.includes("Kaspersky Endpoint Security");
-            const actif = fusionData.AntivirusActif?.includes("Oui");
+            const noms = endpoint.AntivirusNom?.includes("Kaspersky Endpoint Security");
+            const actif = endpoint.AntivirusActif?.includes("Oui");
 
             //verification de l'apparition de "Antivirus Inactif" dans les non conformites
-            const searchAntivirusInactifResult = fusionData.ConformitiesChecked.some(NonConforme => NonConforme.includes("Antivirus Inactif"));
+            const searchAntivirusInactifResult = endpoint.ConformitiesChecked.some(NonConforme => NonConforme.includes("Antivirus Inactif"));
 
             if (noms && actif && searchAntivirusInactifResult) {
-                await updateCoherence(fusionData, nomIncoherence, score);
+                await updateCoherence(endpoint, nomIncoherence, score);
             }
-            console.log(`✅ coherence ContradictionAntivirus verifier avec succes pour ${fusionData.CN}`);
+            console.log(`✅ coherence ContradictionAntivirus verifier avec succes pour ${endpoint.CN ?? endpoint.Nom}`);
         }
     
     }catch(err){

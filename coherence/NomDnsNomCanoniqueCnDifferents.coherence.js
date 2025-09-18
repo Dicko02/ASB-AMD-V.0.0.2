@@ -1,7 +1,7 @@
 const updateCoherence = require('../utility_function/coherence/updateCoherence');
 const scoreCoherenceAccumulateur = require('../utility_function/coherence/scoreCoherenceAccumulateur')
 
-async function NomDnsNomCanoniqueCnDifferents(fusionData, result = null) {
+async function NomDnsNomCanoniqueCnDifferents(endpoint, result = null) {
 
     try{
         const nomIncoherence = "Nom ≠ DNS ≠ Canonique";
@@ -11,14 +11,15 @@ async function NomDnsNomCanoniqueCnDifferents(fusionData, result = null) {
             // 💡 Met à jour le score total seulement si result est fourni
             scoreCoherenceAccumulateur(result, score);
         }else{
-            if (fusionData.CN && fusionData.DNSHostName && fusionData.CanonicalName) {
-                const cn = fusionData.CN.toLowerCase();
+            let Nom = endpoint.CN ?? endpoint.Nom;
+            if (Nom && endpoint.DNSHostName && endpoint.CanonicalName) {
+                const cn = endpoint.CN.toLowerCase();
                 
-                if (!fusionData.DNSHostName.toLowerCase().includes(cn) || !fusionData.CanonicalName.toLowerCase().includes(cn)) {
-                    await updateCoherence(fusionData, nomIncoherence, score)
+                if (!endpoint.DNSHostName.toLowerCase().includes(cn) || !endpoint.CanonicalName.toLowerCase().includes(cn)) {
+                    await updateCoherence(endpoint, nomIncoherence, score)
                 }
             }
-            console.log(`✅ coherence NomDnsNomCanoniqueCnDifferents verifier avec succes pour ${fusionData.CN}`);
+            console.log(`✅ coherence NomDnsNomCanoniqueCnDifferents verifier avec succes pour ${endpoint.CN ?? endpoint.Nom}`);
         }
     
     }catch(err){

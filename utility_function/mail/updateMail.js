@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 const mailModel = require('../../models/mail.model'); // modèle des mails / tickets
 const logHistory = require('../loggers/logHistory');
 const endpointsModel = require('../../models/fusion.model');
+const NoADModel = require('../../models/noAD.model');
 
 const API_URL = process.env.GLPI_URL;
 const APP_TOKEN = process.env.GLPI_APP_TOKEN;
@@ -55,15 +56,16 @@ async function getTicketsForRequester(sessionToken) {
 
 // Vérifie si l'endpoint est critique
 async function isEndpointCritical(endpoint) {
-    const CN = endpoint;
-    const doc = await endpointsModel.findOne({ CN });
+    // Chercher d'abord dans Fusion
+    let doc = await endpointsModel.findOne({ CN: endpoint });
 
-    if(doc?.criticalLevel === 'critical'){
-        return 'critical';
-    }else{
-        return 'non-critique';
+    // Si rien trouvé, on chercher dans NoAD
+    if (!doc) {
+        doc = await NoADModel.findOne({ CN: endpoint });
     }
 
+    // Vérifier le niveau critique
+    return doc?.criticalLevel === 'critical' ? 'critical' : 'non-critique';
 }
 
 // Réouvrir ticket

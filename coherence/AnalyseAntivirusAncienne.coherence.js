@@ -1,7 +1,7 @@
 const updateCoherence = require('../utility_function/coherence/updateCoherence');
 const scoreCoherenceAccumulateur = require('../utility_function/coherence/scoreCoherenceAccumulateur')
 
-async function AnalyseAntivirusAncienne(fusionData, result = null) {
+async function AnalyseAntivirusAncienne(endpoint, result = null) {
 
     try{
         const nomIncoherence = "Derniere analyse complete de l'antivirus plus ancienne que derniere mise à jour des bases antivirus";
@@ -11,15 +11,15 @@ async function AnalyseAntivirusAncienne(fusionData, result = null) {
             // 💡 Met à jour le score total seulement si result est fourni
             scoreCoherenceAccumulateur(result, score);
         }else{
-            if (fusionData?.DerniereAnalyseComplete && fusionData?.DerniereMiseAJourBasesAntivirus) {
+            if (endpoint?.DerniereAnalyseComplete && endpoint?.DerniereMiseAJourBasesAntivirus) {
 
-                const DerniereAnalyseComplete = new Date(fusionData.DerniereAnalyseComplete);
-                const DerniereMiseAJourBasesAntivirus = new Date(fusionData.DerniereMiseAJourBasesAntivirus);
+                const DerniereAnalyseComplete = new Date(endpoint.DerniereAnalyseComplete);
+                const DerniereMiseAJourBasesAntivirus = new Date(endpoint.DerniereMiseAJourBasesAntivirus);
 
                 if (DerniereAnalyseComplete < DerniereMiseAJourBasesAntivirus) {
-                    await updateCoherence(fusionData, nomIncoherence, score);
+                    await updateCoherence(endpoint, nomIncoherence, score);
                 }
-                console.log(`✅ coherence AnalyseAntivirusAncienne verifier avec succes pour ${fusionData.CN}`);
+                console.log(`✅ coherence AnalyseAntivirusAncienne verifier avec succes pour ${endpoint.CN ?? endpoint.Nom}`);
             }
         }
     

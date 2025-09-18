@@ -1,23 +1,26 @@
 const Fusion = require('../models/fusion.model');
+const NoAD = require('../models/noAD.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
 async function NomDeMachineConforme() {
-
     try {
-        const allFusionData = await Fusion.find();
+        // Fusionner Fusion et NoAD pour traiter les deux ensembles en une seule boucle
+        const allData = [
+            ...(await Fusion.find()),
+            ...(await NoAD.find())
+        ];
 
-        let nomConformite = "Nom de machine non conforme";
-        let dangerousityNumber = 0;
-        let nonConforme;
-    
-        for (const fusionData of allFusionData) {
-            if(fusionData.CN){
-                const nomMachine = fusionData.CN;
+        const prefixesConforme = ["WS-", "LP-", "TAB-", "TB-", "SRV-", /^\d{3}/];
+        const nomConformite = "Nom de machine non conforme";
 
-                // la liste des préfixes conformes
-                const prefixesConforme = ["WS-", "LP-", "TAB-", "TB-", "SRV-", /^\d{3}/];
+        for (const endpoint of allData) {
+            let dangerousityNumber = 0;
+            let nonConforme;
 
-                // Vérification si le nom commence par l'un des préfixes ou un motif numérique
+            let nomMachine = endpoint.CN ?? endpoint.Nom;
+
+            if (nomMachine) {
+
                 const verificationPrefixesConforme = prefixesConforme.some(prefix => {
                     if (prefix instanceof RegExp) {
                         return prefix.test(nomMachine);
@@ -27,23 +30,20 @@ async function NomDeMachineConforme() {
                 });
 
                 if (verificationPrefixesConforme) {
-                    console.log(`La machine ${fusionData.CN} a un nom conforme`);
-                }else {
-                    console.log(`La machine ${fusionData.CN} n'a pas un nom conforme`);
+                    console.log(`✅ La machine ${nomMachine} a un nom conforme`);
+                } else {
+                    console.log(`❌ La machine ${nomMachine} n'a pas un nom conforme`);
                     dangerousityNumber = 2;
-                    nonConforme = nomConformite+`(${dangerousityNumber})`;
-                    updateConformity(fusionData, nonConforme, dangerousityNumber);
+                    nonConforme = `${nomConformite}(${dangerousityNumber})`;
+                    updateConformity(endpoint, nonConforme, dangerousityNumber);
                 }
-    
-            }else{
-                console.log(`la machine n'existe pas`);
+            } else {
+                console.log(`⚠️ La machine n'existe pas ou nom non défini`);
             }
         }
-        
-    }catch (error) {
-        console.error("Erreur lors de la vérification de la conformite du nom de la machine:", error);
+    } catch (error) {
+        console.error("Erreur lors de la vérification de la conformité du nom de la machine :", error);
     }
-
 }
 
 module.exports = NomDeMachineConforme;

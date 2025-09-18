@@ -1,7 +1,7 @@
 const updateCoherence = require('../utility_function/coherence/updateCoherence');
 const scoreCoherenceAccumulateur = require('../utility_function/coherence/scoreCoherenceAccumulateur')
 
-async function AntivirusActifMaisNomOuVersionVide(fusionData, result = null) {
+async function AntivirusActifMaisNomOuVersionVide(endpoint, result = null) {
 
     try{ 
         const nomIncoherence = "Antivirus actif mais nom ou version manquant";
@@ -11,10 +11,10 @@ async function AntivirusActifMaisNomOuVersionVide(fusionData, result = null) {
             // 💡 Met à jour le score total seulement si result est fourni
             scoreCoherenceAccumulateur(result, score);
         }else{
-            if (fusionData?.AntivirusActif && (!fusionData.AntivirusNom || !fusionData.AntivirusVersion)) {
-                await updateCoherence(fusionData, nomIncoherence, score);
+            if (endpoint?.AntivirusActif && (!endpoint.AntivirusNom || !endpoint.AntivirusVersion)) {
+                await updateCoherence(endpoint, nomIncoherence, score);
             }
-            console.log(`✅ coherence AntivirusActifMaisNomOuVersionVide verifier avec succes pour ${fusionData.CN}`);
+            console.log(`✅ coherence AntivirusActifMaisNomOuVersionVide verifier avec succes pour ${endpoint.CN ?? endpoint.Nom}`);
         }
     
     }catch(err){

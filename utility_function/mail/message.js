@@ -41,7 +41,7 @@ function message(endpoint){
             <table style="width:100%; border-collapse:collapse;">
             <tr style="border-bottom:1px solid #e5e7eb;">
                 <td style="font-weight:600; color:#374151; padding:8px 12px;">Nom</td>
-                <td style="padding:8px 12px;">${endpoint.CN ?? 'Inconnu'}</td>
+                <td style="padding:8px 12px;">${endpoint.CN ? endpoint.CN : (endpoint.Nom ? endpoint.Nom : "Inconnu")}</td>
             </tr>
 
             <tr style="border-bottom:1px solid #e5e7eb;">
@@ -78,7 +78,7 @@ function message(endpoint){
             <tr style="border-bottom:1px solid #e5e7eb;">
                 <td style="font-weight:600; color:#374151; padding:8px 12px;">Adresse IP</td>
                 <td style="padding:8px 12px; color:#7c3aed;">
-                ${endpoint.IPv4Address ?? 'Inconnu'}
+                ${endpoint.IPv4Address ? endpoint.IPv4Address : (endpoint.IP ? endpoint.IP : "Inconnu")}
                 </td>
             </tr>
 
@@ -109,13 +109,13 @@ function message(endpoint){
     `;
 
     const textContent = `
-        Nom: ${endpoint.CN ?? 'Inconnu'}
+        Nom: ${endpoint.CN ? endpoint.CN : (endpoint.Nom ? endpoint.Nom : "Inconnu")}
         Utilisateur: ${endpoint.Utilisateur ?? 'Inconnu'}
         Type de machine: ${endpoint.typeMachine ?? 'Inconnu'}
         Niveau de dangerosité: ${endpoint.criticalLevel ?? 'Inconnu'} (score : ${endpoint?.dangerousityNumber ?? 'Inconnu'})
         Pourcentage de cohérence: ${PourcentageCoherence() ?? 'Inconnu'}%
         Antivirus: ${endpoint.AntivirusNom ?? 'Inconnu'} (v${endpoint.AntivirusVersion ?? 'Inconnu'}) — Actif : ${endpoint.AntivirusActif ?? 'Inconnu'}
-        Adresse IP: ${endpoint.IPv4Address ?? 'Inconnu'}
+        Adresse IP: ${endpoint.IPv4Address ? endpoint.IPv4Address : (endpoint.IP ? endpoint.IP : "Inconnu")}
         État de chiffrement du disque: ${endpoint.etatChiffrement ?? 'Inconnu'}
         Non Conformes: ${
             endpoint.ConformitiesChecked && endpoint.ConformitiesChecked.length > 0

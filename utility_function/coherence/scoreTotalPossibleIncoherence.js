@@ -1,42 +1,42 @@
-const Fusion = require('../../models/fusion.model')
-const AnalyseAntivirusAncienne = require('../../coherence/AnalyseAntivirusAncienne.coherence');
-const AntivirusActifMaisNomOuVersionVide = require('../../coherence/AntivirusActifMaisNomOuVersionVide.coherence');
-const ConnexionCreationEgaleDate = require('../../coherence/ConnexionCreationEgaleDate.coherence');
-const ContradictionAntivirus = require('../../coherence/ContradictionAntivirus.coherence');
-const ContradictionDisque = require('../../coherence/ContradictionDisque.coherence');
-const DatesFutures = require('../../coherence/DatesFutures.coherence');
-const DatesInvalides = require('../../coherence/DatesInvalides.coherence');
-const DonneesCritiquesManquantes = require('../../coherence/DonneesCritiquesManquantes.coherence');
-const NomAbsentNomDnsPresent = require('../../coherence/NomAbsentNomDnsPresent.coherence');
-const NomDnsNomCanoniqueCnDifferents = require('../../coherence/NomDnsNomCanoniqueCnDifferents.coherence');
-const ProtectionActiveAndMiseAJourDateInvalid = require('../../coherence/ProtectionActiveAndMiseAJourDateInvalid.coherence');
+const Fusion = require('../../models/fusion.model');
+const NoAD = require('../../models/noAD.model');
 
-// Fonction principale pour évaluer la cohérence d’un enpoint
-async function scoreTotalPossibleIncoherence() {
-            
-    // Récupérer toutes les données fusionnées
-    const allFusionData = await Fusion.find();
+// Tableau de toutes les règles de cohérence
+const rules = [
+    require('../../coherence/AnalyseAntivirusAncienne.coherence'),
+    require('../../coherence/AntivirusActifMaisNomOuVersionVide.coherence'),
+    require('../../coherence/ConnexionCreationEgaleDate.coherence'),
+    require('../../coherence/ContradictionAntivirus.coherence'),
+    require('../../coherence/ContradictionDisque.coherence'),
+    require('../../coherence/DatesFutures.coherence'),
+    require('../../coherence/DatesInvalides.coherence'),
+    require('../../coherence/DonneesCritiquesManquantes.coherence'),
+    require('../../coherence/NomAbsentNomDnsPresent.coherence'),
+    require('../../coherence/NomDnsNomCanoniqueCnDifferents.coherence'),
+    require('../../coherence/ProtectionActiveAndMiseAJourDateInvalid.coherence')
+];
 
-    // Parcourir chaque ordinateur fusionné
-    for (const fusionData of allFusionData) {
+// Fonction utilitaire pour appliquer toutes les règles et calculer le score
+async function applyRulesAndScore(dataset) {
+    for (const item of dataset) {
         const result = { value: 0 };
 
-        await AnalyseAntivirusAncienne(fusionData, result);
-        await AntivirusActifMaisNomOuVersionVide(fusionData, result);
-        await ConnexionCreationEgaleDate(fusionData, result);
-        await ContradictionAntivirus(fusionData, result);
-        await ContradictionDisque(fusionData, result);
-        await DatesFutures(fusionData, result);
-        await DatesInvalides(fusionData, result);
-        await DonneesCritiquesManquantes(fusionData, result);
-        await NomAbsentNomDnsPresent(fusionData, result);
-        await NomDnsNomCanoniqueCnDifferents(fusionData, result);
-        await ProtectionActiveAndMiseAJourDateInvalid(fusionData, result);
+        for (const rule of rules) {
+            await rule(item, result);
+        }
 
-        fusionData.incoherenceTotalScore = result.value;
-        await fusionData.save();
+        item.incoherenceTotalScore = result.value;
+        await item.save();
     }
+}
 
+// Fonction principale
+async function scoreTotalPossibleIncoherence() {
+    const allFusionData = await Fusion.find();
+    const allNoADData = await NoAD.find();
+
+    await applyRulesAndScore(allFusionData);
+    await applyRulesAndScore(allNoADData);
 }
 
 module.exports = scoreTotalPossibleIncoherence;

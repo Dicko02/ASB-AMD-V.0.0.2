@@ -3,7 +3,7 @@ const scoreCoherenceAccumulateur = require('../utility_function/coherence/scoreC
 
 const { isFuture } = require("date-fns");
 
-async function DatesFutures(fusionData, result = null) {
+async function DatesFutures(endpoint, result = null) {
 
     try{ 
         const nomIncoherence = "Date de derniere connexion dans le futur";
@@ -13,10 +13,10 @@ async function DatesFutures(fusionData, result = null) {
             // 💡 Met à jour le score total seulement si result est fourni
             scoreCoherenceAccumulateur(result, score);
         }else{
-            if (fusionData.LastLogonDate && isFuture(new Date(fusionData.LastLogonDate))) {
-                await updateCoherence(fusionData, nomIncoherence, score)
+            if (endpoint.LastLogonDate && isFuture(new Date(endpoint.LastLogonDate))) {
+                await updateCoherence(endpoint, nomIncoherence, score)
             }
-            console.log(`✅ coherence DatesFutures verifier avec succes pour ${fusionData.CN}`);
+            console.log(`✅ coherence DatesFutures verifier avec succes pour ${endpoint.CN ?? endpoint.Nom}`);
         }
 
     }catch(err){

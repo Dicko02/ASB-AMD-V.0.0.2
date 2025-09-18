@@ -131,6 +131,9 @@ async function importGlpiFromApi() {
           const softwares = details?.SoftwareVersion ?? [];
           const av = softwares.find(s => /kaspersky|avast|eset|bitdefender/i.test(s.name || ''));
 
+          const osName = details.operatingsystems_id?.name || null;
+          const ip = details.NetworkPort?.[0]?.ipaddresses?.[0]?.name || null;
+
           const doc = {
             Nom: entry.name || null,
             Lieu: entry.locations_id || null,
@@ -138,7 +141,9 @@ async function importGlpiFromApi() {
             AntivirusNom: av?.name || null,
             AntivirusActif: av ? true : null,
             AntivirusVersion: av?.version || null,
-            Utilisateur: entry.users_id_tech || null
+            Utilisateur: entry.users_id_tech || null,
+            ExploitationSystem: osName,
+            IP: ip
           };
 
           // Vérifier si l'ordinateur existe déjà

@@ -1,40 +1,44 @@
 const Fusion = require('../models/fusion.model');
+const NoAD = require('../models/noAD.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
 async function BadLogonCount() {
-
     try {
-        const allFusionData = await Fusion.find();
+        // Fusionner Fusion et NoAD
+        const allData = [
+            ...(await Fusion.find()),
+            ...(await NoAD.find())
+        ];
 
-        let nomConformite = "Nombre de mauvaise connection a la machine depassant 3";
-        let dangerousityNumber = 0;
-        let nonConforme;
-    
-        for (const fusionData of allFusionData) {
-            if(fusionData.BadLogonCount){
-                const badLogonCount = fusionData.BadLogonCount;
-                if(badLogonCount <= 3){
-                    console.log(`le nombre de mauvaise connection a la machine ${fusionData.CN} est de ${badLogonCount}`);
-                }else{
-                    console.log(`ATTENTION : le nombre de mauvaise connection a la machine ${fusionData.CN} est de ${badLogonCount}, il est superieur a 3, il faut investiguer`);
+        const nomConformiteBase = "Nombre de mauvaise connexion à la machine dépassant 3";
+
+        for (const endpoint of allData) {
+            let dangerousityNumber = 0;
+            let nonConforme;
+            let nomConformite = nomConformiteBase;
+
+            if (endpoint.BadLogonCount != null) {
+                const badLogonCount = endpoint.BadLogonCount;
+                if (badLogonCount <= 3) {
+                    console.log(`✅ Le nombre de mauvaise connexion à la machine ${endpoint.CN ?? endpoint.Nom} est de ${badLogonCount}`);
+                } else {
+                    console.log(`❌ ATTENTION : le nombre de mauvaise connexion à la machine ${endpoint.CN ?? endpoint.Nom} est de ${badLogonCount}, il est supérieur à 3, il faut investiguer`);
                     dangerousityNumber = 2;
-                    nonConforme = nomConformite+`(${dangerousityNumber})`;
-                    updateConformity(fusionData, nonConforme, dangerousityNumber);
+                    nonConforme = `${nomConformite}(${dangerousityNumber})`;
+                    updateConformity(endpoint, nonConforme, dangerousityNumber);
                 }
-    
-            }else{
-                console.log(`les donnees lie au nombre de mauvaise connection a la machine ${fusionData.CN} ne sont pas disponible`);
-                nomConformite = "Nombre de mauvaise connection a la machine non disponible";
+            } else {
+                console.log(`⚠️ Les données liées au nombre de mauvaise connexion à la machine ${endpoint.CN ?? endpoint.Nom} ne sont pas disponibles`);
+                nomConformite = "Nombre de mauvaise connexion à la machine non disponible";
                 dangerousityNumber = 3;
-                nonConforme = nomConformite+`(${dangerousityNumber})`;
-                updateConformity(fusionData, nonConforme, dangerousityNumber);
+                nonConforme = `${nomConformite}(${dangerousityNumber})`;
+                updateConformity(endpoint, nonConforme, dangerousityNumber);
             }
         }
-        
-    }catch (error) {
-        console.error("Erreur lors de la vérification du nombre de mauvaise connection a la machine:", error);
-    }
 
+    } catch (error) {
+        console.error("Erreur lors de la vérification du nombre de mauvaise connexion à la machine :", error);
+    }
 }
 
 module.exports = BadLogonCount;

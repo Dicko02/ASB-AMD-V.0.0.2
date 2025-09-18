@@ -1,7 +1,7 @@
 const updateCoherence = require('../utility_function/coherence/updateCoherence');
 const scoreCoherenceAccumulateur = require('../utility_function/coherence/scoreCoherenceAccumulateur')
 
-async function ConnexionCreationEgaleDate(fusionData, result = null) {
+async function ConnexionCreationEgaleDate(endpoint, result = null) {
 
     try{  
         const nomIncoherence = "derniere connexion et création ont lieu le même jour";
@@ -11,10 +11,10 @@ async function ConnexionCreationEgaleDate(fusionData, result = null) {
             // 💡 Met à jour le score total seulement si result est fourni
             scoreCoherenceAccumulateur(result, score);
         }else{
-            if (fusionData.whenCreated && fusionData.LastLogonDate && fusionData.whenCreated === fusionData.LastLogonDate) {
-                await updateCoherence(fusionData, nomIncoherence, score);
+            if (endpoint.whenCreated && endpoint.LastLogonDate && endpoint.whenCreated === endpoint.LastLogonDate) {
+                await updateCoherence(endpoint, nomIncoherence, score);
             }
-            console.log(`✅ coherence ConnexionCreationEgaleDate verifier avec succes pour ${fusionData.CN}`);
+            console.log(`✅ coherence ConnexionCreationEgaleDate verifier avec succes pour ${endpoint.CN ?? endpoint.Nom}`);
         }
     
     }catch(err){

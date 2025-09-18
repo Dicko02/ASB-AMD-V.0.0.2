@@ -1,8 +1,18 @@
 async function typeMachine(endpoint) {
 
-    const nomMachine = endpoint.CN.toUpperCase(); // on met tout en majuscule
-    const systemMachine = endpoint.OperatingSystem.toLowerCase(); // on met tout en minuscule
-    const adressIP = endpoint.IPv4Address;
+    // Nom de la Machine
+    let nomMachine = endpoint.CN 
+        ? endpoint.CN.toUpperCase() 
+        : (endpoint.Nom ? endpoint.Nom.toUpperCase() : "");
+
+    // System d'Exploitation
+    let systemMachine = endpoint.OperatingSystem 
+        ? endpoint.OperatingSystem.toLowerCase() 
+        : (endpoint.ExploitationSystem ? endpoint.ExploitationSystem.toLowerCase() : "");
+
+    // Adresse IP
+    let adressIP = endpoint.IPv4Address || endpoint.IP || "";
+
 
     if (nomMachine.startsWith("WS-") && (systemMachine.includes("windows 11") || systemMachine.includes("windows 10"))) {
 
