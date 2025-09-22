@@ -1,24 +1,17 @@
 async function typeMachine(endpoint) {
 
     // Nom de la Machine
-    let nomMachine = endpoint.CN 
-        ? endpoint.CN.toUpperCase() 
-        : (endpoint.Nom ? endpoint.Nom.toUpperCase() : "");
-
-    // System d'Exploitation
-    let systemMachine = endpoint.OperatingSystem 
-        ? endpoint.OperatingSystem.toLowerCase() 
-        : (endpoint.ExploitationSystem ? endpoint.ExploitationSystem.toLowerCase() : "");
+    let nomMachine = endpoint.CN ? endpoint.CN.toUpperCase() : (endpoint.Nom ? endpoint.Nom.toUpperCase() : "");
 
     // Adresse IP
     let adressIP = endpoint.IPv4Address || endpoint.IP || "";
 
 
-    if (nomMachine.startsWith("WS-") && (systemMachine.includes("windows 11") || systemMachine.includes("windows 10"))) {
+    if (nomMachine.startsWith("WS-")) {
 
         endpoint.typeMachine = "Desktop"; // Les Desktops
 
-    } else if (nomMachine.startsWith("LP-") && (systemMachine.includes("windows 11") || systemMachine.includes("windows 10"))) {
+    } else if (nomMachine.startsWith("LP-")) {
 
         endpoint.typeMachine = "Laptop"; // Les Laptops
     
@@ -26,7 +19,7 @@ async function typeMachine(endpoint) {
     
         endpoint.typeMachine = "Tablette"; // Les Tablettes
     
-    } else if (nomMachine.startsWith("SRV-") && (systemMachine.includes("windows server") || systemMachine.includes("linux"))) {
+    } else if (nomMachine.startsWith("SRV")) {
     
         endpoint.typeMachine = "Server"; // Les Servers
     
