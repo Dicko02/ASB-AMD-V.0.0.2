@@ -1,5 +1,4 @@
 const Fusion = require('../../models/fusion.model');
-const NoAD = require('../../models/noAD.model');
 const logApp = require('../loggers/logApp');
 const typeMachine = require('../typeMachine');
 const sendMail = require('../mail/sendMail');
@@ -39,14 +38,10 @@ async function processDataSet(dataSet) {
 async function criticalLevelUpDate() {
     try {
         // Récupérer toutes les données
-        const [allFusionData, allNoADData] = await Promise.all([
-            Fusion.find(),
-            NoAD.find()
-        ]);
+        const allFusionData = await Fusion.find()
 
-        // Traiter chaque jeu de données
+        // Traiter le jeu de données
         await processDataSet(allFusionData);
-        await processDataSet(allNoADData);
 
         // Supprime de la base les demandes déjà traitées
         await updateMail();

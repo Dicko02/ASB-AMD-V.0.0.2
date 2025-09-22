@@ -1,5 +1,4 @@
 const Fusion = require('../../models/fusion.model');
-const NoAD = require('../../models/noAD.model');
 
 // Liste des règles de cohérence à appliquer
 const rules = [
@@ -27,11 +26,9 @@ async function applyRulesToData(dataset) {
 
 // Fonction principale pour évaluer la cohérence d’un endpoint
 async function Coherence() {
+    
     const allFusionData = await Fusion.find();
-    const allNoADData = await NoAD.find();
-
     await applyRulesToData(allFusionData);
-    await applyRulesToData(allNoADData);
 }
 
 module.exports = Coherence;

@@ -13,7 +13,6 @@ require('./utility_function/cronJob'); // C’est suffisant pour démarrer la t�
 
 const fusionRoute = require("./routes/fusion.route");
 const adminRoute = require("./routes/admin.route");
-const noADRoute = require("./routes/noAD.route");
 const conformitySettingRoute = require("./routes/conformitySetting.route");
 const logsRoute = require('./routes/logs.route');
 
@@ -41,7 +40,6 @@ app.use(helmet());
 // Routes
 app.use('/api/fusion', fusionRoute);
 app.use('/api/admin', adminRoute);
-app.use('/api/noAD', noADRoute);
 app.use('/api/conformitySetting', conformitySettingRoute);
 app.use('/api/logs', logsRoute);
 

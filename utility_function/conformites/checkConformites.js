@@ -1,4 +1,3 @@
-// fonction d'utilite(utility_function)
 const runImportAndFusion = require('../runImportAndFusion'); 
 const criticalLevelUpDate = require('./criticalLevelUpDate');
 

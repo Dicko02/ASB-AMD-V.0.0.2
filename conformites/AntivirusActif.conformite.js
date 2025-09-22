@@ -1,14 +1,10 @@
 const Fusion = require('../models/fusion.model');
-const NoAD = require('../models/noAD.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
 async function AntivirusActif() {
     try {
-        // Fusionner les données Fusion et NoAD
-        const allData = [
-            ...(await Fusion.find()),
-            ...(await NoAD.find())
-        ];
+        // Fusionner les données Fusion
+        const allData = await Fusion.find();
 
         const nomConformiteBase = "Antivirus Inactif";
 

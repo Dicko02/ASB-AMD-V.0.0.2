@@ -1,5 +1,4 @@
 const Fusion = require('../../models/fusion.model');
-const NoAD = require('../../models/noAD.model');
 
 // Tableau de toutes les règles de cohérence
 const rules = [
@@ -32,11 +31,9 @@ async function applyRulesAndScore(dataset) {
 
 // Fonction principale
 async function scoreTotalPossibleIncoherence() {
+    
     const allFusionData = await Fusion.find();
-    const allNoADData = await NoAD.find();
-
     await applyRulesAndScore(allFusionData);
-    await applyRulesAndScore(allNoADData);
 }
 
 module.exports = scoreTotalPossibleIncoherence;

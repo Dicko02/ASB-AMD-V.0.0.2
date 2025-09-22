@@ -1,7 +1,6 @@
 const fs = require('fs');
 const csv = require('csv-parser');
 const kasperskyData = require('../models/kaspersky.model');
-const path = require('path');
 const logHistory = require('../utility_function/loggers/logHistory');
 const _ = require("lodash");
 const chemin = process.env.CHEMIN_ACCES_FICHIER_CSV;

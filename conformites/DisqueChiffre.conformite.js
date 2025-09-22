@@ -1,14 +1,10 @@
 const Fusion = require('../models/fusion.model');
-const NoAD = require('../models/noAD.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
 async function DisqueChiffre() {
     try {
         // Fusionner Fusion et NoAD pour éviter la répétition
-        const allData = [
-            ...(await Fusion.find()),
-            ...(await NoAD.find())
-        ];
+        const allData = await Fusion.find();
 
         for (const endpoint of allData) {
             let dangerousityNumber = 0;

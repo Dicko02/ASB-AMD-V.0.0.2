@@ -1,14 +1,10 @@
 const Fusion = require('../models/fusion.model');
-const NoAD = require('../models/noAD.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
 async function BadLogonCount() {
     try {
         // Fusionner Fusion et NoAD
-        const allData = [
-            ...(await Fusion.find()),
-            ...(await NoAD.find())
-        ];
+        const allData = await Fusion.find();
 
         const nomConformiteBase = "Nombre de mauvaise connexion à la machine dépassant 3";
 
