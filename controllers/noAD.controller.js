@@ -22,19 +22,19 @@ module.exports.getAllNoAD = async (req, res) => {
 // Route GET : Récupérer les infos d'une machine noAD
 module.exports.noADInfo = async (req, res) => {
     const user = req.user?.pseudo || 'Inconnu';
+    const Nom = req.params.Nom;
     try {
-        const id = req.params._id
-        const noAD = await noADModel.findById(id);
+        const noAD = await noADModel.findOne({Nom: Nom});
         if (!noAD) {
             return res.status(404).json({message: "noAD non enregistre"});
         };
 
-        logHistory(`✅ Consultation des informations d'un enpoint noAD d'id ${id}`, user);
+        logHistory(`✅ Consultation des informations de l'endpoint noAD ${Nom}`, user);
 
         res.json(noAD);
 
     } catch (error) {
-        logHistory(`❌ Echec de la consultation des informations d'un enpoint noAD d'id ${id}`, user);
+        logHistory(`❌ Echec de la consultation des informations de l'endpoint noAD ${Nom}`, user);
         res.status(500).json({ message: "Erreur lors de la récupération des infos de la machine noAD", error });
     }
 }
@@ -43,19 +43,19 @@ module.exports.noADInfo = async (req, res) => {
 // Route DELETE : supprimer une machine noAD
 module.exports.deleteNoAD = async (req, res) => {
     const user = req.user?.pseudo || 'Inconnu';
-    const id = req.params._id
+    const Nom = req.params.Nom;
     try {
-        const deleteNoAD = await noADModel.findByIdAndDelete(id);
+        const deleteNoAD = await noADModel.findOneAndDelete({Nom: Nom});
         if (!deleteNoAD) {
             return res.status(404).json({ message: "l'machine noAD n'existe deja pas" });
         };
 
-        logHistory(`✅ Suppression de la machine noAD d'id ${id}`, user);
+        logHistory(`✅ Suppression de l'endpoint noAD ${Nom}`, user);
 
         res.json({ message: 'machine noAD supprimée', noAD: deleteNoAD });
         
     } catch (error) {
-        logHistory(`❌ Echec de la suppression de la machine noAD d'id ${id}`, user);
+        logHistory(`❌ Echec de la suppression de l'endpoint noAD ${Nom}`, user);
         res.status(500).json({ message: "Erreur lors de la suppression de la machine noAD", error });
     }
 };

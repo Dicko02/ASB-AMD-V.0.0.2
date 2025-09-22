@@ -8,10 +8,10 @@ const authMiddleware = require('../middlewares/auth.middleware');
 router.get('/', authMiddleware, noADControllers.getAllNoAD);
 
 // affichage des infos d'un noAD
-router.get('/:CN', authMiddleware, noADControllers.noADInfo);
+router.get('/:Nom', authMiddleware, noADControllers.noADInfo);
 
 // suppression d'un noAD
-router.delete('/:CN', authMiddleware, noADControllers.deleteNoAD)
+router.delete('/:Nom', authMiddleware, noADControllers.deleteNoAD)
 
 
 module.exports = router;

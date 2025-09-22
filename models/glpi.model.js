@@ -32,6 +32,14 @@ const glpiSchema = new mongoose.Schema(
         Utilisateur: {
             type: String
         },
+
+        ExploitationSystem: {
+            type: String
+        },
+        
+        IP: {
+            type: String
+        }
     }
 );
 

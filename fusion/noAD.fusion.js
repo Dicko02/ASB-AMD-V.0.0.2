@@ -1,7 +1,7 @@
 const GLPI = require('../models/glpi.model');
 const Kaspersky = require('../models/kaspersky.model');
 const NoAD = require('../models/noAD.model');
-const AD = require('../models/ad.model');  // Import du modèle AD
+const AD = require('../models/ad.model');
 const _ = require("lodash");
 
 const relevantFields = [
@@ -17,71 +17,84 @@ const relevantFields = [
   "Composites"
 ];
 
-// fonction permettant la fusion des endpoints apparaissant dans Kaspersky ou GLPI mais n'apparaissant pas dans AD
 async function noAD() {
   try {
     const allGlpiData = await GLPI.find();
     const allKasperskyData = await Kaspersky.find();
     const allAdData = await AD.find();
 
-    // Crée un Set avec tous les CN d'AD pour vérifier rapidement
+    // CN déjà présents dans AD
     const adCNs = new Set(allAdData.map(ad => ad.CN));
-    const processed = new Set(); // pour éviter les doublons
+    const processed = new Set();
 
-    // ---- Cas Kaspersky ----
-    if (allKasperskyData && allKasperskyData.length > 0) {
+    const nomConformiteAD = "La machine n'existe pas dans AD";
+    const nomConformiteKaspersky = "La machine n'existe pas dans Kaspersky";
+    const nomConformiteGlpi = "La machine n'apparait pas dans GLPI";
+
+    const dangerousityNumberAD = 10;
+    const dangerousityNumberKaspersky = 10;
+    const dangerousityNumberGlpi = 10;
+
+    // -------- Cas Kaspersky --------
+    if (allKasperskyData?.length > 0) {
       for (const kasperskyData of allKasperskyData) {
-
-        // Ignore si Nom dans Kaspersky est absent ou déjà traité
         if (!kasperskyData.Nom || adCNs.has(kasperskyData.Nom) || processed.has(kasperskyData.Nom)) continue;
         processed.add(kasperskyData.Nom);
 
         const glpiData = allGlpiData.find(glpi => glpi.Nom === kasperskyData.Nom);
 
         const noADData = {
-          ...kasperskyData.toObject(),
-          ...(glpiData ? glpiData.toObject() : {}),
+          ..._.omit(kasperskyData.toObject(), ["_id", "__v"]),
+          ...(glpiData ? _.omit(glpiData.toObject(), ["_id", "__v"]) : {})
         };
 
-        // Supprime _id pour éviter le doublon
-        delete noADData._id;
+        // Initialisation sûre
+        noADData.dangerousityNumber = noADData.dangerousityNumber || 0;
+        noADData.ConformitiesChecked = noADData.ConformitiesChecked || [];
+        noADData.Composites = ["Kaspersky"];
 
-        // Préparer le tableau Composites selon la source
-        const composites = ["Kaspersky"];
-        if (glpiData) composites.push("GLPI");
-        noADData.Composites = composites;
+        // Ajout conformités sans doublons
+        noADData.ConformitiesChecked = _.union(
+          noADData.ConformitiesChecked,
+          [`${nomConformiteAD}(${dangerousityNumberAD})`]
+        );
+        noADData.dangerousityNumber += dangerousityNumberAD;
 
-        // Vérifie si déjà existant
+        if (!glpiData) {
+          noADData.ConformitiesChecked = _.union(
+            noADData.ConformitiesChecked,
+            [`${nomConformiteGlpi}(${dangerousityNumberGlpi})`]
+          );
+          noADData.dangerousityNumber += dangerousityNumberGlpi;
+        } else {
+          noADData.Composites.push("GLPI");
+        }
+
         const existing = await NoAD.findOne({ Nom: kasperskyData.Nom });
 
         if (!existing) {
           await NoAD.create(noADData);
           console.log(`🆕 Ajout noAD pour ${kasperskyData.Nom}`);
         } else {
-
-          // Fusionner les tableaux ConformitiesChecked pour ne pas perdre les anciennes erreurs
+          // Fusion conformités
           noADData.ConformitiesChecked = _.union(
-            existing?.ConformitiesChecked || [],
-            noADData.ConformitiesChecked || []
+            existing.ConformitiesChecked || [],
+            noADData.ConformitiesChecked
           );
 
-          // Recalculer dangerousityNumber
+          // Recalcul dangerousityNumber
           noADData.dangerousityNumber = noADData.ConformitiesChecked.reduce((acc, item) => {
             const match = item.match(/\((\d+)\)$/);
             return acc + (match ? parseInt(match[1], 10) : 0);
           }, 0);
 
-          // Comparaison seulement sur les champs pertinents
+          // Comparaison sur champs pertinents
           const cleanExisting = _.pick(existing.toObject(), relevantFields);
           const cleanNew = _.pick(noADData, relevantFields);
           const hasChanged = !_.isEqual(cleanExisting, cleanNew);
 
           if (hasChanged) {
-            await NoAD.findOneAndUpdate(
-              { Nom: kasperskyData.Nom },
-              noADData,
-              { new: true }
-            );
+            await NoAD.findOneAndUpdate({ Nom: kasperskyData.Nom }, noADData, { new: true });
             console.log(`🔄 Mise à jour noAD pour ${kasperskyData.Nom}`);
           } else {
             console.log(`✅ Pas de changement pour ${kasperskyData.Nom}`);
@@ -90,17 +103,27 @@ async function noAD() {
       }
     }
 
-    // ---- Cas GLPI ----
+    // -------- Cas GLPI --------
     for (const glpiData of allGlpiData) {
       if (!glpiData.Nom || adCNs.has(glpiData.Nom) || processed.has(glpiData.Nom)) continue;
       processed.add(glpiData.Nom);
 
       const noADData = {
-        ...glpiData.toObject(),
+        ..._.omit(glpiData.toObject(), ["_id", "__v"]),
         Composites: ["GLPI"]
       };
 
-      delete noADData._id; // <- important
+      // Initialisation sûre
+      noADData.dangerousityNumber = noADData.dangerousityNumber || 0;
+      noADData.ConformitiesChecked = noADData.ConformitiesChecked || [];
+
+      noADData.ConformitiesChecked = _.union(
+        noADData.ConformitiesChecked,
+        [`${nomConformiteAD}(${dangerousityNumberAD})`],
+        [`${nomConformiteKaspersky}(${dangerousityNumberKaspersky})`]
+      );
+
+      noADData.dangerousityNumber += dangerousityNumberAD + dangerousityNumberKaspersky;
 
       const existing = await NoAD.findOne({ Nom: glpiData.Nom });
 
@@ -108,13 +131,11 @@ async function noAD() {
         await NoAD.create(noADData);
         console.log(`🆕 Ajout noAD pour ${glpiData.Nom}`);
       } else {
-        // Fusionner ConformitiesChecked
         noADData.ConformitiesChecked = _.union(
-          existing?.ConformitiesChecked || [],
-          noADData.ConformitiesChecked || []
+          existing.ConformitiesChecked || [],
+          noADData.ConformitiesChecked
         );
 
-        // Recalculer dangerousityNumber
         noADData.dangerousityNumber = noADData.ConformitiesChecked.reduce((acc, item) => {
           const match = item.match(/\((\d+)\)$/);
           return acc + (match ? parseInt(match[1], 10) : 0);
@@ -125,11 +146,7 @@ async function noAD() {
         const hasChanged = !_.isEqual(cleanExisting, cleanNew);
 
         if (hasChanged) {
-          await NoAD.findOneAndUpdate(
-            { Nom: glpiData.Nom },
-            noADData,
-            { new: true }
-          );
+          await NoAD.findOneAndUpdate({ Nom: glpiData.Nom }, noADData, { new: true });
           console.log(`🔄 Mise à jour noAD pour ${glpiData.Nom}`);
         } else {
           console.log(`✅ Pas de changement pour ${glpiData.Nom}`);
@@ -138,10 +155,9 @@ async function noAD() {
     }
 
     console.log("✅ Fusion noAD terminée avec succès pour tous les ordinateurs.");
-
   } catch (error) {
     console.error("❌ Erreur dans l'ajout ou la fusion noAD :", error);
   }
-};
+}
 
 module.exports = noAD;
