@@ -19,8 +19,12 @@ const logger = createLogger({
     format.printf(info => `[${info.timestamp}] ${info.level.toUpperCase()}: ${info.message}`)
   ),
   transports: [
-    new transports.File({ filename: appLogFile }), // logs techniques
-    new transports.Console() // affichage console
+    new transports.File({
+      filename: appLogFile,
+      maxsize: 5 * 1024 * 1024, // un maximum de 5MB par fichier
+      maxFiles: 5, // garde seulement 5 fichiers max
+      options: { flags: 'a' } // append mode pour ne pas écraser les logs existants
+    }),
   ],
 });
 
