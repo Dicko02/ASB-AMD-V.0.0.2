@@ -47,7 +47,7 @@ function analyserLogsApp(filePath) {
         const dureeMs = end - start;
         const jours = dureeMs / (1000 * 60 * 60 * 24);
 
-        if (jours >= 1) {
+        if (jours >= 0) {
           critiquesDurables.push({
             endpoint,
             niveau: niveauActuel,

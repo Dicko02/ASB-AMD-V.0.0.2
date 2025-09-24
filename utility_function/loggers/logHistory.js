@@ -4,31 +4,34 @@ const path = require('path');
 
 const logsDir = path.join(__dirname, '..', '..', 'logs'); // Chemin vers le dossier logs
 
-// Verification de l'existance du dossier auquel logsDir fait reference(/logs)
+// Vérification de l'existence du dossier logs
 if (!fs.existsSync(logsDir)) {
   fs.mkdirSync(logsDir, { recursive: true });
 }
 
-// Définir les chemins pour le fichier de logHistory
+// Définir le chemin pour le fichier de logHistory
 const historyLogFile = path.join(logsDir, 'history.log');
 
-// Fonction spéciale pour l’historique métier
+// Créer **une seule instance** du logger pour l’historique
+const historyLogger = createLogger({
+  format: format.combine(
+    format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+    format.printf(info => `[${info.timestamp}] ${info.message}`)
+  ),
+  transports: [
+    new transports.File({
+      filename: historyLogFile,
+      maxsize: 5 * 1024 * 1024, // max 5 MB
+      maxFiles: 5,              // garde 5 fichiers max
+      options: { flags: 'a' }   // append mode
+    })
+  ],
+});
+
+// Fonction utilitaire pour loguer une action
 function logHistory(action, user = 'system') {
-  const timestamp = new Date().toISOString();
   const message = `Action: ${action}, Par: ${user}`;
-
-  // Enregistre dans le fichier `history.log`
-  const historyLogger = createLogger({
-    format: format.combine(
-      format.printf(() => `[${timestamp}] ${message}`)
-    ),
-    transports: [
-      new transports.File({ filename: historyLogFile })
-    ]
-  });
-
-  historyLogger.info('');// on écrit sans rien puisque tout est déjà dans format
+  historyLogger.info(message);
 }
-
 
 module.exports = logHistory;
