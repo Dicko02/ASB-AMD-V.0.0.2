@@ -5,7 +5,7 @@ const sendMail = require('../mail/sendMail');
 const updateMail = require('../mail/updateMail');
 
 // Fonction générique pour traiter un ensemble de documents
-async function processDataSet(dataSet) {
+async function processDataSet(dataSet, startOrCronJob) {
     for (const data of dataSet) {
         const criticalNumber = data.dangerousityNumber;
 
@@ -28,23 +28,28 @@ async function processDataSet(dataSet) {
         // Historique
         logApp.info(`l'endpoint ${data.CN ? data.CN : (data.Nom ? data.Nom : "Inconnu")} a un niveau de dangerosite <${data.criticalLevel}>`);
 
-        // Envoi d’alerte si critique
-        if (data.criticalLevel === "critical") {
-            await sendMail(data);
+        // Si c'est le démarrage du serveur ou un cron job
+        if (startOrCronJob) {
+            // Envoi d’alerte si critique
+            if (data.criticalLevel === "critical") {
+                await sendMail(data);
+            }
         }
     }
 }
 
-async function criticalLevelUpDate() {
+async function criticalLevelUpDate(startOrCronJob = false) {
     try {
         // Récupérer toutes les données
         const allFusionData = await Fusion.find()
 
         // Traiter le jeu de données
-        await processDataSet(allFusionData);
+        await processDataSet(allFusionData, startOrCronJob = false);
 
-        // Supprime de la base les demandes déjà traitées
-        await updateMail();
+        // Mise à jour des mails si c'est le démarrage du serveur ou un cron job
+        if (startOrCronJob) {
+            await updateMail();
+        }
 
     } catch (error) {
         console.log("erreur lors l'affectation du niveau de criticite, du typage de l'endpoint, de la mise a jour l'historique ou encore de l'envoie de mail d'alerte: ", error);

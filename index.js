@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 require("dotenv").config({quiet: true});
-//require('./config/db_config');
 const helmet = require("helmet");
 const cors = require("cors");
 const morgan = require('morgan');
@@ -51,14 +50,17 @@ app.use((req, res) => {
   });
 });
 
-//démarrage du serveur
+// démarrage du serveur
 app.listen(port || 10000, `${process.env.IP}`, () => {
     console.log(`Listening on port ${port ?? 10000}`);
 });
 
-let user = "System";
+let user = "System"; // utilisateur system pour les actions automatiques
+
+let start = true; // indique si c'est le démarrage du serveur
+
 // Lancement de la vérification des conformités
-checkConformites().then(() => {
+checkConformites(start).then(() => {
     action = "✅ Conformités vérifiées et mises à jour.";
     logHistory(action, user);
     console.log("Conformités vérifiées et mises à jour.");
