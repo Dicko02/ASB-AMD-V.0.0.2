@@ -5,7 +5,7 @@ const sendMail = require('../mail/sendMail');
 const updateMail = require('../mail/updateMail');
 
 // Fonction générique pour traiter un ensemble de documents
-async function processDataSet(dataSet, startOrCronJob) {
+async function processDataSet(dataSet, startOrCronJob = false) {
     for (const data of dataSet) {
         const criticalNumber = data.dangerousityNumber;
 
@@ -44,7 +44,7 @@ async function criticalLevelUpDate(startOrCronJob = false) {
         const allFusionData = await Fusion.find()
 
         // Traiter le jeu de données
-        await processDataSet(allFusionData, startOrCronJob = false);
+        await processDataSet(allFusionData, startOrCronJob);
 
         // Mise à jour des mails si c'est le démarrage du serveur ou un cron job
         if (startOrCronJob) {

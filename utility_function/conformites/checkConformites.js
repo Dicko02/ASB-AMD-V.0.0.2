@@ -26,7 +26,6 @@ async function checkConformites(startOrCronJob = false) {
 
     // Récupérer les paramètres de conformité
     const setting = await conformitySettingModel.findOne();
-    console.log('Paramètres de conformité récupérés :', setting);
 
     // Mappage des modules de conformité
     const modules = {
