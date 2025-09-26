@@ -1,7 +1,7 @@
 const Fusion = require('../models/fusion.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
-async function AntivirusActif() {
+async function AntivirusActif(wrong, absent) {
     try {
         // Fusionner les données Fusion
         const allData = await Fusion.find();
@@ -26,7 +26,7 @@ async function AntivirusActif() {
                         console.log(`✅ L'antivirus Kaspersky est actif sur l'ordinateur ${endpoint.CN ?? endpoint.Nom}.`);
                     } else {
                         console.log(`❌ L'antivirus Kaspersky n'est pas actif sur l'ordinateur ${endpoint.CN ?? endpoint.Nom}.`);
-                        dangerousityNumber = 1;
+                        dangerousityNumber = wrong;
                         nonConforme = `${nomConformite}(${dangerousityNumber})`;
                         updateConformity(endpoint, nonConforme, dangerousityNumber);
                     }
@@ -34,7 +34,7 @@ async function AntivirusActif() {
                     console.log(`✅ L'antivirus Kaspersky est actif sur l'ordinateur ${endpoint.CN ?? endpoint.Nom}.`);
                 } else {
                     console.log(`❌ L'antivirus Kaspersky n'est pas présent sur l'ordinateur ${endpoint.CN ?? endpoint.Nom}.`);
-                    dangerousityNumber = 2;
+                    dangerousityNumber = absent;
                     nonConforme = `Antivirus Inexistant(${dangerousityNumber})`;
                     updateConformity(endpoint, nonConforme, dangerousityNumber);
                 }

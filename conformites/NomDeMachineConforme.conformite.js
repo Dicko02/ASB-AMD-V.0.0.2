@@ -1,7 +1,7 @@
 const Fusion = require('../models/fusion.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
-async function NomDeMachineConforme() {
+async function NomDeMachineConforme(wrong, absent) {
     try {
         // Fusionner Fusion et NoAD pour traiter les deux ensembles en une seule boucle
         const allData = await Fusion.find();
@@ -29,12 +29,15 @@ async function NomDeMachineConforme() {
                     console.log(`✅ La machine ${nomMachine} a un nom conforme`);
                 } else {
                     console.log(`❌ La machine ${nomMachine} n'a pas un nom conforme`);
-                    dangerousityNumber = 2;
+                    dangerousityNumber = wrong;
                     nonConforme = `${nomConformite}(${dangerousityNumber})`;
                     updateConformity(endpoint, nonConforme, dangerousityNumber);
                 }
             } else {
                 console.log(`⚠️ La machine n'existe pas ou nom non défini`);
+                dangerousityNumber = absent;
+                nonConforme = `Nom de machine inconnu-inexistant(${dangerousityNumber})`;
+                updateConformity(endpoint, nonConforme, dangerousityNumber);
             }
         }
     } catch (error) {

@@ -1,7 +1,7 @@
 const Fusion = require('../models/fusion.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
-async function DerniereConnexionUtilisateur() {
+async function DerniereConnexionUtilisateur(wrong, absent) {
     try {
         // Fusionner Fusion et NoAD
         const allData = await Fusion.find();
@@ -22,7 +22,7 @@ async function DerniereConnexionUtilisateur() {
                     console.log(`❌ La dernière connexion de l'ordinateur ${endpoint.CN ?? endpoint.Nom} remonte à plus de 30 jours`);
                     console.log(`Date de la dernière connexion = ${dateDerniereConnexion}`);
 
-                    dangerousityNumber = 2;
+                    dangerousityNumber = wrong;
                     nonConforme = `${nomConformite}(${dangerousityNumber})`;
                     updateConformity(endpoint, nonConforme, dangerousityNumber);
                 } else {
@@ -31,7 +31,7 @@ async function DerniereConnexionUtilisateur() {
             } else {
                 console.log(`⚠️ Les données liées à la dernière connexion de l'ordinateur ${endpoint.CN ?? endpoint.Nom} ne sont pas disponibles`);
                 nomConformite = "Date de dernière connexion de l'utilisateur non disponible";
-                dangerousityNumber = 3;
+                dangerousityNumber = absent;
                 nonConforme = `${nomConformite}(${dangerousityNumber})`;
                 updateConformity(endpoint, nonConforme, dangerousityNumber);
             }

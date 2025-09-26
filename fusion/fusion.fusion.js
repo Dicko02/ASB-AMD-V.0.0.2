@@ -4,6 +4,10 @@ const Kaspersky = require('../models/kaspersky.model');
 const Fusion = require('../models/fusion.model');
 const _ = require("lodash"); // pour les comparaisons profonde
 
+const conformityDangerosityNumberModel = require('../models/conformityDangerosityNumber.model'); // Pour récupérer les paramètres de dangerosité
+
+
+// Champs pertinents pour la comparaison
 const relevantFields = [
   "CN",
   "Nom",
@@ -25,201 +29,79 @@ const relevantFields = [
 
 async function fusion() {
   try {
-    const allAdData = await AD.find();
-    const allGlpiData = await GLPI.find();
-    const allKasperskyData = await Kaspersky.find();
+    const [allAdData, allGlpiData, allKasperskyData, dangerosityParams] = await Promise.all([
+      AD.find(), GLPI.find(), Kaspersky.find(), conformityDangerosityNumberModel.findOne()
+    ]);
 
-    const nomConformiteAD = "La machine n'existe pas dans AD";
-    const nomConformiteKaspersky = "La machine n'existe pas dans Kaspersky";
-    const nomConformiteGlpi = "La machine n'apparait pas dans GLPI";
+    const dangerousityNumbers = {
+      AD: dangerosityParams?.NoAD ?? 10,
+      Kaspersky: dangerosityParams?.NoKaspersky ?? 10,
+      GLPI: dangerosityParams?.NoGLPI ?? 10
+    };
 
-    const dangerousityNumberAD = 10;
-    const dangerousityNumberKaspersky = 10;
-    const dangerousityNumberGlpi = 10;
+    const adMap = new Map(allAdData.map(d => [d.CN, d]));
+    const glpiMap = new Map(allGlpiData.map(d => [d.Nom, d]));
+    const kasperskyMap = new Map(allKasperskyData.map(d => [d.Nom, d]));
+    const fusionMap = new Map((await Fusion.find()).map(d => [d.CN || d.Nom, d]));
 
-    const processed = new Set(); // pour éviter les doublons
+    const allKeys = new Set([...adMap.keys(), ...glpiMap.keys(), ...kasperskyMap.keys()]);
 
-    // ----------- Étape 1 : machines AD -----------
-    for (const adData of allAdData) {
-      const glpiData = allGlpiData.find(glpi => glpi.Nom === adData.CN);
-      const kasperskyData = allKasperskyData.find(kaspersky => kaspersky.Nom === adData.CN);
+    const operations = [];
+
+    for (const key of allKeys) {
+      const adData = adMap.get(key);
+      const glpiData = glpiMap.get(key);
+      const kasperskyData = kasperskyMap.get(key);
+      const existing = fusionMap.get(key);
 
       const fusionData = {
-        ...adData.toObject(),
-        ...(glpiData ? glpiData.toObject() : {}),
-        ...(kasperskyData ? kasperskyData.toObject() : {}),
+        ...(adData?.toObject() || {}),
+        ...(glpiData?.toObject() || {}),
+        ...(kasperskyData?.toObject() || {}),
+        ConformitiesChecked: [],
+        Composites: []
       };
 
-      fusionData.dangerousityNumber = 0;
-      const composites = ["AD"];
-      fusionData.ConformitiesChecked = fusionData.ConformitiesChecked || [];
+      // Supprimer les champs MongoDB immuables
+      delete fusionData._id;
+      delete fusionData.__v;
 
-      if (!glpiData) {
-        fusionData.dangerousityNumber += dangerousityNumberGlpi;
-        fusionData.ConformitiesChecked.push(`${nomConformiteGlpi}(${dangerousityNumberGlpi})`);
-      } else {
-        composites.push("GLPI");
-      }
+      // Calcul des composites
+      if (adData) fusionData.Composites.push("AD");
+      if (glpiData) fusionData.Composites.push("GLPI");
+      if (kasperskyData) fusionData.Composites.push("Kaspersky");
 
-      if (!kasperskyData) {
-        fusionData.dangerousityNumber += dangerousityNumberKaspersky;
-        fusionData.ConformitiesChecked.push(`${nomConformiteKaspersky}(${dangerousityNumberKaspersky})`);
-      } else {
-        composites.push("Kaspersky");
-      }
-
-      fusionData.Composites = composites;
-      processed.add(adData.CN);
-
-      const existing = await Fusion.findOne({ CN: adData.CN });
-
-      fusionData.ConformitiesChecked = _.union(
-        existing?.ConformitiesChecked || [],
-        fusionData.ConformitiesChecked
-      );
+      // ConformitiesChecked et dangerousityNumber
+      if (!adData) fusionData.ConformitiesChecked.push(`La machine n'existe pas dans AD(${dangerousityNumbers.AD})`);
+      if (!glpiData) fusionData.ConformitiesChecked.push(`La machine n'apparait pas dans GLPI(${dangerousityNumbers.GLPI})`);
+      if (!kasperskyData) fusionData.ConformitiesChecked.push(`La machine n'existe pas dans Kaspersky(${dangerousityNumbers.Kaspersky})`);
 
       fusionData.dangerousityNumber = fusionData.ConformitiesChecked.reduce((acc, item) => {
         const match = item.match(/\((\d+)\)$/);
         return acc + (match ? parseInt(match[1], 10) : 0);
       }, 0);
 
-      if (!existing) {
-        await Fusion.create(fusionData);
-        console.log(`🆕 Ajout Fusion pour ${adData.CN}`);
-      } else {
-        const cleanExisting = _.pick(existing.toObject(), relevantFields);
-        const cleanFusion = _.pick(fusionData, relevantFields);
-        const hasChanged = !_.isEqual(cleanExisting, cleanFusion);
+      const cleanFusion = _.pick(fusionData, relevantFields);
+      const cleanExisting = existing ? _.pick(existing.toObject(), relevantFields) : null;
 
-        if (hasChanged) {
-          const updateData = _.omit(fusionData, ['_id', '__v']);
-          await Fusion.findOneAndUpdate({ CN: adData.CN }, { $set: updateData }, { new: true });
-          console.log(`🔄 Mise à jour Fusion pour ${adData.CN}`);
-        } else {
-          console.log(`✅ Pas de changement pour ${adData.CN}`);
-        }
+      if (!existing) {
+        operations.push({ insertOne: { document: fusionData } });
+      } else if (!_.isEqual(cleanFusion, cleanExisting)) {
+        const updateData = { ...fusionData };
+        delete updateData._id; // Juste pour être sûr
+        operations.push({ updateOne: { filter: { CN: key }, update: { $set: updateData } } });
       }
     }
 
-    // ----------- Étape 2 : machines hors AD (ancien noAD) -----------
-
-    // Cas Kaspersky
-    for (const kasperskyData of allKasperskyData) {
-      if (!kasperskyData.Nom || processed.has(kasperskyData.Nom)) continue;
-
-      const glpiData = allGlpiData.find(glpi => glpi.Nom === kasperskyData.Nom);
-
-      const fusionData = {
-        ..._.omit(kasperskyData.toObject(), ["_id", "__v"]),
-        ...(glpiData ? _.omit(glpiData.toObject(), ["_id", "__v"]) : {}),
-      };
-
-      fusionData.dangerousityNumber = fusionData.dangerousityNumber || 0;
-      fusionData.ConformitiesChecked = fusionData.ConformitiesChecked || [];
-      fusionData.Composites = ["Kaspersky"];
-
-      fusionData.ConformitiesChecked = _.union(
-        fusionData.ConformitiesChecked,
-        [`${nomConformiteAD}(${dangerousityNumberAD})`]
-      );
-      fusionData.dangerousityNumber += dangerousityNumberAD;
-
-      if (!glpiData) {
-        fusionData.ConformitiesChecked = _.union(
-          fusionData.ConformitiesChecked,
-          [`${nomConformiteGlpi}(${dangerousityNumberGlpi})`]
-        );
-        fusionData.dangerousityNumber += dangerousityNumberGlpi;
-      } else {
-        fusionData.Composites.push("GLPI");
-      }
-
-      processed.add(kasperskyData.Nom);
-
-      const existing = await Fusion.findOne({ Nom: kasperskyData.Nom });
-
-      fusionData.ConformitiesChecked = _.union(
-        existing?.ConformitiesChecked || [],
-        fusionData.ConformitiesChecked
-      );
-
-      fusionData.dangerousityNumber = fusionData.ConformitiesChecked.reduce((acc, item) => {
-        const match = item.match(/\((\d+)\)$/);
-        return acc + (match ? parseInt(match[1], 10) : 0);
-      }, 0);
-
-      if (!existing) {
-        await Fusion.create(fusionData);
-        console.log(`🆕 Ajout Fusion (hors AD) pour ${kasperskyData.Nom}`);
-      } else {
-        const cleanExisting = _.pick(existing.toObject(), relevantFields);
-        const cleanFusion = _.pick(fusionData, relevantFields);
-        const hasChanged = !_.isEqual(cleanExisting, cleanFusion);
-
-        if (hasChanged) {
-          await Fusion.findOneAndUpdate({ Nom: kasperskyData.Nom }, fusionData, { new: true });
-          console.log(`🔄 Mise à jour Fusion (hors AD) pour ${kasperskyData.Nom}`);
-        } else {
-          console.log(`✅ Pas de changement pour ${kasperskyData.Nom}`);
-        }
-      }
+    if (operations.length > 0) {
+      await Fusion.bulkWrite(operations);
     }
 
-    // Cas GLPI
-    for (const glpiData of allGlpiData) {
-      if (!glpiData.Nom || processed.has(glpiData.Nom)) continue;
-
-      const fusionData = {
-        ..._.omit(glpiData.toObject(), ["_id", "__v"]),
-        Composites: ["GLPI"]
-      };
-
-      fusionData.dangerousityNumber = fusionData.dangerousityNumber || 0;
-      fusionData.ConformitiesChecked = fusionData.ConformitiesChecked || [];
-
-      fusionData.ConformitiesChecked = _.union(
-        fusionData.ConformitiesChecked,
-        [`${nomConformiteAD}(${dangerousityNumberAD})`],
-        [`${nomConformiteKaspersky}(${dangerousityNumberKaspersky})`]
-      );
-
-      fusionData.dangerousityNumber += dangerousityNumberAD + dangerousityNumberKaspersky;
-
-      processed.add(glpiData.Nom);
-
-      const existing = await Fusion.findOne({ Nom: glpiData.Nom });
-
-      fusionData.ConformitiesChecked = _.union(
-        existing?.ConformitiesChecked || [],
-        fusionData.ConformitiesChecked
-      );
-
-      fusionData.dangerousityNumber = fusionData.ConformitiesChecked.reduce((acc, item) => {
-        const match = item.match(/\((\d+)\)$/);
-        return acc + (match ? parseInt(match[1], 10) : 0);
-      }, 0);
-
-      if (!existing) {
-        await Fusion.create(fusionData);
-        console.log(`🆕 Ajout Fusion (hors AD) pour ${glpiData.Nom}`);
-      } else {
-        const cleanExisting = _.pick(existing.toObject(), relevantFields);
-        const cleanFusion = _.pick(fusionData, relevantFields);
-        const hasChanged = !_.isEqual(cleanExisting, cleanFusion);
-
-        if (hasChanged) {
-          await Fusion.findOneAndUpdate({ Nom: glpiData.Nom }, fusionData, { new: true });
-          console.log(`🔄 Mise à jour Fusion (hors AD) pour ${glpiData.Nom}`);
-        } else {
-          console.log(`✅ Pas de changement pour ${glpiData.Nom}`);
-        }
-      }
-    }
-
-    console.log("✅ Fusion terminée avec succès pour tous les ordinateurs.");
-  } catch (error) {
-    console.error("❌ Erreur dans la fusion :", error);
+    console.log("✅ Fusion optimisée terminée pour toutes les machines.");
+  } catch (err) {
+    console.error("❌ Erreur fusion optimisée :", err);
   }
 }
+
 
 module.exports = fusion;

@@ -1,7 +1,7 @@
 const Fusion = require('../models/fusion.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
-async function AntivirusAJour() {
+async function AntivirusAJour(wrong, absent) {
     try {
         // Fusionner Fusion et NoAD
         const allData = await Fusion.find();
@@ -22,14 +22,14 @@ async function AntivirusAJour() {
                     console.log(`✅ L'antivirus de l'ordinateur ${endpoint.CN ?? endpoint.Nom} est à jour.`);
                 } else {
                     console.log(`❌ L'antivirus de l'ordinateur ${endpoint.CN ?? endpoint.Nom} n'est pas à jour. Dernière mise à jour il y a ${differenceEnJours} jours.`);
-                    dangerousityNumber = 1;
+                    dangerousityNumber = wrong;
                     nonConforme = `${nomConformite}(${dangerousityNumber})`;
                     updateConformity(endpoint, nonConforme, dangerousityNumber);
                 }
             } else {
                 console.log(`❌ L'ordinateur ${endpoint.CN ?? endpoint.Nom} n'a pas de date de dernière mise à jour des bases antivirus.`);
                 nomConformite = "Date de dernière mise à jour de l'antivirus non disponible";
-                dangerousityNumber = 2;
+                dangerousityNumber = absent;
                 nonConforme = `${nomConformite}(${dangerousityNumber})`;
                 updateConformity(endpoint, nonConforme, dangerousityNumber);
             }

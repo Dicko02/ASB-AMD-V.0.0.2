@@ -1,7 +1,7 @@
 const Fusion = require('../models/fusion.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
-async function PareFeuActive() {
+async function PareFeuActive(wrong, absent) {
     try {
         // Fusionner Fusion et NoAD pour traiter les deux ensembles en une seule boucle
         const allData = await Fusion.find();
@@ -17,14 +17,14 @@ async function PareFeuActive() {
                     console.log(`✅ Le pare-feu de la machine ${endpoint.CN ?? endpoint.Nom} est activé`);
                 } else {
                     console.log(`❌ Le pare-feu de la machine ${endpoint.CN ?? endpoint.Nom} est désactivé`);
-                    dangerousityNumber = 1;
+                    dangerousityNumber = wrong;
                     nonConforme = `${nomConformiteDefault}(${dangerousityNumber})`;
                     updateConformity(endpoint, nonConforme, dangerousityNumber);
                 }
             } else {
                 console.log(`⚠️ Les données liées au pare-feu de la machine ${endpoint.CN ?? endpoint.Nom} ne sont pas disponibles`);
                 const nomConformite = "Données liées au pare-feu non disponibles";
-                dangerousityNumber = 2;
+                dangerousityNumber = absent;
                 nonConforme = `${nomConformite}(${dangerousityNumber})`;
                 updateConformity(endpoint, nonConforme, dangerousityNumber);
             }

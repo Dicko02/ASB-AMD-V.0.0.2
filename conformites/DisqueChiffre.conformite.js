@@ -1,7 +1,7 @@
 const Fusion = require('../models/fusion.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
-async function DisqueChiffre() {
+async function DisqueChiffre(wrong, absent) {
     try {
         // Fusionner Fusion et NoAD pour éviter la répétition
         const allData = await Fusion.find();
@@ -16,14 +16,14 @@ async function DisqueChiffre() {
                     console.log(`✅ Le disque de l'ordinateur ${endpoint.CN ?? endpoint.Nom} est chiffré`);
                 } else {
                     console.log(`❌ Le disque de l'ordinateur ${endpoint.CN ?? endpoint.Nom} n'est pas chiffré`);
-                    dangerousityNumber = 1;
+                    dangerousityNumber = wrong;
                     nonConforme = `${nomConformite}(${dangerousityNumber})`;
                     updateConformity(endpoint, nonConforme, dangerousityNumber);
                 }
             } else {
                 console.log(`⚠️ Les données liées au chiffrement du disque de l'ordinateur ${endpoint.CN ?? endpoint.Nom} ne sont pas disponibles`);
                 nomConformite = "État de chiffrement du disque non disponible";
-                dangerousityNumber = 2;
+                dangerousityNumber = absent;
                 nonConforme = `${nomConformite}(${dangerousityNumber})`;
                 updateConformity(endpoint, nonConforme, dangerousityNumber);
             }

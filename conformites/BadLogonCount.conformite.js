@@ -1,7 +1,7 @@
 const Fusion = require('../models/fusion.model');
 const updateConformity = require('../utility_function/conformites/updateConformity');
 
-async function BadLogonCount() {
+async function BadLogonCount(wrong, absent) {
     try {
         // Fusionner Fusion et NoAD
         const allData = await Fusion.find();
@@ -19,14 +19,14 @@ async function BadLogonCount() {
                     console.log(`✅ Le nombre de mauvaise connexion à la machine ${endpoint.CN ?? endpoint.Nom} est de ${badLogonCount}`);
                 } else {
                     console.log(`❌ ATTENTION : le nombre de mauvaise connexion à la machine ${endpoint.CN ?? endpoint.Nom} est de ${badLogonCount}, il est supérieur à 3, il faut investiguer`);
-                    dangerousityNumber = 2;
+                    dangerousityNumber = wrong;
                     nonConforme = `${nomConformite}(${dangerousityNumber})`;
                     updateConformity(endpoint, nonConforme, dangerousityNumber);
                 }
             } else {
                 console.log(`⚠️ Les données liées au nombre de mauvaise connexion à la machine ${endpoint.CN ?? endpoint.Nom} ne sont pas disponibles`);
                 nomConformite = "Nombre de mauvaise connexion à la machine non disponible";
-                dangerousityNumber = 3;
+                dangerousityNumber = absent;
                 nonConforme = `${nomConformite}(${dangerousityNumber})`;
                 updateConformity(endpoint, nonConforme, dangerousityNumber);
             }
