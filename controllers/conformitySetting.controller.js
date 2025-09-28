@@ -6,7 +6,7 @@ const logHistory = require('../utility_function/loggers/logHistory');
 module.exports.getConformitySetting = async (req, res) => {
   const user = req.user?.pseudo || 'Inconnu';
   try{
-    const conformitySetting = await conformitySettingModel.findOne({ adminId: req.admin.id });
+    const conformitySetting = await conformitySettingModel.findOne();
 
     //enregistrement du log dans l'historique des audits utilisateurs
     logHistory("✅ Consultation de la liste des conformites", user);
@@ -21,11 +21,11 @@ module.exports.getConformitySetting = async (req, res) => {
 // PUT paramètres des conformites
 module.exports.updateConformitySetting = async (req, res) => {
   const user = req.user?.pseudo || 'Inconnu';
-  const { adminId, conformityToCheck } = req.body;
+  const { conformityToCheck } = req.body;
 
-  if (!adminId) {
-    console.log('adminId manquant dans la requête')
-    return res.status(400).json({ message: "adminId manquant dans la requête" });
+  if (!conformityToCheck) {
+    console.log('conformityToCheck manquant dans la requête')
+    return res.status(400).json({ message: "conformityToCheck manquant dans la requête" });
   }
 
   if (!Array.isArray(conformityToCheck)) {
@@ -35,7 +35,6 @@ module.exports.updateConformitySetting = async (req, res) => {
 
   try {
     const updated = await conformitySettingModel.findOneAndUpdate(
-      { adminId },
       { conformityToCheck },
       { upsert: true, new: true }
     );

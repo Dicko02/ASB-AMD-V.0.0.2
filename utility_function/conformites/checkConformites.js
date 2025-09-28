@@ -24,13 +24,8 @@ async function checkConformites(startOrCronJob = false) {
     console.log('Démarrage de l\'importation et de la fusion des données...');
     await runImportAndFusion(startOrCronJob);
     console.log('Importation et fusion des données terminées.');
-
-    // Récupérer les paramètres de conformité
-    const setting = await conformitySettingModel.findOne();
-
-    // Récupérer les paramètres de dangerosité
-    let dangerosityParams = await conformityDangerosityNumberModel.findOne();
-
+    
+    let dangerosityParams = await conformityDangerosityNumberModel.findOne(); // Récupérer les paramètres de dangerosité
     // Si les paramètres de dangerosité n'existent pas, en créer un document par défaut
     if(!dangerosityParams){
       dangerosityParams = await conformityDangerosityNumberModel.create({
@@ -47,6 +42,24 @@ async function checkConformites(startOrCronJob = false) {
         NoKaspersky: 10
       });
     };
+
+
+    let ConformitySetting = await conformitySettingModel.findOne(); // Récupérer les paramètres de conformité
+    // Si les paramètres de conformité n'existent pas, en créer un document par défaut
+    if(!ConformitySetting){
+      ConformitySetting = await conformitySettingModel.create({
+        conformityToCheck: [
+          "AntivirusActif",
+          "AntivirusAJour",
+          "DerniereConnexionUtilisateur",
+          "DisqueChiffre",
+          "NomDeMachineConforme",
+          "PareFeuActive",
+          "VolumesPourcentageLibreSuffisant",
+          "BadLogonCount"
+        ]
+      });
+    }
 
     // Mappage des modules de conformité AVEC paramètres
     const modules = {
@@ -96,7 +109,7 @@ async function checkConformites(startOrCronJob = false) {
     };
 
     // Déterminer les vérifications de conformité à exécuter
-    let lists = Array.isArray(setting?.conformityToCheck) ? setting.conformityToCheck : Object.keys(modules);
+    let lists = Array.isArray(ConformitySetting?.conformityToCheck) ? ConformitySetting.conformityToCheck : Object.keys(modules);
 
     // Valider et collecter les tâches
     const tasks = [];

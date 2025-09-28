@@ -70,10 +70,7 @@ module.exports.signUp = async (req, res) => {
         titre: req.body.titre,
         status: 'active',
         password: req.body.password
-      });
-      // Une fois le user créé, on crée aussi son document paramètres
-      await conformitySettingModel.create({ adminId: admin._id });
-      await admin.save()
+      });      
 
       logHistory(`✅ Creation du compte de niveau <${req.body.titre}> portant le pseudo: ${req.body.pseudo}`, user);
 

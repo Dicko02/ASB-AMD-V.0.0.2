@@ -22,18 +22,20 @@ async function processDataSet(dataSet, startOrCronJob = false) {
 
         await data.save(); // Enregistrement des modifications
 
-        // Typage de la machine
-        typeMachine(data);
-
         // Historique
         logApp.info(`l'endpoint ${data.CN ? data.CN : (data.Nom ? data.Nom : "Inconnu")} a un niveau de dangerosite <${data.criticalLevel}>`);
 
         // Si c'est le démarrage du serveur ou un cron job
         if (startOrCronJob) {
+            
+            // Typage de la machine
+            typeMachine(data);
+
             // Envoi d’alerte si critique
             if (data.criticalLevel === "critical") {
                 await sendMail(data);
             }
+            
         }
     }
 }
