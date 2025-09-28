@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const logHistory = require('../loggers/logHistory');
+const logHistory = require('../../loggers/logHistory');
 const responsableMailModel = require('../../../models/responsableMail.model');
 
 //fonction d'envoi de mail
