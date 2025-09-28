@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Schéma souple : on n'impose pas tous les champs
 const mailSchema = new mongoose.Schema(
     {
         ticketId: {

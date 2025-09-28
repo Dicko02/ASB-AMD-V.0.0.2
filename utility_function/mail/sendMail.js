@@ -28,12 +28,12 @@ async function sendMail(endpoint) {
             const subject = object(demandeurNom, endpoint.CN ?? endpoint.Nom, endpoint.ConformitiesChecked);
             await mail(subject, message.htmlContent, message.textContent);
             console.log(`Email envoyé avec succès à propos de ${endpoint.CN ?? endpoint.Nom}.`);
-            logHistory(`✅ Mail de prise en charge de ${endpoint.CN ?? endpoint.Nom} envoye avec succes`, user);
+            logHistory(`📧 Mail de prise en charge de ${endpoint.CN ?? endpoint.Nom} envoyé avec succès`, user);
         }
 
     } catch (error) {
         console.error(`Erreur lors de l'envoi de l'email : ${error.message}`);
-        logHistory(`❌ Echec de l'envoie du mail de prise en charge de ${endpoint.CN}`, user);
+        logHistory(`❌ Échec de l'envoi du mail de prise en charge de ${endpoint.CN}`, user);
     }
 }
 

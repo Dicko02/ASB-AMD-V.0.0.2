@@ -117,7 +117,6 @@ async function checkTickets() {
         const endpoint = t.titre.split("|")[0].split(":")[1].trim();
         const critical = isEndpointCritical(endpoint);
         const mailEntry = await mailModel.findOne({ ticketId: t.id });
-        const now = new Date();
 
         if (critical === 'critical') {
             const reopenAt = mailEntry?.reopenAt ? new Date(mailEntry.reopenAt) : null;
@@ -137,6 +136,18 @@ async function checkTickets() {
                     logHistory(`🔄 Ticket ${t.id} réouvert pour endpoint critique ${t.titre}`, user);
                 }
             }
+
+            // Vérifier si un mail a déjà été envoyé pour ce endpoint
+            const endpointMail = await mailModel.findOne({ endpoint: endpoint });
+            const creationDate = endpointMail?.createdAt || now;
+            const diffDays = Math.floor((now - creationDate) / (1000 * 60 * 60 * 24));
+            // Une fois arrivé à 7 jours ou plus, envoyer un mail au responsable si ce n'est pas déjà fait
+            if (diffDays >= 7) {
+                const demandeurNom = process.env.DEMANDEUR_NOM;
+                const responsableMail = process.env.RESPONSABLE_MAIL;
+                await responsableMail(endpoint, demandeurNom, diffDays);
+            }
+
         } else if ((t.statut === 5 || t.statut === 6) && critical !== 'critical' && mailEntry?.ticketId) {
             const deleteMail = await mailModel.findOneAndDelete({ ticketId: t.id });
             if (deleteMail) console.log(`✅ Mail supprimé pour ticket ${t.id}`);
