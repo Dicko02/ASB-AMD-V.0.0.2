@@ -15,6 +15,8 @@ const conformitySettingModel = require('../../models/conformitySetting.model'); 
 
 const conformityDangerosityNumberModel = require('../../models/conformityDangerosityNumber.model'); // Pour récupérer les paramètres de dangerosité
 
+const criticalLevelMaxValueModel = require('../../models/criticalLevelMaxValue.model'); // Pour récupérer les paramètres de niveaux de criticité
+
 
 // Fonction principale pour vérifier les conformités
 async function checkConformites(startOrCronJob = false) {
@@ -25,8 +27,9 @@ async function checkConformites(startOrCronJob = false) {
     await runImportAndFusion(startOrCronJob);
     console.log('Importation et fusion des données terminées.');
     
+
     let dangerosityParams = await conformityDangerosityNumberModel.findOne(); // Récupérer les paramètres de dangerosité
-    // Si les paramètres de dangerosité n'existent pas, en créer un document par défaut
+    // Si les paramètres de dangerosité n'existent pas on en créer un document par défaut
     if(!dangerosityParams){
       dangerosityParams = await conformityDangerosityNumberModel.create({
         AntivirusActif: [{ Wrong: 1, Absent: 2 }],
@@ -45,7 +48,7 @@ async function checkConformites(startOrCronJob = false) {
 
 
     let ConformitySetting = await conformitySettingModel.findOne(); // Récupérer les paramètres de conformité
-    // Si les paramètres de conformité n'existent pas, en créer un document par défaut
+    // Si les paramètres de conformité n'existent pas on en créer un document par défaut
     if(!ConformitySetting){
       ConformitySetting = await conformitySettingModel.create({
         conformityToCheck: [
@@ -60,6 +63,18 @@ async function checkConformites(startOrCronJob = false) {
         ]
       });
     }
+
+
+    let criticalLevelParams = await criticalLevelMaxValueModel.findOne(); // Récupérer les paramètres de niveaux de criticité
+    // Si les paramètres de niveaux de criticité n'existent pas on en créer un document par défaut
+    if(!criticalLevelParams){
+      criticalLevelParams = await criticalLevelMaxValueModel.create({
+        lowMaxValue: 3,
+        mediumMaxValue: 6,
+        highMaxValue: 10
+      });
+    }
+
 
     // Mappage des modules de conformité AVEC paramètres
     const modules = {

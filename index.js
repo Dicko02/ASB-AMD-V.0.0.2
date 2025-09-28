@@ -15,6 +15,7 @@ const adminRoute = require("./routes/admin.route");
 const conformitySettingRoute = require("./routes/conformitySetting.route");
 const logsRoute = require('./routes/logs.route');
 const conformityDangerosityNumberRoute = require('./routes/conformityDangerosityNumber.route');
+const criticalLevelMaxValueRoute = require('./routes/criticalLevelMaxValue.route');
 
 // Import de la fonction de vérification des conformités
 const checkConformites = require("./utility_function/conformites/checkConformites");
@@ -43,6 +44,7 @@ app.use('/api/admin', adminRoute);
 app.use('/api/conformitySetting', conformitySettingRoute);
 app.use('/api/logs', logsRoute);
 app.use('/api/conformityDangerosityNumber', conformityDangerosityNumberRoute);
+app.use('/api/criticalLevelMaxValue', criticalLevelMaxValueRoute);
 
 // Middleware pour les routes non trouvées
 app.use((req, res) => {

@@ -3,18 +3,28 @@ const logApp = require('../loggers/logApp');
 const typeMachine = require('../typeMachine');
 const sendMail = require('../mail/sendMail');
 const updateMail = require('../mail/updateMail');
+const criticalLevelMaxValue = require('../../models/criticalLevelMaxValue.model');
 
 // Fonction générique pour traiter un ensemble de documents
 async function processDataSet(dataSet, startOrCronJob = false) {
+
+    // Récupérer les paramètres de niveaux de criticité
+    const levelParams = await criticalLevelMaxValue.findOne();
+    const lowMax = levelParams ? levelParams.lowMaxValue : 3;
+    const mediumMax = levelParams ? levelParams.mediumMaxValue : 6;
+    const highMax = levelParams ? levelParams.highMaxValue : 10;
+
+    
+    // Parcourir chaque document et mettre à jour le niveau de criticité et d'autres champs
     for (const data of dataSet) {
         const criticalNumber = data.dangerousityNumber;
 
         // Attribution du niveau de criticité
-        if (criticalNumber <= 1) {
+        if (criticalNumber <= lowMax) {
             data.criticalLevel = "low";
-        } else if (criticalNumber <= 5) {
+        } else if (criticalNumber <= mediumMax) {
             data.criticalLevel = "medium";
-        } else if (criticalNumber <= 10) {
+        } else if (criticalNumber <= highMax) {
             data.criticalLevel = "high";
         } else {
             data.criticalLevel = "critical";
