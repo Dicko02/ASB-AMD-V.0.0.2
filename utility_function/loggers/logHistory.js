@@ -21,8 +21,8 @@ const historyLogger = createLogger({
   transports: [
     new transports.File({
       filename: historyLogFile,
-      maxsize: 5 * 1024 * 1024, // max 5 MB
-      maxFiles: 5,              // garde 5 fichiers max
+      maxsize: 1024 * 1024 * 1024, // max 1 GB
+      maxFiles: 10,              // garde 10 fichiers max
       options: { flags: 'a' }   // append mode
     })
   ],

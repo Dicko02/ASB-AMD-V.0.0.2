@@ -48,7 +48,7 @@ async function initGlpiSession() {
 }
 
 // Pour récupérer les ordinateurs dans GLPI
-async function fetchGlpiComputers(sessionToken, rangeStart = 0, rangeStop = 999) {
+async function fetchGlpiComputers(sessionToken, rangeStart = 0, rangeStop = 499) {
   const res = await safeFetch(`${GLPI_URL}/Computer`, {
     headers: {
       'Session-Token': sessionToken,
