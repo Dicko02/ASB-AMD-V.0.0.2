@@ -26,7 +26,7 @@ async function safeFetch(url, options = {}) {
 // Fonction pour initialiser la session GLPI
 async function initGlpiSession() {
   try {
-    const data = await safeFetch(`${GLPI_URL}/initSession`, {
+    const data = await safeFetch(`${GLPI_URL}/initSession?expand_dropdowns=true&all_entities=true`, {
       headers: {
         'App-Token': APP_TOKEN,
         'Authorization': `user_token ${USER_TOKEN}`,
@@ -49,7 +49,7 @@ async function initGlpiSession() {
 
 // Pour récupérer les ordinateurs dans GLPI
 async function fetchGlpiComputers(sessionToken, rangeStart = 0, rangeStop = 499) {
-  const res = await safeFetch(`${GLPI_URL}/Computer`, {
+  const response = await fetch(`${GLPI_URL}/Computer?all_entities=true`, {
     headers: {
       'Session-Token': sessionToken,
       'App-Token': APP_TOKEN,
@@ -57,18 +57,24 @@ async function fetchGlpiComputers(sessionToken, rangeStart = 0, rangeStop = 499)
     }
   });
 
-  if (!Array.isArray(res)) {
+  if (!response.ok) {
+    console.log(`⚠️ Requête échouée (${response.status}) sur /Computer`);
     return { data: [], more: false };
   }
 
-  const more = res.length >= (rangeStop - rangeStart + 1);
+  const contentRange = response.headers.get('Content-Range');
+  const data = await response.json();
 
-  return { data: res, more };
+  console.log(`📦 Content-Range: ${contentRange} (${data.length} machines)`);
+
+  const more = contentRange && /\/(\d+)$/.test(contentRange) ? parseInt(contentRange.match(/\/(\d+)$/)[1]) > rangeStop + 1 : false;
+
+  return { data, more };
 }
 
 // Pour récupérer les détails d'un ordinateur par son id
 async function fetchComputerDetails(id, sessionToken) {
-  return await safeFetch(`${GLPI_URL}/Computer/${id}?expand_dropdowns=true`, {
+  return await safeFetch(`${GLPI_URL}/Computer/${id}?expand_dropdowns=true&all_entities=true`, {
     headers: {
       'Session-Token': sessionToken,
       'App-Token': APP_TOKEN
