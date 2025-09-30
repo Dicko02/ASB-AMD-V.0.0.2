@@ -21,8 +21,8 @@ const logger = createLogger({
   transports: [
     new transports.File({
       filename: appLogFile,
-      maxsize: 1024 * 1024 * 1024, // un maximum de 1GB par fichier
-      maxFiles: 10, // garde seulement 10 fichiers max
+      maxsize: 1024 * 1024 * 1024 * 1024, // un maximum de 1 To par fichier
+      maxFiles: 1, // garde seulement 1 fichier max
       options: { flags: 'a' } // append mode pour ne pas écraser les logs existants
     }),
   ],
