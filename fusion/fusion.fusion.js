@@ -45,8 +45,9 @@ async function fusion() {
 
     // machines AD
     for (const adData of allAdData) {
-      const glpiData = allGlpiData.find(glpi => glpi.Nom === adData.CN);
-      const kasperskyData = allKasperskyData.find(kaspersky => kaspersky.Nom === adData.CN);
+      const adName = adData.CN;
+      const glpiData = allGlpiData.find(glpi => glpi.Nom === adName);
+      const kasperskyData = allKasperskyData.find(kaspersky => kaspersky.Nom === adName);
 
       const fusionData = {
         ...adData.toObject(),
